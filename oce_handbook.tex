@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{fullpage}
+%\usepackage{mathptmx}
 \usepackage{times}
 \usepackage{ifthen}
 \usepackage{microtype}
@@ -17,27 +18,28 @@
 \definecolor{diColor}{rgb}{0.8,0,0} % hide them as black
 
 \newcommand{\di}[2][EMPTY]{\ifthenelse{\equal{#1}{EMPTY}}{\color{diColor}#2\color{black}\index{#2}}{\color{diColor}#2\color{black}\index{#1}}}
-\newcommand{\fixme}[1]{\color{red}$<$#1$>$\color{black}\index{$>>>>$FIXME$<<<<$}}
+\newcommand{\fixme}[1]{\color{blue}$<$#1$>$\color{black}\index{$>>>>$FIXME$<<<<$}}
 
-\newcommand{\curcom}{\index{Curriculum Committee}\index{Committee!Curriculum}Curriculum Committee}
+\newcommand{\curcom}{\index{Committees!Curriculum}Curriculum Committee}
 
-\newcommand{\advcom}{\index{Advisory Committee}\index{Committee!Advisory}Advisory Committee}
+\newcommand{\advcom}{\index{Committees!Advisory}Advisory Committee}
 
-\newcommand{\goc}{\index{Graduate Oversight Committee}\index{Committee!Graduate Oversight}Graduate Oversight Committee}
+\newcommand{\goc}{\index{Committees!Graduate Oversight}Graduate Oversight Committee}
 
 \makeindex
 
 \begin{document}
 
 % A.	GENERAL  PROGRAM REQUIREMENTS
-\section{General Program Requirements}
+\section{\label{sec:general_program_requirements}General Program Requirements}
 
 %A1	REGISTRATION
 \subsection{Registration}
 
 Graduate students must maintain their registration in all three terms until
-their program is completed, except in cases where a formal \di{Leave of
-Absence} has been approved by the Faculty of Graduate Studies.
+their program is completed, except in cases where a formal \di[leave of
+absence]{Leave of Absence} has been approved by the Faculty of Graduate
+Studies.
 
 Registration consists of:
 1.	REGN 9999
@@ -57,15 +59,15 @@ readmission\footnote{FGS Regulations, section 5.2.3 Failure to Register
 
 Students must register at least one month prior to the beginning of each term.
 
-Students must register for the \di{Fee Generating
-Course}\index{course!fee-generating} (REGN 9999) in all three terms for the
+Students must register for the Fee Generating
+Course\index{courses!fee-generating} (REGN 9999) in all three terms for the
 duration of their program. If REGN 9999 is not added for each term, graduate
 students are not considered to be registered. Failure to register at least one
 month prior to the beginning of each term will result in non- payment of
 scholarships and stipends.
 
-The CRN for each term can be found in the Academic Timetable on the Registrar’s
-Office website\footnote{Academic Timetable
+The CRN \fixme{define this} for each term can be found in the Academic
+Timetable on the Registrar’s Office website\footnote{Academic Timetable
 \elink{http://www.dal.ca/academics.academic_timetable.html}.} as ``Registration
 Course--Graduate''.
 
@@ -90,7 +92,7 @@ Oceanography course listings (MSc – OCEA 9000, PhD – OCEA 9530).
  
 
 %A2.1	CORE COURSES
-\subsubsection{Core courses}
+\subsubsection{\label{sec:core_courses}Core courses}
 
 Core courses are broadly based, advanced-level courses that are intended to
 help students gain a wide understanding of the major areas of oceanography, and
@@ -98,11 +100,11 @@ they are to be taken outside, as well as within, the student’s research area.
 They are offered every year.
 
 Depending on the degree program, students usually take some combination of the
-\di{core course}s\index{course!core}, OCEA 5110, 5120, 5130, and 5140, which
-cover Marine Geology and Geophysics, Physical Oceanography, Chemical
-Oceanography and Biological Oceanography, respectively. One or more of these
-sometimes may be waived with the consent of the thesis advisory committee, if
-the student has sufficient background.
+core courses\index{courses!core}, OCEA 5110, 5120, 5130, and 5140, which cover
+Marine Geology and Geophysics, Physical Oceanography, Chemical Oceanography and
+Biological Oceanography, respectively. One or more of these sometimes may be
+waived with the consent of the thesis advisory committee, if the student has
+sufficient background.
 
 
 %A2.2	COURSE REQUIREMENTS
@@ -178,8 +180,9 @@ with the supervisor, should demonstrate the student's
 \end{itemize}
 
 The acceptance of a thesis proposal is a critical step in a student's program.
-The detailed requirements differ for MSc and PhD proposals (see sections B and
-C respectively).\fixme{fix section refs} 
+The detailed requirements differ for MSc and PhD proposals (see
+sections~\ref{sec:msc_program_requirements}
+and~\ref{sec:phd_program_requirements} respectively).
 
 %A4	SEA TIME
 \subsection{Sea time}
@@ -188,9 +191,9 @@ C respectively).\fixme{fix section refs}
 Graduate students in Oceanography are required to spend time at sea on
 oceanographic ships to familiarize themselves with oceanographic techniques,
 even if their research does not require measurements at sea. Students are
-required to submit a \di{Sea Time} Form to the Graduate Secretary. The \curcom
-must approve completed forms. Requests for special consideration by the \curcom
-for \di{fieldwork} in lieu of sea time may be made in extenuating
+required to submit a \di[sea time]{Sea Time} Form to the Graduate Secretary.
+The \curcom must approve completed forms. Requests for special consideration by
+the \curcom for \di{fieldwork} in lieu of sea time may be made in extenuating
 circumstances.
 
 
@@ -213,13 +216,13 @@ questions for the PhD Qualifying Exam and the PhD Thesis Proposal Defence.
 %A6	CHANGE IN STATUS
 \subsection{Change in status}
 
-Any change in status, such as transfer from MSc to PhD (see section
-B5\fixme{cross-ref}), a leave of absence, and entrance to another degree
-program must be recommended by the advisory committee to the Graduate Oversight
-Committee. Final approval for a change in status will be made by the Graduate
-Oversight Committee, which will meet as required to review these requests.
-Students should consult the Graduate Secretary regarding the required
-documentation.
+Any change in status, such as transfer from MSc to PhD (see
+section~\ref{sec:transfer_to_phd}), a leave of absence, and entrance to another
+degree program must be recommended by the advisory committee to the Graduate
+Oversight Committee. Final approval for a change in status will be made by the
+Graduate Oversight Committee, which will meet as required to review these
+requests.  Students should consult the Graduate Secretary regarding the
+required documentation.
 
 
 %A7	ANNUAL PROGRESS REPORT
@@ -274,7 +277,10 @@ Membership on an Advisory Committee is flexible and may change during the
 course of a student’s program. Students must complete a Graduate Student
 Program Update Form when a decision to make changes to committee membership is
 made. The Advisory Committee structure differs for MSc and PhD, as explained in
-sections B and C\fixme{cross links}.
+sections~\ref{sec:msc_program_requirements} and
+\ref{sec:phd_program_requirements}.
+
+% above was: sections B and C
 
 Advisory committees are formally sub-committees of the Department appointed
 both to provide expert advice to students and to evaluate and report on student
@@ -383,15 +389,15 @@ The responsibilities of the internal supervisor in part are
 
 %B.	MSc  PROGRAM REQUIREMENTS
 
-\section{MSc program requirements}
+\section{\label{sec:msc_program_requirements}MSc program requirements}
 
 % B1	MSc COURSE REQUIREMENTS
 
 \subsection{MSc course requirements}
 
 MSc students must complete a minimum of 5 half-credits at the 5000-level or
-higher, at least three of which must be chosen from the introductory core
-courses (refer to section A2.1)\fixme{cross link}.
+        higher, at least three of which must be chosen from the introductory
+        core courses (refer to section~\ref{sec:core_courses}).
 
 Any student who anticipates a transfer to the PhD program should complete the
 course-work and other requirements as listed in the PhD program requirements.
@@ -465,23 +471,25 @@ proceed in violation of the below composition of the examining committee due to
 short-term absence of committee members.
 
 The examining committee will consist of a minimum of 5 members:
+
 \begin{itemize}
-\item 3 members of the advisory committee
-\begin{itemize}
-\item Supervisor(s)
-    \item Full-time department faculty member
-    \item One other member
-    \end{itemize}
+    \item 3 members of the advisory committee
+        \begin{itemize}
+            \item Supervisor(s)
+            \item Full-time department faculty member
+            \item One other member
+        \end{itemize}
 
     \item Departmental Representative/Chair (from outside the
-committee)\footnote{The Graduate Secretary will arrange for the Departmental
-Representative (normally the Graduate Coordinator or a designate). The Chair of
-the MSc thesis defence is independent of the examining committee. The
-Departmental Representative normally performs this duty.}
+        committee)\footnote{The Graduate Secretary will arrange for the
+        Departmental Representative (normally the Graduate Coordinator or a
+        designate). The Chair of the MSc thesis defence is independent of the
+        examining committee. The Departmental Representative normally performs
+        this duty.}
 
     \item External examiner from outside the advisory
-committee\footnote{adjunct professors may fulfill the requirement of an
-external examiner.}
+        committee\footnote{adjunct professors may fulfill the requirement of an
+        external examiner.}
 
 \end{itemize}
 
@@ -583,7 +591,7 @@ the time frame within which they are to be completed. In the event of an
 unsuccessful defence, an explanation of the negative outcome is provided. A
 copy of the report will be provided to the Graduate Secretary.
 
-\subsection{Transfer to PhD}
+\subsection{\label{sec:transfer_to_phd}Transfer to PhD}
 
 Request for transfer to the PhD program should be completed no later than one
 month prior to the anniversary of the student’s admission date.
@@ -607,18 +615,23 @@ The decision categories for the transfer to the PhD are:
 \end{itemize}
 
 Students anticipating this change should take the required core courses in the
-first year and take the qualifying examinations (see section C3)\fixme{cross
-ref} in the first year following completion of the required core classes.
+first year and take the qualifying examinations (see
+section~\ref{sec:phd_qualifying_examination}) in the first year following
+completion of the required core classes.
+
+% above referred to C3 for QE
 
 %C.	PhD  PROGRAM REQUIREMENTS
-\section{PhD program requirements}
+\section{\label{sec:phd_program_requirements}PhD program requirements}
 
 %C1	PhD COURSE REQUIREMENTS
 \subsection{PhD course requirements}
 
 PhD students must complete a minimum of 6 half-credits at the 5000-level or
 higher, at least two of which must be chosen from the introductory core courses
-outside the student’s sub-discipline (refer to section A2.1)\fixme{cross link}.
+outside the student’s sub-discipline (refer to section~\ref{sec:core_courses}).
+
+% above referred to A2.1 originally
 
 Courses are to be chosen in consultation with the advisory committee. The
 various sub-disciplines have individual course requirements, some of which
@@ -686,7 +699,7 @@ least one member of the committee be from outside the Department.
 
 
 %C3	PhD QUALIFYING EXAMINATION
-\subsection{PhD Qualifying Examination}
+\subsection{\label{sec:phd_qualifying_examination}PhD Qualifying Examination}
 
 The \di{qualifying examination} should be completed between months 9 and 12 of
 the program.  Students transferring from the MSc program should take the
@@ -968,15 +981,19 @@ The examining committee will consist of a minimum of 5 members:
 
 \item 3 members of the advisory committee
 
-\begin{itemize}
-\item Supervisor(s)
-    \item Full-time department faculty member
-    \item One other member
+    \begin{itemize}
+
+        \item Supervisor(s)
+
+        \item Full-time department faculty member
+
+        \item One other member
+
     \end{itemize}
 
-    \item Departmental Representative (from outside the committee)\footnote{The
-        Graduate Secretary will arrange for the Departmental Representative (normally
-                the Graduate Coordinator or a designate).}
+\item Departmental Representative (from outside the committee)\footnote{The
+    Graduate Secretary will arrange for the Departmental Representative
+        (normally the Graduate Coordinator or a designate).}
 
 \item External examiner (from outside the University)
 
@@ -989,7 +1006,7 @@ The examining committee will consist of a minimum of 5 members:
 %C5.2	PhD THESIS DEFENCE TIMELINE
 \subsubsection{PhD thesis defence timeline}
 
-students should be aware of the time scales required by FGS and Departmental
+Students should be aware of the time scales required by FGS and Departmental
 regulations, which stretch over a period of more than eight months before the
 defence.
 
@@ -997,55 +1014,87 @@ Prior to proceeding with scheduling the defence, the thesis (in essentially
 final form) should be distributed to the supervisor and committee to be
 reviewed for suitability and final approval.
 
-Twelve Weeks Prior to Defence:
-
 \begin{itemize}
+    \item Twelve Weeks Prior to Defence:
 
-\item Submit Request to Arrange an Oral Defence Form, listing 3 choices for
-external examiners along with CV for external examiner of first choice to the
-Graduate Secretary.
+        \begin{itemize}
 
-\end{itemize}
+            \item Submit Request to Arrange an Oral Defence Form, listing 3
+                choices for external examiners along with CV for external
+                examiner of first choice to the Graduate Secretary.
 
-Six Weeks Prior to Defence:
+        \end{itemize}
 
-\begin{itemize}
-\item Have a format review of the thesis done by FGS before it is distributed to the examining committee
-\item Submit a PhD Thesis Submission From and copy of the thesis for the External Examiner to the Graduate Secretary
-\item Submit a PhD Examination Information Form to the Graduate Secretary
-\item Submit a copy of the student’s CV to the Graduate Secretary
-\item Submit a Thesis Binding Submission Form and payment to the Graduate Secretary
-\item Submit an electronic copy of the abstract to the Graduate Secretary
-\item Provide copies of the thesis to the supervisor for distribution to the internal examining committee members
-\end{itemize}
+    \item Six Weeks Prior to Defence:
 
-Four Weeks Prior to Defence:
+        \begin{itemize}
 
-\begin{itemize}
-\item Notify the Graduate Secretary of any Audiovisual requirements Two Weeks Prior to Defence:
-\item Submit a printed copy of the thesis to the Graduate Secretary
-\end{itemize}
+            \item Have a format review of the thesis done by FGS before it is
+                distributed to the examining committee
 
-Following Defence:
+            \item Submit a PhD Thesis Submission From and copy of the thesis
+                for the External Examiner to the Graduate Secretary
 
-\begin{itemize}
-\item Have Examining Committee Members sign the signature page
-\item Submit required changes to the thesis within the specified timeframe
-\item Have a final format check done by FGS
+            \item Submit a PhD Examination Information Form to the Graduate
+                Secretary
 
-\item Electronically submit the final version of the thesis via
-DalSpace\footnote{DalSpace \elink{http://dalspace.library.dal.ca/}.}.
+            \item Submit a copy of the student’s CV to the Graduate Secretary
 
-\item Submit original completed forms to FGS (National Library of Canada Form,
-Title Page of Thesis, Signature page with original signatures, Copyright Page,
-Ethics Pages (if applicable), Student Contribution to Manuscripts (if
-applicable)
+            \item Submit a Thesis Binding Submission Form and payment to the
+                Graduate Secretary
 
-\item Submit final copies of thesis to the Graduate Secretary for binding
-(include copies of the signed signature page, and the Copyright Page with
-original signatures)
+            \item Submit an electronic copy of the abstract to the Graduate
+                Secretary
 
-\item Complete Exit Survey
+            \item Provide copies of the thesis to the supervisor for
+                distribution to the internal examining committee members
+
+        \end{itemize}
+
+    \item Four Weeks Prior to Defence:
+
+        \begin{itemize}
+
+            \item Notify the Graduate Secretary of any Audiovisual requirements
+
+        \end{itemize}
+
+    \item Two Weeks Prior to Defence:
+        
+        \begin{itemize}
+
+            \item Submit a printed copy of the thesis to the Graduate Secretary
+
+        \end{itemize}
+
+
+    \item Following Defence:
+
+        \begin{itemize}
+
+            \item Have Examining Committee Members sign the signature page
+
+            \item Submit required changes to the thesis within the specified
+                timeframe
+
+            \item Have a final format check done by FGS
+
+            \item Electronically submit the final version of the thesis via
+                DalSpace\footnote{DalSpace
+                \elink{http://dalspace.library.dal.ca/}.}.
+
+            \item Submit original completed forms to FGS (National Library of
+                Canada Form, Title Page of Thesis, Signature page with original
+                signatures, Copyright Page, Ethics Pages (if applicable),
+                Student Contribution to Manuscripts (if applicable)
+
+            \item Submit final copies of thesis to the Graduate Secretary for
+                binding (include copies of the signed signature page, and the
+                Copyright Page with original signatures)
+
+            \item Complete Exit Survey
+
+        \end{itemize}
 
 \end{itemize}
 
@@ -1059,7 +1108,7 @@ are provided above.
 %C5.3	PhD THESIS DEFENCE OUTCOME
 \subsubsection{PhD thesis defence outcome}
 
-The student opens the examination with a 20-minute presentation of the thesis.\fixme{mistake?}
+The student opens the examination with a 20-minute presentation of the thesis.
 Other faculty, students and public may be present, and ask questions, but the
 critical decisions are made in private and are the responsibility of the
 examining committee.
@@ -1081,11 +1130,11 @@ completion of the thesis examination.
 Dalhousie Graduate Fellowships will normally be provided for two years for an
 MSc student and four years for a PhD student.
 
-Scholarship support is provided directly to some students by the Natural
-Sciences and Engineering Research Council (NSERC), the Killam Foundation
-through Dalhousie, by companies, and by other agencies, both national and
-international. Students are encouraged to apply for external support whenever
-possible.
+Scholarship support is provided directly to some students by the \di{Natural
+Sciences and Engineering Research Council} (\di{NSERC}), the \di{Killam
+Foundation} through Dalhousie, by companies, and by other agencies, both
+national and international. Students are encouraged to apply for external
+support whenever possible.
 
 Full-time students without such special scholarship support are generally
 awarded Dalhousie Graduate Fellowships from funds that come partly to the
@@ -1127,9 +1176,11 @@ If students and/or faculty have concerns or doubts about any issue pertaining
 to any part of Section 6, consult with your Chair, Graduate Coordinator, or
 Supervisor, or contact the Faculty of Graduate Studies for advice. If you feel
 uncomfortable with approaching your immediate supervisor, then go to the next
-level and ask to be heard in confidence\footnote{FGS Regulations, section 6.4
-Policy on Intellectual Property \elink{http://dalgrad.dal.ca/regulations/vi/ -
-6.4}.}
+level and ask to be heard in
+confidence\footnote{\href{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10849&loaduseredits=False}{FGS
+Regulations, section 6.4: Policy on Intellectual Property}.}.
+
+%\elink{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10849&loaduseredits=False}, section 6.4.}.
 
 %E1	ACADEMIC INTEGRITY
 \subsection{Academic integrity}
@@ -1141,9 +1192,10 @@ suspension or expulsion from the University, or even the revocation of a
 degree.  It is essential that there be correct attribution of authorities from
 which facts and opinions have been derived. Prior to submitting any paper in a
 course, or material for a thesis, students should read the Policy on
-Intellectual Honesty\footnote{Policy on Intellectual Honesty
-\elink{http://www.dal.ca/dept/university_secretariat/academic-integrity.html}.}
- 
+Intellectual
+Honesty\footnote{\href{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10849&loaduseredits=False}{FGS
+Regulatios, seciont 6.3: Policy on Integrity in Scholarly Activity}.}.
+
 \printindex
 
 \end{document}
