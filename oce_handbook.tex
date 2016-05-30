@@ -26,6 +26,30 @@
 
 \newcommand{\goc}{\index{Committees!Graduate Oversight}Graduate Oversight Committee}
 
+\usepackage{tikz}
+
+\newcommand{\ExternalLink}{%
+    \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
+        \begin{scope}[x=1ex, y=1ex]
+            \clip (-0.1,-0.1) 
+                --++ (-0, 1.2) 
+                --++ (0.6, 0) 
+                --++ (0, -0.6) 
+                --++ (0.6, 0) 
+                --++ (0, -1);
+            \path[draw, 
+                line width = 0.5, 
+                rounded corners=0.5] 
+                (0,0) rectangle (1,1);
+        \end{scope}
+        \path[draw, line width = 0.5] (0.5, 0.5) 
+            -- (1, 1);
+        \path[draw, line width = 0.5] (0.6, 1) 
+            -- (1, 1) -- (1, 0.6);
+        }
+    }
+
+
 \makeindex
 
 \begin{document}
@@ -42,17 +66,19 @@ absence]{Leave of Absence} has been approved by the Faculty of Graduate
 Studies.
 
 Registration consists of:
-1.	REGN 9999
-2.	Thesis Code
-3.	Courses (if applicable)
+\begin{enumerate}
+    \item REGN 9999
+    \item Thesis Code
+    \item Courses (if applicable)
+\end{enumerate}
 
 Students who fail to register within the approved deadlines will be considered
 to have \di{lapsed registration}. Such students will not be permitted to submit
 a thesis, nor will they receive any services from the University during that
 academic term. Students who allow their registration to lapse will be
 considered to have withdrawn and will be required to apply for
-readmission\footnote{FGS Regulations, section 5.2.3 Failure to Register
-\elink{http://dalgrad.dal.ca/regulations/v5.2.3}}
+readmission\footnote{FGS Regulations, section 5.2.3: Failure to Register
+\href{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10848&loaduseredits=False}{\ExternalLink}.}.
 
 %A1.1	REGN 9999
 \subsection{REGN 9999}
@@ -66,10 +92,10 @@ students are not considered to be registered. Failure to register at least one
 month prior to the beginning of each term will result in non- payment of
 scholarships and stipends.
 
-The CRN \fixme{define this} for each term can be found in the Academic
-Timetable on the Registrar’s Office website\footnote{Academic Timetable
-\elink{http://www.dal.ca/academics.academic_timetable.html}.} as ``Registration
-Course--Graduate''.
+The \di{Course Registration Number} (\di{CRN}) for each term can be found in
+the Academic Timetable on the Registrar’s Office
+website\footnote{\href{https://dalonline.dal.ca/PROD/fysktime.P_DisplaySchedule}{Academic
+Timetable} as ``Registration Course--Graduate''.}.
 
 %A1.2	THESIS CODE
 \subsection{Thesis Code}
@@ -115,10 +141,11 @@ within one month of the start of your program.
 
 Students must submit a Graduate Student Program Update Form to the Graduate
 Secretary when a decision to make changes to course requirements is
-made\footnote{Graduate Student Program Forms can be downloaded from the FGS
-website \elink{http://dalgrad.dal.ca/currentstudents/forms}.}.  Failure to do
-so can result in the assessment of additional fees for courses not included in
-your program requirements, or affect the student’s ability to graduate.
+made\footnote{Graduate Student Program Forms can be downloaded from the
+\href{http://www.dal.ca/faculty/gradstudies/currentstudents/forms.html}{FGS
+website}.}.  Failure to do so can result in the assessment of additional fees
+for courses not included in your program requirements, or affect the student’s
+ability to graduate.
 
 In addition to the core classes as described above, there are several classes
 designed to provide students with the tools and background knowledge
@@ -1158,7 +1185,7 @@ month prior to the date of travel.
 Graduate students are eligible to apply for one travel grant per degree at
 Dalhousie (Master’s or Doctoral) through the Faculty of Graduate
 Studies\footnote{FGS Conference Travel Grant Application Form and Guidelines
-\elink{http://dalgrad.dal.ca/currentstudents/forms/ - travel}.}.
+\href{http://www.dal.ca/faculty/gradstudies/funding/grants.html}{\ExternalLink}.}.
 
 Students must be registered in a graduate program at the time of application
 and at the time of the conference. In order to be eligible, students must
@@ -1176,9 +1203,9 @@ If students and/or faculty have concerns or doubts about any issue pertaining
 to any part of Section 6, consult with your Chair, Graduate Coordinator, or
 Supervisor, or contact the Faculty of Graduate Studies for advice. If you feel
 uncomfortable with approaching your immediate supervisor, then go to the next
-level and ask to be heard in
-confidence\footnote{\href{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10849&loaduseredits=False}{FGS
-Regulations, section 6.4: Policy on Intellectual Property}.}.
+level and ask to be heard in confidence\footnote{FGS Regulations, section 6.4:
+Policy on Intellectual Property
+\href{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10849&loaduseredits=False}{\ExternalLink}.}.
 
 %\elink{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10849&loaduseredits=False}, section 6.4.}.
 
@@ -1191,10 +1218,10 @@ Plagiarism is a serious academic offence that may lead to a failing grade,
 suspension or expulsion from the University, or even the revocation of a
 degree.  It is essential that there be correct attribution of authorities from
 which facts and opinions have been derived. Prior to submitting any paper in a
-course, or material for a thesis, students should read the Policy on
-Intellectual
-Honesty\footnote{\href{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10849&loaduseredits=False}{FGS
-Regulatios, seciont 6.3: Policy on Integrity in Scholarly Activity}.}.
+course, or material for a thesis, students should read the Policy on Integrity
+in Scholarly Activity\footnote{FGS Regulations, section 6.3: Policy on
+Integrity in Scholarly
+Activity \href{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10849&loaduseredits=False}{\ExternalLink}.}.
 
 \printindex
 
