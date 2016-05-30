@@ -2,16 +2,26 @@
 \usepackage{fullpage}
 \usepackage{times}
 \usepackage{microtype}
+\usepackage{colors}
 \usepackage[plainpages=false,debug]{hyperref} % should be last package
 
 \newcommand\elink[1]{\url{#1}}
 
+\definecolor{diColor}{rgb}{0.8,0,0} % hide them as black
+
+\newcommand{\di}[2][EMPTY]{\ifthenelse{\equal{#1}{EMPTY}}{\color{diColor}#2\color{black}\index{#2}}{\color{diColor}#2\color{black}\index{#1}}}
+
 \begin{document}
 
-A.	GENERAL  PROGRAM REQUIREMENTS
-A1	REGISTRATION
+% A.	GENERAL  PROGRAM REQUIREMENTS
+\section{General Program Requirements}
 
-Graduate students must maintain their registration in all three terms until their program is completed, except in cases where a formal Leave of Absence has been approved by the Faculty of Graduate Studies.
+%A1	REGISTRATION
+\subsection{Registration}
+
+Graduate students must maintain their registration in all three terms until
+their program is completed, except in cases where a formal Leave of Absence has
+been approved by the Faculty of Graduate Studies.
 
 Registration consists of:
 1.	REGN 9999
