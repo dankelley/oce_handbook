@@ -1,8 +1,12 @@
 \documentclass{article}
 \usepackage{fullpage}
 \usepackage{times}
+\usepackage{ifthen}
 \usepackage{microtype}
-\usepackage{colors}
+\usepackage{color}
+\usepackage{xspace}
+\usepackage{makeidx}
+\usepackage{graphicx}
 \usepackage[plainpages=false,debug]{hyperref} % should be last package
 
 \newcommand\elink[1]{\url{#1}}
@@ -10,6 +14,15 @@
 \definecolor{diColor}{rgb}{0.8,0,0} % hide them as black
 
 \newcommand{\di}[2][EMPTY]{\ifthenelse{\equal{#1}{EMPTY}}{\color{diColor}#2\color{black}\index{#2}}{\color{diColor}#2\color{black}\index{#1}}}
+\newcommand{\fixme}[1]{\color{red}$<$#1$>$\color{black}\index{$>>>>$FIXME$<<<<$}}
+
+\newcommand{\curcom}{\index{Curriculum Committee}\index{Committee!Curriculum}Curriculum Committee}
+
+\newcommand{\advcom}{\index{Advisory Committee}\index{Committee!Advisory}Advisory Committee}
+
+\newcommand{\goc}{\index{Graduate Oversight Committee}\index{Committee!Graduate Oversight}Graduate Oversight Committee}
+
+\makeindex
 
 \begin{document}
 
@@ -20,346 +33,673 @@
 \subsection{Registration}
 
 Graduate students must maintain their registration in all three terms until
-their program is completed, except in cases where a formal Leave of Absence has
-been approved by the Faculty of Graduate Studies.
+their program is completed, except in cases where a formal \di{Leave of
+Absence} has been approved by the Faculty of Graduate Studies.
 
 Registration consists of:
 1.	REGN 9999
 2.	Thesis Code
 3.	Courses (if applicable)
 
-Students who fail to register within the approved deadlines will be considered to have lapsed registration. Such students will not be permitted to submit a thesis, nor will they receive any services from the University during that academic term. Students who allow their registration to lapse will be considered to have withdrawn and will be required to apply for readmission. 1
-A1.1	REGN 9999
+Students who fail to register within the approved deadlines will be considered
+to have \di{lapsed registration}. Such students will not be permitted to submit
+a thesis, nor will they receive any services from the University during that
+academic term. Students who allow their registration to lapse will be
+considered to have withdrawn and will be required to apply for
+readmission\footnote{FGS Regulations, section 5.2.3 Failure to Register
+\elink{http://dalgrad.dal.ca/regulations/v5.2.3}}
+
+%A1.1	REGN 9999
+\subsection{REGN 9999}
 
 Students must register at least one month prior to the beginning of each term.
 
-Students must register for the Fee Generating Course (REGN 9999) in all three terms for the duration of their program. If REGN 9999 is not added for each term, graduate students are not considered to be registered. Failure to register at least one month prior to the beginning of each term will result in non- payment of scholarships and stipends.
+Students must register for the \di{Fee Generating
+Course}\index{course!fee-generating} (REGN 9999) in all three terms for the
+duration of their program. If REGN 9999 is not added for each term, graduate
+students are not considered to be registered. Failure to register at least one
+month prior to the beginning of each term will result in non- payment of
+scholarships and stipends.
 
-The CRN for each term can be found in the Academic Timetable on the Registrar’s Office website2 as “Registration Course – Graduate”.
-A1.2	THESIS CODE
+The CRN for each term can be found in the Academic Timetable on the Registrar’s
+Office website\footnote{Academic Timetable
+\elink{http://www.dal.ca/academics.academic_timetable.html}.} as ``Registration
+Course--Graduate''.
+
+%A1.2	THESIS CODE
+\subsection{Thesis Code}
 
 Students must register at least one month prior to the beginning of each term.
 
-Students must register for the Thesis Code in all three terms for the duration of their program. Failure to do so in a term during which formal classes are not being taken will result in a blank term on the student’s transcript, which means that there will be no documentation demonstrating that work was done on the thesis.
+Students must register for the Thesis Code in all three terms for the duration
+of their program. Failure to do so in a term during which formal classes are
+not being taken will result in a blank term on the student’s transcript, which
+means that there will be no documentation demonstrating that work was done on
+the thesis.
 
-The CRN for each term can be found in the Academic Timetable under the Oceanography course listings (MSc – OCEA 9000, PhD – OCEA 9530).
+The CRN for each term can be found in the Academic Timetable under the
+Oceanography course listings (MSc – OCEA 9000, PhD – OCEA 9530).
 
 
 
-
-1 FGS Regulations, section 5.2.3 Failure to Register \elink{http://dalgrad.dal.ca/regulations/v5.2.3}.
-2 Academic Timetable \elink{http://www.dal.ca/academics.academic_timetable.html}.
+% A2	COURSES
+\section{Courses}
  
 
-A2	COURSES
-A2.1	CORE COURSES
+%A2.1	CORE COURSES
+\subsection{Core courses}
 
-Core courses are broadly based, advanced-level courses that are intended to help students gain a wide understanding of the major areas of oceanography, and they are to be taken outside, as well as within, the student’s research area. They are offered every year.
+Core courses are broadly based, advanced-level courses that are intended to
+help students gain a wide understanding of the major areas of oceanography, and
+they are to be taken outside, as well as within, the student’s research area.
+They are offered every year.
 
-Depending on the degree program, students usually take some combination of the core courses, OCEA 5110, 5120, 5130, and 5140, which cover Marine Geology and Geophysics, Physical Oceanography, Chemical Oceanography and Biological Oceanography, respectively. One or more of these sometimes may be waived with the consent of the thesis advisory committee, if the student has sufficient background.
-A2.2	COURSE REQUIREMENTS
+Depending on the degree program, students usually take some combination of the
+\di{core course}s\index{course!core}, OCEA 5110, 5120, 5130, and 5140, which
+cover Marine Geology and Geophysics, Physical Oceanography, Chemical
+Oceanography and Biological Oceanography, respectively. One or more of these
+sometimes may be waived with the consent of the thesis advisory committee, if
+the student has sufficient background.
 
-A Graduate Student Program form must be submitted to the Graduate Secretary within one month of the start of your program.
 
-Students must submit a Graduate Student Program Update Form to the Graduate Secretary when a decision to make changes to course requirements is made 3. Failure to do so can result in the assessment of additional fees for courses not included in your program requirements, or affect the student’s ability to graduate.
+%A2.2	COURSE REQUIREMENTS
+\subsection{Course requirements}
 
-In addition to the core classes as described above, there are several classes designed to provide students with the tools and background knowledge appropriate to their particular area of research. As explained in sections B and C, the detailed requirements differ for MSc and PhD and between the sub-disciplines of Oceanography. The choice of classes is made by the student in consultation with the thesis supervisor, with the approval of the advisory committee. Students must register for the 5000 level
-courses (4000 level is for undergraduates only) prior to the registration deadline4.
-A2.3	GRADING
+A Graduate Student Program form must be submitted to the Graduate Secretary
+within one month of the start of your program.
 
-FGS Regulations5 stipulate that graduate students must achieve a grade of B- or higher in all classes required as part of their degree program.  The grading scheme follows the FGS regulations.
+Students must submit a Graduate Student Program Update Form to the Graduate
+Secretary when a decision to make changes to course requirements is
+made\footnote{Graduate Student Program Forms can be downloaded from the FGS
+website \elink{http://dalgrad.dal.ca/currentstudents/forms}.}.  Failure to do
+so can result in the assessment of additional fees for courses not included in
+your program requirements, or affect the student’s ability to graduate.
 
-Upon Failure of any course (grade less than B-), a student will be withdrawn from the Graduate Program and must apply for re-admission. Such a student may apply, in writing, to the department for immediate reinstatement6. Reinstatement to a program after a failing grade must be supported by the Graduate Coordinator, and must be approved in writing by the Faculty of Graduate Studies. If
+In addition to the core classes as described above, there are several classes
+designed to provide students with the tools and background knowledge
+appropriate to their particular area of research. As explained in sections B
+and C, the detailed requirements differ for MSc and PhD and between the
+sub-disciplines of Oceanography. The choice of classes is made by the student
+in consultation with the thesis supervisor, with the approval of the advisory
+committee. Students must register for the 5000 level courses (4000 level is for
+undergraduates only) prior to the registration deadline\footnote{Course
+registration deadlines can be found in the Graduate Studies Academic Calendar
+\elink{http://www.dal.ca/academics/academic_calendars.html}.}.
 
-3 Graduate Student Program Forms can be downloaded from the FGS website \elink{http://dalgrad.dal.ca/currentstudents/forms}.
-4 Course registration deadlines can be found in the Graduate Studies Academic Calendar \elink{http://www.dal.ca/academics/academic_calendars.html}.
-5 FGS Regulations, section 7.6 Classes and Grades \elink{http://dalgrad.dal.ca/regulations/vii/ - 7.6}.
-6 FGS Regulations, section 5.2.6 Readmission of Students \elink{http://dalgrad.dal.ca/regulations/v/ - 5.2.6}.
+%A2.3	GRADING
+\subsection{Grading}
+
+FGS Regulations\footnote{FGS Regulations, section 7.6 Classes and Grades
+\elink{http://dalgrad.dal.ca/regulations/vii/ - 7.6}.} stipulate that graduate
+students must achieve a grade of B- or higher in all classes required as part
+of their degree program.  The grading scheme follows the FGS regulations.
+
+Upon Failure of any course (grade less than B-), a student will be withdrawn
+from the Graduate Program and must apply for re-admission. Such a student may
+apply, in writing, to the department for immediate reinstatement\footnote{FGS
+Regulations, section 5.2.6 Readmission of Students
+\elink{http://dalgrad.dal.ca/regulations/v/ - 5.2.6}.}.  Reinstatement to a
+program after a failing grade must be supported by the Graduate Coordinator,
+and must be approved in writing by the Faculty of Graduate Studies. If
+readmitted, any subsequent 'F' will result in a final program dismissal. Any
+academic withdrawal and reinstatement will be recorded on the student's
+official transcript.
+
+%A2.4	REGISTERING FOR COURSES AT ANOTHER INSTITUTION
+\subsection{Registering for courses at another institution}
+
+Classes approved by the Department and Faculty of Graduate Studies (after
+examination of class descriptions) can be taken at other universities as part
+of the graduate degree program, provided the class is not available at
+Dalhousie\footnote{FGS Regulations, section 7.6.6 Letters of Permission
+\elink{http://dalgrad.dal.ca/regulations/vii/ - 7.6.6}.}.  The Letter of
+Permission Form\footnote{Letter of Permission Form and Guidelines
+\elink{http://dalgrad.dal.ca/currentstudents/forms/ - lop}.} must be completed
+and submitted to the Graduate Secretary in advance. Such approval will not be
+given retroactively.
+
+
+%A3	THESIS PROPOSAL
+\subsection{Thesis proposal}
+
+When a particular research area has been identified and an advisory committee
+appointed, students are required to provide their advisory committees with
+detailed thesis proposals. This document, typically developed in collaboration
+with the supervisor, should demonstrate the student's
+
+\begin{itemize}
+\item Background of appropriate literature
+\item Awareness of current research activity
+\item Ability to formulate pertinent scientific hypotheses
+\item Appreciation of the time, effort, and resources necessary to achieve the thesis objectives
+\end{itemize}
+
+The acceptance of a thesis proposal is a critical step in a student's program.
+The detailed requirements differ for MSc and PhD proposals (see sections B and
+C respectively).\fixme{fix section refs} 
+
+%A4	SEA TIME
+\subsection{Sea time}
+
+
+Graduate students in Oceanography are required to spend time at sea on
+oceanographic ships to familiarize themselves with oceanographic techniques,
+even if their research does not require measurements at sea. Students are
+required to submit a \di{Sea Time} Form to the Graduate Secretary. The \curcom
+must approve completed forms. Requests for special consideration by the \curcom
+for \di{fieldwork} in lieu of sea time may be made in extenuating
+circumstances.
+
+
+% A5	SEMINARS
+\subsection{Seminars}
+
+Students are required to attend the general \di{departmental
+seminars}\index{seminars!departmental} and to attend, and participate in, the
+specialty seminars in their field of interest.  Students who are unable to
+attend seminars regularly must have the specific agreement of their \advcom
+that this requirement is waived and this must be communicated to the
+departmental office in a written memo signed by the supervisor. It is important
+to note that materials presented in these seminars may form part of the
+questions for the PhD Qualifying Exam and the PhD Thesis Proposal Defence.
+
+
+
  
 
-readmitted, any subsequent 'F' will result in a final program dismissal. Any academic withdrawal and reinstatement will be recorded on the student's official transcript.
-A2.4	REGISTERING FOR COURSES AT ANOTHER INSTITUTION
+%A6	CHANGE IN STATUS
+\subsection{Change in status}
 
-Classes approved by the Department and Faculty of Graduate Studies (after examination of class descriptions) can be taken at other universities as part of the graduate degree program, provided the class is not available at Dalhousie7.
-The Letter of Permission Form8 must be completed and submitted to the Graduate Secretary in advance. Such approval will not be given retroactively.
-A3	THESIS PROPOSAL
-
-When a particular research area has been identified and an advisory committee appointed, students are required to provide their advisory committees with detailed thesis proposals. This document, typically developed in collaboration with the supervisor, should demonstrate the student's
-
-•	Background of appropriate literature
-•	Awareness of current research activity
-•	Ability to formulate pertinent scientific hypotheses
-•	Appreciation of the time, effort, and resources necessary to achieve the thesis objectives
-
-The acceptance of a thesis proposal is a critical step in a student's program. The detailed requirements differ for MSc and PhD proposals (see sections B and C respectively).
-A4	SEA TIME
-
-Graduate students in Oceanography are required to spend time at sea on oceanographic ships to familiarize themselves with oceanographic techniques, even if their research does not require measurements at sea. Students are required to submit a Sea Time Form to the Graduate Secretary. The Curriculum Committee must approve completed forms. Requests for special consideration by the Curriculum Committee for fieldwork in lieu of sea time may be made in extenuating circumstances.
-A5	SEMINARS
-
-Students are required to attend the general departmental seminars and to attend, and participate in, the specialty seminars in their field of interest. Students who are unable to attend seminars regularly must have the specific agreement of their advisory committee that this requirement is waived and this must be communicated to the departmental office in a written memo signed by the supervisor. It is important to note that materials presented in these seminars may form part of the questions for the PhD Qualifying Exam and the PhD Thesis Proposal Defence.
+Any change in status, such as transfer from MSc to PhD (see section
+B5\fixme{cross-ref}), a leave of absence, and entrance to another degree
+program must be recommended by the advisory committee to the Graduate Oversight
+Committee. Final approval for a change in status will be made by the Graduate
+Oversight Committee, which will meet as required to review these requests.
+Students should consult the Graduate Secretary regarding the required
+documentation.
 
 
+%A7	ANNUAL PROGRESS REPORT
+\subsection{Annual progress report}
 
-7 FGS Regulations, section 7.6.6 Letters of Permission \elink{http://dalgrad.dal.ca/regulations/vii/ - 7.6.6}.
-8 Letter of Permission Form and Guidelines \elink{http://dalgrad.dal.ca/currentstudents/forms/ - lop}.
- 
+Students must submit an Annual Progress Report each year, one month prior to
+the anniversary of their admission date. Failure to submit this report will
+result in delays in registration and funding.
 
-A6	CHANGE IN STATUS
+This report is made with the Graduate Student Information System (GSIS) through
+DalOnline\footnote{DalOnline \elink{https://dalonline.dal.ca}.}.  The
+supervisor and the Graduate Coordinator must approve this report
+electronically, and students should bear this in mind so that the deadline can
+be met.
 
-Any change in status, such as transfer from MSc to PhD (see section B5), a leave of absence, and entrance to another degree program must be recommended by the advisory committee to the Graduate Oversight Committee. Final approval for a change in status will be made by the Graduate Oversight Committee, which will meet as required to review these requests. Students should consult the Graduate Secretary regarding the required documentation.
-A7	ANNUAL PROGRESS REPORT
+A hard copy of the Oceanography Supplementary Program Report Form (available
+from the Graduate Secretary) must also be approved by your supervisor and the
+Graduate Coordinator, and submitted to the Graduate Secretary annually,
+following the same deadline as the Annual Progress Report.
 
-Students must submit an Annual Progress Report each year, one month prior to the anniversary of their admission date. Failure to submit this report will result in delays in registration and funding.
-
-This report is made with the Graduate Student Information System (GSIS) through DalOnline9. The supervisor and the Graduate Coordinator must approve this report electronically, and students should bear this in mind so that the deadline can be met.
-
-A hard copy of the Oceanography Supplementary Program Report Form (available from the Graduate Secretary) must also be approved by your supervisor and the Graduate Coordinator, and submitted to the Graduate Secretary annually, following the same deadline as the Annual Progress Report.
-
-The Supplementary Program Report Form is intended to be saved electronically and added to on a regular basis, similar to a CV. An up-to-date copy of the Supplementary Program Report Form is to be brought to all meetings with the Graduate Coordinator.
-A8	TIME LIMITS FOR COMPLETION OF DEGREES
-
-Graduate students have a maximum period of time within which to complete their graduate program, 4 years for MSc and 6 years for PhD.
-
-Extensions may be granted by FGS on the recommendation of the department, along with a satisfactory Progress Report10. Under no circumstances can a student be registered in a program beyond 10 years from their initial registration in the program.
-A9	THESIS ADVISORY COMMITTEE
-
-The Thesis Advisory Committee must be formed within one month of the start of the student’s program.
-
-The supervisor will select a provisional committee, in consultation with the student. A Graduate Student Program Form listing the Advisory Committee Members must be submitted to the Graduate Secretary.
+The Supplementary Program Report Form is intended to be saved electronically
+and added to on a regular basis, similar to a CV. An up-to-date copy of the
+Supplementary Program Report Form is to be brought to all meetings with the
+Graduate Coordinator.
 
 
-9 DalOnline \elink{https://dalonline.dal.ca}.
-10 FGS Regulations, section 7.3 Maximum Time for Degree Completion and Extensions \elink{http://dalgrad.dal.ca/regulations/vii/ - 7.3}.
- 
+%A8	TIME LIMITS FOR COMPLETION OF DEGREES
+\subsection{Time limits for completion of degrees}
 
-Membership on an Advisory Committee is flexible and may change during the course of a student’s program. Students must complete a Graduate Student Program Update Form when a decision to make changes to committee membership is made. The Advisory Committee structure differs for MSc and PhD, as explained in sections B and C.
+Graduate students have a maximum period of time within which to complete their
+graduate program, 4 years for MSc and 6 years for PhD.
 
-Advisory committees are formally sub-committees of the Department appointed both to provide expert advice to students and to evaluate and report on student progress.
+Extensions may be granted by FGS on the recommendation of the department, along
+with a satisfactory Progress Report\footnote{FGS Regulations, section 7.3
+Maximum Time for Degree Completion and Extensions
+\elink{http://dalgrad.dal.ca/regulations/vii/ - 7.3}.}.  Under no circumstances
+can a student be registered in a program beyond 10 years from their initial
+registration in the program.
 
-All committee members must have Faculty of Graduate Studies membership (most commonly as an External Scholar). Memberships should be applied for through the Graduate Secretary.
 
-Committees are changed by mutual consent within the committee or by the Chair of the committee and student in consultation with the Graduate Coordinator or Chair of the Department. Limits to changes are set by the availability of particular people as supervisors and of research facilities and funds (noting that most research grants are awarded for specific projects).
-A9.1	ADVISORY COMMITTEE MEETINGS
+%A9	THESIS ADVISORY COMMITTEE
+\subsection{Thesis advisory committee}
 
-There must be no less than two advisory committee meetings held per academic year11.
+The Thesis Advisory Committee must be formed within one month of the start of
+the student’s program.
 
-Advisory committee meetings may be held as often as required by the student and/or supervisor. It is the responsibility of the student to ensure that committee meetings are held. The supervisor will ensure that brief minutes of these meetings are recorded and are filed with the Graduate Secretary.
+The supervisor will select a provisional committee, in consultation with the
+student. A Graduate Student Program Form listing the Advisory Committee Members
+must be submitted to the Graduate Secretary.
 
-Following approval of the research proposal by the advisory committee, the student should have several meetings in addition to the regular committee meetings as follows:
+Membership on an Advisory Committee is flexible and may change during the
+course of a student’s program. Students must complete a Graduate Student
+Program Update Form when a decision to make changes to committee membership is
+made. The Advisory Committee structure differs for MSc and PhD, as explained in
+sections B and C\fixme{cross links}.
 
-•	An interim progress meeting to verify that the research is on track.
-•	A final progress meeting at which the committee agrees that sufficient research has been conducted, and that thesis writing may proceed.
-•	Individual meetings with advisory committee members to receive input on drafts or chapters.
-•	A meeting at which the advisory committee agrees that the thesis is defensible and that a defence may be scheduled. Alternatively, the advisory committee may request further revision prior to approving a defence.
-A9.2	COMMITTEE APPROVAL
+Advisory committees are formally sub-committees of the Department appointed
+both to provide expert advice to students and to evaluate and report on student
+progress.
+
+All committee members must have Faculty of Graduate Studies membership (most
+commonly as an External Scholar). Memberships should be applied for through the
+Graduate Secretary.
+
+Committees are changed by mutual consent within the committee or by the Chair
+of the committee and student in consultation with the Graduate Coordinator or
+Chair of the Department. Limits to changes are set by the availability of
+particular people as supervisors and of research facilities and funds (noting
+that most research grants are awarded for specific projects).
+
+%A9.1	ADVISORY COMMITTEE MEETINGS
+\subsection{Advisory committee meetings}
+
+There must be no less than two advisory committee meetings held per academic
+year\footnote{FGS Regulations, section 9.3 Supervisory Committees
+\elink{http://dalgrad.dal.ca/regulations/ix/ - 9.3}.}.
+
+Advisory committee meetings may be held as often as required by the student
+and/or supervisor. It is the responsibility of the student to ensure that
+committee meetings are held. The supervisor will ensure that brief minutes of
+these meetings are recorded and are filed with the Graduate Secretary.
+
+Following approval of the research proposal by the advisory committee, the
+student should have several meetings in addition to the regular committee
+meetings as follows:
+\begin{itemize}
+
+\item An interim progress meeting to verify that the research is on track.
+
+\item A final progress meeting at which the committee agrees that sufficient
+research has been conducted, and that thesis writing may proceed.
+
+\item Individual meetings with advisory committee members to receive input on drafts or chapters.
+
+\item A meeting at which the advisory committee agrees that the thesis is
+defensible and that a defence may be scheduled. Alternatively, the advisory
+committee may request further revision prior to approving a defence.
+
+\end{itemize}
+
+
+
+
+
+%A9.2	COMMITTEE APPROVAL
+\subsection{Committee approval}
+
 
 At several points in a student's program the approval of the advisory committee is essential:
+\begin{itemize}
+\item Initial discussion of research plan and direction; this should occur as early as possible in the student's program.
+\item Approval of research plan and direction for thesis proposal.
+\item Acceptance of a thesis proposal.
+\item Change of status, such as advancement to the PhD program.
+\item Approval to write up sections of a thesis.
+\item Approval of draft of thesis.
+\item The acceptance of the thesis, in final form, as being ready for defence.
+\end{itemize}
 
-•	Initial discussion of research plan and direction; this should occur as early as possible in the student's program.
-•	Approval of research plan and direction for thesis proposal.
-•	Acceptance of a thesis proposal.
-•	Change of status, such as advancement to the PhD program.
 
-11 FGS Regulations, section 9.3 Supervisory Committees \elink{http://dalgrad.dal.ca/regulations/ix/ - 9.3}.
- 
-
-•	Approval to write up sections of a thesis.
-•	Approval of draft of thesis.
-•	The acceptance of the thesis, in final form, as being ready for defence.
-A9.3	SUPERVISOR
+%A9.3	SUPERVISOR
+\subsection{Supervisor}
 
 The Supervisor provides direct supervision of the student's research and is expected to
+\begin{itemize}
+\item Advise the student on the choice of a research topic, on the possible directions to emphasize during the work, and the point at which it should be concluded.
+\item Supervise the research, as well as the preparation of the proposal, progress reports and thesis.
+\item Ensure that the resources necessary to the thesis project are made available and that any necessary skills are acquired by the student.
+\item Assess the student's progress, evaluating strengths and weaknesses.
+\item Provide current updates of progress to the student's file.
+\item Ensure that the student is funded
+\item Select thesis examining committee members (following the guidelines for composition of the various examining committees).
+\end{itemize}
 
-•	Advise the student on the choice of a research topic, on the possible directions to emphasize during the work, and the point at which it should be concluded.
-•	Supervise the research, as well as the preparation of the proposal, progress reports and thesis.
-•	Ensure that the resources necessary to the thesis project are made available and that any necessary skills are acquired by the student.
-•	Assess the student's progress, evaluating strengths and weaknesses.
-•	Provide current updates of progress to the student's file.
-•	Ensure that the student is funded
-•	Select thesis examining committee members (following the guidelines for composition of the various examining committees).
+A supervisor is changed only with the approval of the Department. This may
+arise by mutual agreement within the advisory committee or at the request of
+the student (to either the Graduate Coordinator or the Chair of the
+Department).
 
-A supervisor is changed only with the approval of the Department. This may arise by mutual agreement within the advisory committee or at the request of the student (to either the Graduate Coordinator or the Chair of the Department).
+In order to take advantage of the special expertise and facilities available,
+the role of supervisor is not restricted to permanent faculty members of the
+Department. However, supervisors must be Adjunct Professors or Full Professors
+with Faculty of Graduate Studies membership in Oceanography.
 
-In order to take advantage of the special expertise and facilities available, the role of supervisor is not restricted to permanent faculty members of the Department. However, supervisors must be Adjunct Professors or Full Professors with Faculty of Graduate Studies membership in Oceanography.
+In the case where a student has a supervisor who is not a full time faculty
+member in the Department of Oceanography, there must be an internal supervisor
+who is a faculty member in the Department.
 
-In the case where a student has a supervisor who is not a full time faculty member in the Department of Oceanography, there must be an internal supervisor who is a faculty member in the Department.
-A9.4	INTERNAL SUPERVISOR
+%A9.4	INTERNAL SUPERVISOR
+\subsection{Internal supervisor}
 
 The responsibilities of the internal supervisor in part are
-
-•	To advise on academic requirements, course load, waiver of courses, general departmental affairs, etc.
-•	To ensure that the student has suitable office and laboratory space.
-•	In consultation with the student, to select a supervisor and advisory committee appropriate to the student's research interests (In many cases the chair will also be the supervisor).
-•	To ensure that adequate reports and records of committee meetings are kept and submitted to the appropriate departmental files, and that necessary decisions as to the academic program, (e.g.. thesis proposal), are made on an appropriate time-scale.
-•	To assess the progress of the student both in academic work and research.
+\begin{itemize}
+\item To advise on academic requirements, course load, waiver of courses, general departmental affairs, etc.
+\item To ensure that the student has suitable office and laboratory space.
+\item In consultation with the student, to select a supervisor and advisory committee appropriate to the student's research interests (In many cases the chair will also be the supervisor).
+\item To ensure that adequate reports and records of committee meetings are kept and submitted to the appropriate departmental files, and that necessary decisions as to the academic program, (e.g.. thesis proposal), are made on an appropriate time-scale.
+\item To assess the progress of the student both in academic work and research.
+\end {itemize}
  
 
-B.	MSc  PROGRAM REQUIREMENTS
-B1	MSc COURSE REQUIREMENTS
+%B.	MSc  PROGRAM REQUIREMENTS
 
-MSc students must complete a minimum of 5 half-credits at the 5000-level or higher, at least three of which must be chosen from the introductory core courses (refer to section A2.1).
+\section{MSc program requirements}
 
-Any student who anticipates a transfer to the PhD program should complete the course-work and other requirements as listed in the PhD program requirements.
-B2	MSc COMMITTEE STRUCTURE
+% B1	MSc COURSE REQUIREMENTS
 
-The Thesis Advisory Committee must be formed within one month of the start of the student’s program.
+\subsection{MSc course requirements}
 
-The MSc Advisory Committee consists of at least three members. There must be two full-time faculty members from the Oceanography Department (not Adjunct Professors). If a regular faculty member serving on the committee leaves the department, a replacement with another faculty member must be made. One member will be from another sub-discipline, and it is desirable that at least one member of the committee be from outside the Department.
-B3	MSc THESIS PROPOSAL
+MSc students must complete a minimum of 5 half-credits at the 5000-level or
+higher, at least three of which must be chosen from the introductory core
+courses (refer to section A2.1)\fixme{cross link}.
 
-MSc students are expected to produce an approved proposal within one year of enrolling in the program.
+Any student who anticipates a transfer to the PhD program should complete the
+course-work and other requirements as listed in the PhD program requirements.
 
-The thesis proposal should be developed in consultation with the supervisor and advisory committee. The scope of the research should be such that it can be accomplished and the thesis written within one year. Students should consult with their supervisors on the content of a proposal.
+%B2	MSc COMMITTEE STRUCTURE
+\subsection{MSc committee structure}
 
-The Supervisor will notify the Oceanography Office that the proposal requirement has been satisfied and a copy of the approved proposal must be placed on file with the Graduate Secretary. MSc students may be required to defend the research proposal at the discretion of their committee.
+The Thesis Advisory Committee must be formed within one month of the start of
+the student’s program.
 
-Because a large portion of a student’s first year is consumed by course work, the thesis proposal serves primarily as a well-reasoned course of action, and not as an exhaustive literature review nor as a deeply detailed description of methods. Fifteen pages of text should provide ample space.
-B4	MSc THESIS
+The MSc Advisory Committee consists of at least three members. There must be
+two full-time faculty members from the Oceanography Department (not Adjunct
+Professors). If a regular faculty member serving on the committee leaves the
+department, a replacement with another faculty member must be made. One member
+will be from another sub-discipline, and it is desirable that at least one
+member of the committee be from outside the Department.
 
-Graduate students should pay particular attention to the Faculty of Graduate Studies deadlines for submission of a thesis for graduation and fee payment schedules.
+
+%B3	MSc THESIS PROPOSAL
+\subsection{MSc thesis proposal}
+
+MSc students are expected to produce an approved proposal within one year of
+enrolling in the program.
+
+The thesis proposal should be developed in consultation with the supervisor and
+advisory committee. The scope of the research should be such that it can be
+accomplished and the thesis written within one year. Students should consult
+with their supervisors on the content of a proposal.
+
+The Supervisor will notify the Oceanography Office that the proposal
+requirement has been satisfied and a copy of the approved proposal must be
+placed on file with the Graduate Secretary. MSc students may be required to
+defend the research proposal at the discretion of their committee.
+
+Because a large portion of a student’s first year is consumed by course work,
+the thesis proposal serves primarily as a well-reasoned course of action, and
+not as an exhaustive literature review nor as a deeply detailed description of
+methods. Fifteen pages of text should provide ample space.
+
+
+%B4	MSc THESIS
+\subsection{MSc thesis}
+
+Graduate students should pay particular attention to the Faculty of Graduate
+Studies deadlines for submission of a thesis for graduation and fee payment
+schedules.
  
+The examination for the degree of Master of Science is subject to detailed
+regulations of the Faculty of Graduate Studies\footnote{FGS Regulations,
+section 10.3 Master’s Theses \elink{http://dalgrad.dal.ca/regulations/x/ -
+10.3}.}.
 
-The examination for the degree of Master of Science is subject to detailed regulations of the Faculty of Graduate Studies12.
+The MSc thesis should report original research of such value as to merit
+publication and be in a satisfactory and consistent literary form. Faculty of
+Graduate Studies thesis formatting requirements are available on their
+website\footnote{FGS Common Thesis Format Review Comments
+\elink{http://dalgrad.dal.ca/currentstudents/thesesanddefences/formattingcomments/}.}.
 
-The MSc thesis should report original research of such value as to merit publication and be in a satisfactory and consistent literary form. Faculty of Graduate Studies thesis formatting requirements are available on their website13.
 
-The oral defence of the thesis is open to all members of the department and to other interested persons. Notices of the thesis defence, including an abstract, will be distributed to all members of the Oceanography Department and will be posted.
-B4.1	MSc EXAMINING COMMITTEE
+The oral defence of the thesis is open to all members of the department and to
+other interested persons. Notices of the thesis defence, including an abstract,
+will be distributed to all members of the Oceanography Department and will be
+posted.
 
-It is the supervisor’s responsibility to select the examining committee members, following the committee structure guidelines. The defence may NOT proceed in violation of the below composition of the examining committee due to short-term absence of committee members.
+%B4.1	MSc EXAMINING COMMITTEE
+\subsection{MSc examining committee}
+
+It is the supervisor’s responsibility to select the examining committee
+members, following the committee structure guidelines. The defence may NOT
+proceed in violation of the below composition of the examining committee due to
+short-term absence of committee members.
 
 The examining committee will consist of a minimum of 5 members:
--	3 members of the advisory committee
-o	Supervisor(s)
-o	Full-time department faculty member
-o	One other member
--	Departmental Representative/Chair (from outside the committee)*
--	External examiner from outside the advisory committee**
+\begin{itemize}
+\item 3 members of the advisory committee
+\begin{itemize}
+\item Supervisor(s)
+    \item Full-time department faculty member
+    \item One other member
+    \end{itemize}
 
-*The Graduate Secretary will arrange for the Departmental Representative (normally the Graduate Coordinator or a designate). The Chair of the MSc thesis defence is independent of the examining committee. The Departmental Representative normally performs this duty.
+    \item Departmental Representative/Chair (from outside the
+committee)\footnote{The Graduate Secretary will arrange for the Departmental
+Representative (normally the Graduate Coordinator or a designate). The Chair of
+the MSc thesis defence is independent of the examining committee. The
+Departmental Representative normally performs this duty.}
 
-**Adjunct professors may fulfill the requirement of an external examiner.
-B4.2	MSc THESIS DEFENCE TIMELINE
+    \item External examiner from outside the advisory
+committee\footnote{adjunct professors may fulfill the requirement of an
+external examiner.}
 
-Students with immediate commitments subsequent to the defence must anticipate the deadlines, rather than attempting to rush the defence process in a compressed time frame.
+\end{itemize}
 
-Prior to proceeding with scheduling the defence, the thesis (in essentially final form) should be distributed to the supervisor and committee to be reviewed for suitability and final approval.
+
+%B4.2	MSc THESIS DEFENCE TIMELINE
+\subsection{MSc thesis defence timeline}
+
+Students with immediate commitments subsequent to the defence must anticipate
+the deadlines, rather than attempting to rush the defence process in a
+compressed time frame.
+
+Prior to proceeding with scheduling the defence, the thesis (in essentially
+final form) should be distributed to the supervisor and committee to be
+reviewed for suitability and final approval.
 
 Six Weeks Prior to Defence:
--	Have a format review done by FGS before the thesis is distributed to your examining committee
--	Submit an MSc Examination Information Form to the Graduate Secretary
-
-12 FGS Regulations, section 10.3 Master’s Theses \elink{http://dalgrad.dal.ca/regulations/x/ - 10.3}. 13 FGS Common Thesis Format Review Comments \elink{http://dalgrad.dal.ca/currentstudents/thesesanddefences/formattingcomments/}.
- 
-
--	Submit a Thesis Binding Submission Form and payment to the Graduate Secretary
--	Submit an electronic copy of the abstract to the Graduate Secretary
--	Provide copies of the thesis to the supervisor for distribution to the examining committee
+\begin{itemize}
+\item Have a format review done by FGS before the thesis is distributed to your examining committee
+\item Submit an MSc Examination Information Form to the Graduate Secretary
+\item Submit a Thesis Binding Submission Form and payment to the Graduate Secretary
+\item Submit an electronic copy of the abstract to the Graduate Secretary
+\item Provide copies of the thesis to the supervisor for distribution to the examining committee
+\end{itemize}
 
 Four Weeks Prior to Defence:
--	Notify the Graduate Secretary of any Audiovisual requirements
+\begin{itemize}
+\item Notify the Graduate Secretary of any Audiovisual requirements
+\end{itemize}
 
 Two Weeks Prior to Defence:
--	Submit a printed copy of the thesis to the Graduate Secretary
+\begin{itemize}
+\item Submit a printed copy of the thesis to the Graduate Secretary
+\end{itemize}
 
 Following a successful Defence:
--	Have Examining Committee Members sign the signature page
--	Submit required changes to the supervisor within the specified timeframe
--	Have a final format check of the thesis done by FGS
--	Electronically submit the final version of the thesis via DalSpace14
--	Submit original completed forms to FGS (National Library of Canada Form, Title Page of Thesis, Signature page with original signatures, Copyright Page, Ethics Pages (if applicable), Student Contribution to Manuscripts (if applicable)
--	Submit final copies of thesis to the Graduate Secretary for binding (include copies of the signed signature page, and the Copyright Page with original signatures)
--	Complete Exit Survey
-B4.3	MSc THESIS DEFENCE OUTCOME
+
+\begin{itemize}
+\item Have Examining Committee Members sign the signature page
+\item Submit required changes to the supervisor within the specified timeframe
+\item Have a final format check of the thesis done by FGS
+
+\item Electronically submit the final version of the thesis via
+DalSpace\footnote{DalSpace \elink{http://dalspace.library.dal.ca/}.}
+
+
+
+\item Submit original completed forms to FGS (National Library of Canada Form,
+Title Page of Thesis, Signature page with original signatures, Copyright Page,
+Ethics Pages (if applicable), Student Contribution to Manuscripts (if
+applicable)
+
+\item Submit final copies of thesis to the Graduate Secretary for binding
+(include copies of the signed signature page, and the Copyright Page with
+original signatures)
+
+\item Complete Exit Survey
+\end{itemize}
+
+%B4.3	MSc THESIS DEFENCE OUTCOME
+\subsection{MSc thesis defence outcome}
 
 Outcomes: All theses are either approved or not approved. The categories are:
--	Approve as submitted
--	Approved pending corrections and a clear timetable for completion (normally within one month)
--	Rejected but with permission to re-submit a revised thesis for re-examination with a clear timetable for completion (within one year)
--	Rejected outright
+\begin{itemize}
+\item Approve as submitted
+\item Approved pending corrections and a clear timetable for completion (normally within one month)
+\item Rejected but with permission to re-submit a revised thesis for re-examination with a clear timetable for completion (within one year)
+\item Rejected outright
+\end{itemize}
 
-A simple majority determines the outcome, based on all the examiners except the Departmental Representative, who will vote only in the event of a tie.
+A simple majority determines the outcome, based on all the examiners except the
+Departmental Representative, who will vote only in the event of a tie.
 
-Following the defence, the candidate will receive a letter from the Chair of the examining committee indicating the nature of any corrections to be made and the time frame within which they are to be completed. In the event of an unsuccessful defence, an explanation of the negative outcome is provided. A copy of the report will be provided to the Graduate Secretary.
-B5	TRANSFER TO PhD
+Following the defence, the candidate will receive a letter from the Chair of
+the examining committee indicating the nature of any corrections to be made and
+the time frame within which they are to be completed. In the event of an
+unsuccessful defence, an explanation of the negative outcome is provided. A
+copy of the report will be provided to the Graduate Secretary.
 
-Request for transfer to the PhD program should be completed no later than one month prior to the anniversary of the student’s admission date.
+\subsection{Transfer to PhD}
 
+Request for transfer to the PhD program should be completed no later than one
+month prior to the anniversary of the student’s admission date.
 
-
-14 DalSpace \elink{http://dalspace.library.dal.ca/}.
- 
-
-An MSc student may transfer to a PhD program without completing a MSc. Students wishing to transfer should provide a letter to their advisory committee stating the reason for the transfer, and justification that they are qualified for the PhD program. A one-page explanation is sufficient. The student’s Advisory Committee is required to meet, and the committee may recommend advancement to the PhD program. A letter from the supervisor, justifying the advancement of the student to the PhD program, should be submitted to the Graduate Coordinator along with the student’s letter no later than one month prior to the anniversary of the student’s admission date. The Graduate Oversight Committee will then review the request.
+An MSc student may transfer to a PhD program without completing a MSc. Students
+wishing to transfer should provide a letter to their advisory committee stating
+the reason for the transfer, and justification that they are qualified for the
+PhD program. A one-page explanation is sufficient. The student’s \advcom is
+required to meet, and the committee may recommend advancement to the PhD
+program. A letter from the supervisor, justifying the advancement of the
+student to the PhD program, should be submitted to the Graduate Coordinator
+along with the student’s letter no later than one month prior to the
+anniversary of the student’s admission date. The \goc will then review the
+request.
 
 The decision categories for the transfer to the PhD are:
--	Approved
--	Not approved
--	Deferred
+\begin{itemize}
+\item Approved
+\item Not approved
+\item Deferred
+\end{itemize}
 
-Students anticipating this change should take the required core courses in the first year and take the qualifying examinations (see section C3) in the first year following completion of the required core classes.
+Students anticipating this change should take the required core courses in the
+first year and take the qualifying examinations (see section C3)\fixme{cross
+ref} in the first year following completion of the required core classes.
 
-C.	PhD  PROGRAM REQUIREMENTS
-C1	PhD COURSE REQUIREMENTS
+%C.	PhD  PROGRAM REQUIREMENTS
+\section{PhD program requirements}
 
-PhD students must complete a minimum of 6 half-credits at the 5000-level or higher, at least two of which must be chosen from the introductory core courses outside the student’s sub-discipline (refer to section A2.1).
+%C1	PhD COURSE REQUIREMENTS
+\subsection{PhD course requirements}
 
-Courses are to be chosen in consultation with the advisory committee. The various sub-disciplines have individual course requirements, some of which exceed the minimum requirements, as explained below.
-C1.1	BIOLOGICAL OCEANOGRAPHY GUIDELINES
+PhD students must complete a minimum of 6 half-credits at the 5000-level or
+higher, at least two of which must be chosen from the introductory core courses
+outside the student’s sub-discipline (refer to section A2.1)\fixme{cross link}.
+
+Courses are to be chosen in consultation with the advisory committee. The
+various sub-disciplines have individual course requirements, some of which
+exceed the minimum requirements, as explained below.
+
+%C1.1	BIOLOGICAL OCEANOGRAPHY GUIDELINES
+\subsubsection{Biological Oceanography guidelines}
 
 The normal course requirements for a PhD in Biological Oceanography are:
+\begin{itemize}
+\item Core Classes: Biological Oceanography (5140), Chemical Oceanography (5130), and Physical Oceanography (5120)
+\item A minimum of one other half credit drawn from Geological Oceanography (5110) or a suitable Atmospheric Science course
+\item Other Classes, as required by the Advisory Committee
+\end{itemize}
 
-A.	Core Classes: Biological Oceanography (5140), Chemical Oceanography (5130), and Physical Oceanography (5120)
-B.	A minimum of one other half credit drawn from Geological Oceanography (5110) or a suitable Atmospheric Science course
-C.	Other Classes, as required by the Advisory Committee
-C1.2	CHEMICAL OCEANOGRAPHY GUIDELINES
+%C1.2	CHEMICAL OCEANOGRAPHY GUIDELINES
+\subsubsection{Chemical Oceanography guidelines}
 
 The normal course requirements for a PhD in Chemical Oceanography are:
 
-A.	Core Classes: Chemical Oceanography (5130), Geological Oceanography (5110), Physical Oceanography (5120), and Biological Oceanography (5140)
-B.	Advanced Chemical Oceanography (modular) (5290)
- 
+\begin{itemize}
+\item Core Classes: Chemical Oceanography (5130), Geological Oceanography (5110), Physical Oceanography (5120), and Biological Oceanography (5140)
+\item Advanced Chemical Oceanography (modular) (5290)
+\item Other Classes, as required by the Advisory Committee
+\end{itemize}
 
-C.	Other Classes, as required by the Advisory Committee
-C1.3	GEOLOGICAL OCEANOGRAPHY GUIDELINES
+%C1.3	GEOLOGICAL OCEANOGRAPHY GUIDELINES
+\subsubsection{Geological Oceanography guidelines}
 
 The normal course requirements for a PhD in Geological Oceanography are:
 
-A.	Core Classes: Geological Oceanography (5110) and two other Introductory Classes.
-B.	Other Classes, as required by the Advisory Committee
-C1.4	PHYSICAL OCEANOGRAPHY GUIDELINES
+\begin{itemize}
+\item Core Classes: Geological Oceanography (5110) and two other Introductory Classes.
+\item Other Classes, as required by the Advisory Committee
+\end{itemize}
+
+%C1.4	PHYSICAL OCEANOGRAPHY GUIDELINES
+\subsubsection{Physical Oceanography guidelines}
 
 The normal course requirements for a PhD in Physical Oceanography are:
 
-A.	Core Classes: Physical Oceanography (5120) and two other Introductory Classes.
-B.	Advanced Classes: Fluid Dynamics (5311), Time Series Analysis (5210), Ocean Dynamics (5221), Estuary, Coast and Shelf Dynamics (5222).
-C.	Other Classes, as required by the Advisory Committee e.g. Numerical Modelling (5220), Ocean Waves (5223), Introduction to Acoustical Oceanography (5250), Advanced Marine Particles (5293).
-C2	PhD COMMITTEE STRUCTURE
+\begin{itemize}
+\item Core Classes: Physical Oceanography (5120) and two other Introductory Classes.
+\item Advanced Classes: Fluid Dynamics (5311), Time Series Analysis (5210),
+Ocean Dynamics (5221), Estuary, Coast and Shelf Dynamics (5222).
+\item Other Classes, as required by the Advisory Committee e.g. Numerical
+Modelling (5220), Ocean Waves (5223), Introduction to Acoustical Oceanography
+(5250), Advanced Marine Particles (5293).
+\end{itemize}
 
-The Thesis Advisory Committee must be formed by October 1st of the first year of study.
+%C2	PhD COMMITTEE STRUCTURE
+\subsection{PhD committee structure}
 
-The PhD Advisory Committee consists of at least four members. There must be two full-time faculty members from the Oceanography Department (not Adjunct Professors) on the advisory committee. If a regular faculty member serving on the committee leaves the department, a replacement with another faculty member must be made.
+The Thesis Advisory Committee must be formed by October 1st of the first year
+of study.
 
-One member will be from another sub-discipline, and it is desirable that at least one member of the committee be from outside the Department.
-C3	PhD QUALIFYING EXAMINATION
+The PhD Advisory Committee consists of at least four members. There must be two
+full-time faculty members from the Oceanography Department (not Adjunct
+Professors) on the advisory committee. If a regular faculty member serving on
+the committee leaves the department, a replacement with another faculty member
+must be made.
 
-The qualifying exam should be completed between months 9 and 12 of the program.
-Students transferring from the MSc program should take the qualifying examinations within 12 months of their transfer.
+One member will be from another sub-discipline, and it is desirable that at
+least one member of the committee be from outside the Department.
 
-This examination is designed to assess the student's background knowledge, with the primary aim of identifying weaknesses that need to be addressed in order for a student to undertake research at the Ph.D. level in the chosen field. The format varies with sub-discipline. In each case there is an oral component, but in some cases there can also be a written assignment before or after the oral examination.
 
-The Curriculum Committee may grant extensions up to month 15 if the student and supervisor document a compelling conflict, e.g. fieldwork.
+%C3	PhD QUALIFYING EXAMINATION
+\subsection{PhD Qualifying Examination}
+
+The \di{qualifying examination} should be completed between months 9 and 12 of
+the program.  Students transferring from the MSc program should take the
+qualifying examinations within 12 months of their transfer.
+
+This examination is designed to assess the student's background knowledge, with
+the primary aim of identifying weaknesses that need to be addressed in order
+for a student to undertake research at the Ph.D. level in the chosen field. The
+format varies with sub-discipline. In each case there is an oral component, but
+in some cases there can also be a written assignment before or after the oral
+examination.
+
+The \curcom  may grant extensions up to month 15 if the student and supervisor
+document a compelling conflict, e.g. \di{fieldwork}.
  
 
-C3.1	QUALIFYING EXAMINATION COMMITTEE
+%C3.1	QUALIFYING EXAMINATION COMMITTEE
+\subsubsection{Qualifying Examination committee}
 
-The examination committee has at least 4 members, including a faculty member from outside the sub- discipline, and a departmental representative who acts as chair. The Graduate Secretary will arrange for the Departmental Representative (normally the Graduate Coordinator or a designate). The composition of the rest of the examining committee is set by the sub-discipline.
+The examination committee has at least 4 members, including a faculty member
+from outside the sub- discipline, and a departmental representative who acts as
+chair. The Graduate Secretary will arrange for the Departmental Representative
+(normally the Graduate Coordinator or a designate). The composition of the rest
+of the examining committee is set by the sub-discipline.
 
-The topics of the examination are student-specific, and may include items of a general oceanographic nature (tailored to the courses taken) as well as items that are more tightly focused on the sub-discipline and the intended area of research.
-C3.2	FORMAT AND GUIDELINES
-C3.2.1  BIOLOGICAL OCEANOGRAPHY QE GUIDELINES
-The core of the qualification process is an oral examination based on a reading list tailored to the student’s research area. In some cases this may be followed by a written examination. The details and the timing are as follows.
+The topics of the examination are student-specific, and may include items of a
+general oceanographic nature (tailored to the courses taken) as well as items
+that are more tightly focused on the sub-discipline and the intended area of
+research.
+
+%C3.2	FORMAT AND GUIDELINES
+\subsubsection{Format and guidelines}
+
+%C3.2.1  BIOLOGICAL OCEANOGRAPHY QE GUIDELINES
+\subsubsection{Biological Oceanography QE guidelines}
+
+The core of the qualification process is an oral examination based on a reading
+list tailored to the student’s research area. In some cases this may be
+followed by a written examination. The details and the timing are as follows.
 
 1)	The PhD candidate prepares a brief (2-3 page) summary of his or her research interests and sends it to the BO faculty. The student’s summary of research interests guides faculty members in the selection of papers; it will not be used as source material during the exam, and neither the student nor the committee members bring copies of the research summary to the exam.
 
@@ -385,7 +725,10 @@ e.g. in courses or in directed studies.
 -	The candidate is required to take a written examination, at a date determined during the oral examination meeting. This examination will be based on the topics that arose during the oral examination and will not exceed three hours. The committee can then pass the student with no extra conditions, or be informed of weaknesses that should be addressed during the PhD work, e.g. in courses or in directed studies.
 
 9)	The Chair is to report in writing to the Chair of the Curriculum Committee on the outcome of the exam, with copies to candidate and examining committee.
-C3.2.2  CHEMICAL OCEANOGRAPHY QE GUIDELINES
+
+
+%C3.2.2  CHEMICAL OCEANOGRAPHY QE GUIDELINES
+\subsubsection{Chemical Oceanography QE guidelines}
 
 No discipline-specific guidelines – follow general Departmental guidelines
 C3.2.3  GEOLOGICAL OCEANOGRAPHY QE GUIDELINES
@@ -606,5 +949,6 @@ been derived. Prior to submitting any paper in a course, or material for a thesi
 
 19 Policy on Intellectual Honesty \elink{http://www.dal.ca/dept/university_secretariat/academic- integrity.html}.
  
+\printindex
 
 \end{document}
