@@ -10,8 +10,10 @@
 \usepackage{enumitem}
 \usepackage{graphicx}
 \usepackage[normalem]{ulem}
-
+\usepackage[compact]{titlesec}
+\usepackage{tikz}
 \usepackage[plainpages=false,debug]{hyperref} % should be last package
+
 
 \setlist{nosep} % tighten itemized lists
 
@@ -44,7 +46,14 @@
 
 \setlength{\parskip}{0.5ex plus 0.5ex minus 0.25ex}
 
-\usepackage{tikz}
+\titleformat*{\section}{\Large\bfseries}
+\titlespacing*{\section}{0pt}{*0}{0pt}
+\titleformat*{\subsection}{\large\bfseries}
+\titlespacing*{\subsection}{0pt}{*0}{0pt}
+\titleformat*{\subsubsection}{\slshape}
+\titlespacing*{\subsubsection}{0pt}{*0}{0pt}
+\titleformat*{\paragraph}{\large\bfseries}
+%\titleformat*{\subparagraph}{\large\bfseries}
 
 \newcommand{\ExternalLink}{%
     \tikz[x=1.2ex, y=1.2ex, baseline=-0.05ex]{% 
@@ -71,12 +80,19 @@
 \makeindex
 
 \title{Oceanography Graduate Handbook}
+\author{}
 \date{September, 2016}
 
 \begin{document}
 \maketitle
 \newpage
+
+\renewcommand{\baselinestretch}{0.75}\normalsize
+{\small
+\setcounter{tocdepth}{2}
 \tableofcontents
+}
+\renewcommand{\baselinestretch}{1.0}\normalsize
 
 % A.	GENERAL  PROGRAM REQUIREMENTS
 \section{\label{sec:general_program_requirements}General Program Requirements}
