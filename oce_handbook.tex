@@ -37,6 +37,13 @@
 
 \newcommand{\npara}[1]{\noindent\textbf{\thesubsection.#1}} % for numbered paragraphs of appeals section
 
+\setlength{\parindent}{0em}
+% number paragraphs
+\newcommand{\parnum}{\arabic{parcount}}
+\newcounter{parcount}
+%\newcommand\p{\stepcounter{parcount}\leavevmode[\parnum]\hspace{0.2em}\marginpar[\hfill\parnum]{\parnum}}
+\newcommand\p{\stepcounter{parcount}\leavevmode{\small[\parnum]}\hspace{0.2em}}
+\newcommand\cp{\setcounter{parcount}{0}}
 
 \newcommand{\curcom}{\index{Committees!Curriculum}\color{diColor}Curriculum Committee\color{black}\xspace}
 
@@ -44,11 +51,11 @@
 
 \newcommand{\goc}{\index{Committees!Graduate Oversight}\color{diColor}Graduate Oversight Committee\color{black}\xspace}
 
-\setlength{\parskip}{0.5ex plus 0.5ex minus 0.25ex}
+\setlength{\parskip}{0.7ex plus 0.5ex minus 0.2ex}
 
-\titleformat*{\section}{\Large\bfseries}
+\titleformat*{\section}{\large\bfseries}
 \titlespacing*{\section}{0pt}{*0}{0pt}
-\titleformat*{\subsection}{\large\bfseries}
+\titleformat*{\subsection}{\slshape}
 \titlespacing*{\subsection}{0pt}{*0}{0pt}
 \titleformat*{\subsubsection}{\slshape}
 \titlespacing*{\subsubsection}{0pt}{*0}{0pt}
@@ -87,8 +94,8 @@
 \maketitle
 \newpage
 
-\renewcommand{\baselinestretch}{0.75}\normalsize
-{\small
+\renewcommand{\baselinestretch}{0.5}\normalsize
+{\footnotesize
 \setcounter{tocdepth}{2}
 \tableofcontents
 }
@@ -100,19 +107,19 @@
 %A1	REGISTRATION
 \subsection{Registration}
 
-Graduate students must maintain their registration in all three terms until
+\p Graduate students must maintain their registration in all three terms until
 their program is completed, except in cases where a formal \di[leave of
 absence]{Leave of Absence} has been approved by the Faculty of Graduate
 Studies.
 
-Registration consists of:
+\p Registration consists of:
 \begin{enumerate}
     \item REGN 9999
     \item Thesis Code
     \item Courses (if applicable)
 \end{enumerate}
 
-Students who fail to register within the approved deadlines will be considered
+\p Students who fail to register within the approved deadlines will be considered
 to have \di{lapsed registration}. Such students will not be permitted to submit
 a thesis, nor will they receive any services from the University during that
 academic term. Students who allow their registration to lapse will be
@@ -123,17 +130,19 @@ readmission\footnote{FGS Regulations, section 5.2.3: Failure to Register
 %A1.1	REGN 9999
 \subsection{REGN 9999}
 
-Students must register at least one month prior to the beginning of each term.
+\cp
 
-Students must register for the Fee Generating
+\p Students must register at least one month prior to the beginning of each term.
+
+\p Students must register for the Fee Generating
 Course\index{courses!fee-generating} (REGN 9999) in all three terms for the
 duration of their program. If REGN 9999 is not added for each term, graduate
 students are not considered to be registered. Failure to register at least one
 month prior to the beginning of each term will result in non- payment of
 scholarships and stipends.
 
-The \di{Course Registration Number} (\di{CRN}) for each term can be found in
-the Academic Timetable on the Registrar's Office website\footnote{Academic
+\p The \di{Course Registration Number} (\di{CRN}) for each term can be found
+in the Academic Timetable on the Registrar's Office website\footnote{Academic
 Timetable for Oceanography
 \href{https://dalonline.dal.ca/PROD/fysktime.P_DisplaySchedule?s_term=201710,201720&s_subj=OCEA&s_district=100}{\ExternalLink}.}.
 
