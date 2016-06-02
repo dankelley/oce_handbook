@@ -14,6 +14,12 @@
 \usepackage{tikz}
 \usepackage[plainpages=false,debug]{hyperref} % should be last package
 
+\usepackage{fancyhdr}
+
+\fancyfoot{}
+\fancyhead[RO,LE]{\thepage}
+\fancyhead[LO]{\leftmark}
+\fancyhead[RE]{\rightmark}
 
 \setlist{nosep} % tighten itemized lists
 
@@ -33,9 +39,9 @@
 
 
 \newcommand{\di}[2][EMPTY]{\ifthenelse{\equal{#1}{EMPTY}}{\color{diColor}#2\color{black}\index{#2}}{\color{diColor}#2\color{black}\index{#1}}}
-\newcommand{\fixme}[1]{\color{fixmeColor}$<$#1$>$\color{black}\index{$>>>>$FIXME$<<<<$}}
+\newcommand{\fixme}[1]{\color{fixmeColor}$\{$#1$\}$\color{black}\index{$>>>>$FIXME$<<<<$}}
 
-\newcommand{\npara}[1]{\noindent\textbf{\thesubsection.#1}} % for numbered paragraphs of appeals section
+%\newcommand{\npara}[1]{\noindent\textbf{\thesubsection.#1}} % for numbered paragraphs of appeals section
 
 \setlength{\parindent}{0em}
 % number paragraphs
@@ -56,8 +62,8 @@
 \setcounter{secnumdepth}{5}
 \titleformat*{\section}{\large\bfseries}
 \titlespacing*{\section}{0pt}{*0}{0pt}
-\titleformat*{\subsection}{\slshape}
-\titlespacing*{\subsection}{0pt}{*0}{0pt}
+\titleformat*{\subsection}{\bfseries\slshape}
+\titlespacing*{\subsection}{0pt}{1.5ex plus 0.5ex minus 0.2ex}{0pt}
 \titleformat*{\subsubsection}{\slshape}
 \titlespacing*{\subsubsection}{0pt}{*0}{0pt}
 %\titleformat*{\subsubsubsection}{}
@@ -93,6 +99,7 @@
 \author{}
 \date{September, 2016}
 
+\pagestyle{fancy}
 
 \begin{document}
 \maketitle
@@ -839,11 +846,15 @@ anniversary of the student's admission date. The \goc will then review the
 request.
 
 \p The decision categories for the transfer to the PhD are:
-\begin{itemize}
-\item Approved
-\item Not approved
-\item Deferred
-\end{itemize}
+ \begin{itemize}
+     \item Approved
+     \item Not approved
+     \item Deferred
+ \end{itemize}
+%\p The decision categories for the transfer to the PhD are: ``Approved,'' ``Not
+%approved,'' and ``Deferred.''
+% \begin{itemize} \item Approved \item Not approved \item Deferred
+% \end{itemize}
 
 \p Students anticipating this change should take the required core courses in the
 first year and take the qualifying examinations (see
@@ -1437,14 +1448,15 @@ Departmental approval must be given to these applications.
 
 \cp
 
-\p The Faculty of Graduate Studies is developing a policy on Intellectual
-Property, which will be available on the Faculty of Graduate Studies website.
-If students and/or faculty have concerns or doubts about any issue pertaining
-to any part of Section 6, consult with your Chair, Graduate Coordinator, or
-Supervisor, or contact the Faculty of Graduate Studies for advice. If you feel
-uncomfortable with approaching your immediate supervisor, then go to the next
-level and ask to be heard in confidence\footnote{FGS Regulations, section 6.4:
-Policy on Intellectual Property
+\p The Faculty of Graduate Studies is developing\fixme{probably already exists
+-- check into it}  a policy on Intellectual Property, which will be available
+on the Faculty of Graduate Studies website.  If students and/or faculty have
+concerns or doubts about any issue pertaining to any part of Section 6, consult
+with your Chair, Graduate Coordinator, or Supervisor, or contact the Faculty of
+Graduate Studies for advice. If you feel uncomfortable with approaching your
+immediate supervisor, then go to the next level and ask to be heard in
+confidence\footnote{FGS Regulations, section 6.4: Policy on Intellectual
+Property
 \href{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10849&loaduseredits=False}{\ExternalLink}.}.
 
 %\elink{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10849&loaduseredits=False}, section 6.4.}.
@@ -1465,7 +1477,322 @@ read the Policy on Integrity in Scholarly Activity\footnote{FGS Regulations,
 section 6.3: Policy on Integrity in Scholarly Activity
 \href{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10849&loaduseredits=False}{\ExternalLink}.}.
 
-\include{appeals}
+%\include{appeals}
+
+\section{Procedures for Student Academic Appeals}
+%and Governance of the Ad Hoc Appeal Committee}
+
+\subsection{Introduction}
+
+\cp
+
+\p The procedures detailed below will be followed in cases where a student
+wishes to appeal an academic procedure, other than a grade, on the set of
+criteria detailed in section~\ref{sec:basis_for_an_appeal}. (Grade appeals are
+handled by the University's Registrar.)
+
+\p The regulations and procedures given below cover appeals launched by
+both undergraduate and graduate students in the Department of Oceanography at
+Dalhousie University.  
+
+\p These procedures do not apply to labor disputes between an employee
+(be that person a student, post-doc, etc.) and an employer (faculty, staff) in
+regard to working conditions.  Persons wishing to dispute a labor condition
+should consult either the Chair of the Department and/or their union agreement,
+if applicable, or the laws governing labour relations in Nova Scotia and the
+procedures detailed therein. 
+
+\p These regulations do not apply if the cause of the dispute centers
+on discrimination based on gender, race, nationality, sexual orientation,
+gender identity, official language, or disability.  The complainant in such
+cases must contact the Dalhousie Office of Human Rights, Equity \& Harassment
+Prevention for procedures in such cases.  Nor are these regulations applicable
+to cases of sexual harassment, assault, criminality, etc., where Dalhousie
+Security or Law Enforcement should be involved.  
+
+\p There are no appeals on admission decisions, including transfers to
+the PhD program.  
+
+\subsection{\label{sec:basis_for_an_appeal} Basis for an Appeal}
+
+\cp
+
+\p The procedures below apply to the administration of qualifying and
+preliminary examinations, comprehensive examinations, thesis proposal defenses,
+and Master's thesis defenses.  Results (grades) of such examinations cannot be
+appealed as oral portions cannot be regraded.  
+
+\p Appeals related to Doctoral defenses must be directed to Faculty of
+Graduate Studies in the first instance. 
+
+\p Appeals of course examination grades (re-grading) are direct through
+the University Registrar's Office.
+%, and not the Department of Oceanography.
+%Some clarification on the method of reassessment is given below in
+%section~\ref{sec:grade_reassessment}; otherwise the appellant must follow the
+%procedures set by the Registrar. \fixme{should we just leave the rules to the
+%registrar, thus axiomatically avoiding contradiction?}
+ 
+\p The grounds for appeal are limited to the following.  For all these grounds,
+the onus is on the appellant to prove, through factual documentation, that such
+conditions existed. 
+
+\begin{enumerate}
+
+    \item Procedural Unfairness.  (This means that the method used to
+        administer the academic process, e.g., an exam, was unreasonably and
+        inherently stacked against any person attempting the process.  Note:
+        exams and their content, in and of themselves, are not procedurally
+        unfair.  Differences in how an exam is administered between the
+        sub-disciplines in the Department also does not constitute unfairness,
+        as long as the method is applied consistently within that
+        sub-discipline.)
+
+    \item Bias. (This means that the process was conducted in such a way as to
+        disadvantage the particular appellant, relative to other persons
+        undertaking the same process.)
+
+    \item Irregularity in Procedure. (This means that the process did not
+        follow the procedures set in the regulations and guidelines governing
+        the actions of the Department and its faculty.)
+
+    \item Inappropriate or Unfair Expectation(s). This means that the
+        deliverable of the process could not reasonably be expected of a person
+        who undertakes assiduously, genuinely, and accurately the steps leading
+        to completion of that process.) 
+
+
+\end{enumerate}
+
+% ``Procedural Unfairness'' means that the method used to administer the academic
+% process, e.g., an exam, was unreasonably and inherently stacked against any
+% person attempting the process.  Note: exams and their content, in and of
+% themselves, are not procedurally unfair.  Differences in how an exam is
+% administered between the sub-disciplines in the Department also does not
+% constitute unfairness, as long as the method is applied consistently within
+% that sub-discipline.  
+%
+% ``Bias'' means that the process was conducted in such a way as to disadvantage the
+% particular appellant, relative to other persons undertaking the same process.    
+%
+%``Irregularity in procedure'' means that the process did not follow the
+%procedures set in the regulations and guidelines governing the actions of the
+%Department and its faculty.  
+%
+%``Inappropriate or unfair expectation'' means that the deliverable of the
+%process could not reasonably be expected of a person who undertakes
+%assiduously, genuinely, and accurately the steps leading to completion of that
+%process.   
+
+
+\p A written appeal must be submitted to the Chair of the Department of
+Oceanography within 30 days following the event or circumstances being
+appealed. 
+
+\p The appeal submission must include:
+\begin{enumerate}
+
+\item A description of the exact nature of the appeal, including a summary of
+    events and chronology
+
+\item Specific details of the alleged unfairness, bias or irregularity, and any
+    other relevant consideration or information
+
+\item The requested resolution of the appeal, which is limited to a reasonable
+    academic action(s). 
+
+\end{enumerate}
+
+\p The submission of an appeal will engender the following actions by
+the Chair of the Department:
+
+\begin{enumerate}
+
+\item The Chair will contact both the appellant and the person responsible for
+the process being appealed to see if an informal resolution is first possible, and
+
+\item Failing an informal resolution, the Chair will constitute an Ad Hoc
+Appeal Panel for that specific appeal.  The nature of and procedures for that
+Panel are detailed below in section~\ref{sec:the_ad_hoc_appeal_panel}.
+
+\end{enumerate}
+
+\p Decisions of the Ad Hoc Appeal Panel are forwarded to the Chair, who
+will communicate the decision in writing to the appellant.
+
+\p Decisions of the Ad Hoc Appeal Panel are subject to further appeal to
+the Faculty of Science (undergraduates) or the Faculty of Graduate Studies
+(graduate students), or Senate, as regulations in those administrative units
+specify. 
+
+
+\subsection{\label{sec:the_ad_hoc_appeal_panel}The Ad Hoc Appeal Panel}
+
+\cp
+
+\p Decisions on appeals are made by an Ad Hoc Appeal Panel.
+
+\p The Panel does not have fixed membership.  Instead, it will consist
+of three faculty members, chosen on a fixed rotating basis from all the faculty
+in the Department.  The professor(s) responsible for the process being appealed
+will be excluded.  For graduate students, the student's supervisor or
+co-supervisors, or for undergraduates, the student's honors supervisor (if
+applicable) will also be excluded from the list.
+
+\p An appropriate graduate student (for undergraduate appeals) or
+Post-doctoral fellow (for graduate appeals) will constitute the fourth and
+final member of the Panel.  Any student on the Panel will not have a personal
+or academic conflict of interest with respect to the appellant.  For
+undergraduates, the student will be chosen from the graduate students.  For
+graduate students, the student member will be chosen from the Post-doctoral
+Fellows, without conflict of interest.  
+
+\p The Panel will examine the appeal and determine if a \emph{prima
+facie} case exists for the appeal.  (\emph{Prima facie} in this context means
+the appeal document contains sufficient evidence to support the stated claim.)
+If such a case exists, then the Panel will convene a formal Appeal Hearing at
+the first opportunity when all involved, i.e., appellant, the faculty member
+who owns the process, and the Panel members can meet to hear verbal arguments
+on the appeal, but preferably within three weeks of constitution of the Panel.
+If there is no \emph{prima facie} case, the Panel will inform the Chair and the
+appeal will be dismissed at the Departmental level.
+
+\p If a Hearing is convened, the Panel will chose a Chair who will
+control and direct all communication.
+
+\p The Chair of the Panel will make the faculty owner of the process
+aware of the appeal and provide, in a timely manner, a copy of the appeal
+document to the process-owner (faculty member).  
+
+\p Before the Hearing, the process owner will provide the Panel with a
+written rebuttal to the appeal within 5 working days of the appeal being
+received.  (Exceptions will be made to accommodate persons being at sea or
+subject to other serious limitations in availability.)  The Panel will forward
+that rebuttal to the appellant.
+
+
+\subsection{The Appeal Hearing}
+\cp
+
+\p The Hearing will adhere to the following steps:
+
+\begin{enumerate}
+
+\item The Chair of the Panel will direct the flow of the Hearing, making sure
+    both parties are properly heard, and directing questioning;
+
+\item The Chair of the Panel will first invite the appellant to present and
+    explain their case; this will be followed by an invitation to the faculty
+    member owner for a rebuttal;
+
+\item Neither the appellant nor the owner can ask questions during these
+    presentations; however, any Panel member may interrupt the presentation to
+    ask questions;
+
+\item At the end of the presentations, the appellant will be invited to direct
+    questions to the faculty owner for the purpose of seeking clarifications
+    (only); after that is completed, the faculty owner will be invited to do
+    the same;  the Panel members may interrupt these questioning sessions at
+    any time to ask their own questions; the Chair of the panel will ensure
+    that this questioning remains civil and on topic;
+
+\item At the end of the questioning, the Chair of the Panel will ask the
+    appellant and faculty owner to leave and convene an \emph{in-camera}
+    discussion of the presentations and Appeal Document, the Panel will decide
+    on the validity of the appeal and of requested resolution.
+
+\end{enumerate}
+
+\p The Chair of the Panel will communicate, in writing, the decision of
+the Panel within 3 working days (except for serious time conflicts such as
+noted those mentioned at \ref{sec:the_ad_hoc_appeal_panel}.7 above).
+
+\p In an appeal process, the student has the right to representation.
+The student is required to inform the Chair of the Panel, in writing, if s/he
+will have a representative at the appeal, or intends to call witnesses. 
+
+\p Witnesses may be called by either party, but only if those witnesses
+can testify about direct knowledge of the matter.  No character or indirect
+testimony is permitted.  The Panel Chair must be informed 72-hours before a
+Hearing if a witness(es) will be called, along with that person's identity and
+significance to the Hearing.  The Chair of the Panel will then inform the other
+party of the witness(es).  
+
+\p No persons providing solely moral support can be present at a
+Hearing.  A person providing aid to someone with a disability is permitted, as
+is a translator, but such persons cannot testify at a Hearing.
+
+
+\subsection{Supplementary Points}
+
+\cp
+
+\p The Ad Hoc Appeal Panel has no jurisdiction to hear student appeals
+on a matter involving a requested exemption from the application of
+Departmental, Faculty or University regulations or procedures, except when
+irregularities or unfairness in the application thereof is alleged.  This means
+that only procedural issues, and not the merits of the regulations, are subject
+to appeal.
+
+\p The Ad Hoc Appeal Panel may not render decisions counter to
+Departmental, Faculty or University regulations, nor can it make decisions that
+go beyond strictly academic matters, e.g., financial or administrative.  If the
+requested resolution contains such points, these must be ignored and dismissed.   
+
+\p Matters involving allegations of ``failure to supervise'' by a
+graduate student will be referred directly to the Faculty of Graduate Studies
+for resolution.  
+
+
+% \subsection{\label{sec:grade_reassessment}Grade Reassessment (Re-grading)}
+% 
+% \fixme{Earlier, it says we just follow university rules. It seems best to do
+% that, rather than to write something here that could be wrong. I confess I
+% don't really understand the system of the two levels. What I read here is
+% consistent with what I've seen done in the past (e.g. I regraded an exam for
+% Barry Ruddick's class, once).}
+% 
+% \npara{1} A request to re-grade a written exam or test follows the procedures
+% set by the University's Registrar.
+% 
+% \npara{2} A grade cannot be both reassessed via the Registrar's Office and
+% appealed to the Department, under the rules in this document.  A student must
+% choose one procedure or the other, as they are mutually exclusive.  Under
+% normal circumstances a student should ask for a re-grading, unless there is
+% evidence of bias, irregularity, unfairness in the administration of the exam,
+% or inappropriate expectation.   
+% 
+% \npara{3} When the Department receives a re-grading request, the instructor of
+% the course will prepare the following materials:
+% 
+% \begin{enumerate}
+% 
+% \item  A list of at least two independent other professors (including contact
+% information), either within or outside of the University, who are sufficiently
+% knowledgeable of the topic in question, so as to be suitable to re-grade the
+% exam.  (Real and apparent conflicts of interest must be avoided in choosing
+% these re-assessors.) 
+% 
+% \item A copy of the exam in question, along with a template of ``optimal''
+%     answers for each question.
+% 
+% \item Copies of at least one student-completed exam at both the A and B grade
+% levels, fully de-personalized.  
+% 
+% \item A fully de-personalized copy of the completed exam being re-graded.
+% 
+% \end{enumerate}
+% 
+% \npara{4} The above materials will be given to the Chair of the Department who
+% will then contact the re-assessors and forward the materials if they accept the
+% re-grading task.  The re-grading should be complete within two weeks of receipt
+% of the material by the re-assessors.  
+% 
+% \npara{5} Communication of the results of the re-assessment will follow
+% Registrar procedures.   
+% 
+
+
 
 \printindex
 
