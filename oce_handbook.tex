@@ -37,8 +37,20 @@
 
 %\newcommand\edited{\marginpar{\color{red}$\Delta$\color{black}}}
 
+\newcommand{\course}[2][EMPTY]%
+    {\ifthenelse%
+        {\equal{#1}{EMPTY}}%
+        {OCEA #2}%
+        {#1 #2}%
+    }
 
-\newcommand{\di}[2][EMPTY]{\ifthenelse{\equal{#1}{EMPTY}}{\color{diColor}#2\color{black}\index{#2}}{\color{diColor}#2\color{black}\index{#1}}}
+\newcommand{\di}[2][EMPTY]%
+    {\ifthenelse%
+        {\equal{#1}{EMPTY}}%
+        {\color{diColor}#2\color{black}\index{#2}}%
+        {\color{diColor}#2\color{black}\index{#1}}%
+    } 
+
 \newcommand{\fixme}[1]{\color{fixmeColor}$\{$#1$\}$\color{black}\index{$>>>>$FIXME$<<<<$}}
 
 %\newcommand{\npara}[1]{\noindent\textbf{\thesubsection.#1}} % for numbered paragraphs of appeals section
@@ -55,7 +67,9 @@
 
 \newcommand{\advcom}{\index{Committees!Advisory}\color{diColor}Advisory Committee\color{black}\xspace}
 
-\newcommand{\goc}{\index{Committees!Graduate Oversight}\color{diColor}Graduate Oversight Committee\color{black}\xspace}
+\newcommand{\gocom}{\index{Committees!Graduate Oversight}\color{diColor}Graduate Oversight Committee\color{black}\xspace}
+
+\newcommand{\FGS}{\index{Faculty of Graduate Studies (FGS)}FGS}
 
 \setlength{\parskip}{0.7ex plus 0.5ex minus 0.2ex}
 
@@ -110,7 +124,7 @@ published in the Graduate Studies Calendar of Dalhousie University.  As such,
 this document adds further requirements that students must accomplish in order
 to complete a degree program in Oceanography.  Such additional prerequisites
 are permitted by Graduate Studies.  In the event of a real or perceived
-conflict in such stipulations, Graduate Studies (FGS) requirements and rules
+conflict in such stipulations, Graduate Studies (\FGS) requirements and rules
 shall prevail.
 
 \newpage
@@ -130,13 +144,13 @@ document.
 \begin{itemize}
 
     \item ``CRN'' refers to a Course Registration Number. For example, the
-        Physical Oceanography core class, listed as OCEA~5120 in the University
+        Physical Oceanography core class, listed as \course{5120} in the University
         Calendar, has CRN 12070. Consult the Registrar's website\footnote{Registrars website of Oceanography classes \href{https://dalonline.dal.ca/PROD/fysktime.P_DisplaySchedule?s_term=201710,201720&s_subj=OCEA&s_district=100}{\ExternalLink}.}
 
     \item ``External'' \fixme{write a few lines here, with the 3 types
         discussed in the meeting of 20160527}.
 
-    \item ``FGS''  stands for Faculty of Graduate Studies.
+    \item ``\FGS''  stands for Faculty of Graduate Studies.
 
     \item ``NSERC'' stands for Natural Science and Engineering Research
         Council, a funding agency.
@@ -152,125 +166,151 @@ document.
 \p Graduate students must maintain their registration in all three terms of
 each year in their program, except in cases where a formal \di[leave of
 absence]{Leave of Absence} has been approved by the Faculty of Graduate
-Studies.
+Studies. This involves registering for a ``course'' named ``Registration
+Course--Graduate'' (designated \course[REGN]{9999}, and also called a
+``fee-generating course''), as well as either ``Masters Thesis''
+(\course{9000}) or ``PhD thesis'' (\course{9530}); see the
+Registrar's website\footnote{FGS Registration Information website
+\href{http://www.dal.ca/faculty/gradstudies/currentstudents/registration.html}{\ExternalLink}.}
+for more information, including the relevant Course Registration Numbers. It is
+critical to register for these courses in time, since failure to register at
+lease 1 month prior to the beginning of a term will result in non-payment of
+scholarships and stipends.
 
-\fixme{I don't understand what REGN etc even means. I'll just rewrite this
-junk after I ask a student what they do.}
 
-\p Registration consists of
-\begin{enumerate}
-    \item REGN 9999
-    \item Thesis Code
-    \item Courses (if applicable)
-\end{enumerate}
+%\p Registration consists of
+%\begin{enumerate}
+%    \item REGN 9999
+%    \item Thesis Code
+%    \item Courses (if applicable)
+%\end{enumerate}
 
-\p Students who fail to register within the approved deadlines will be considered
-to have \di{lapsed registration}. Such students will not be permitted to submit
-a thesis, nor will they receive any services from the University during that
-academic term. Students who allow their registration to lapse will be
-considered to have withdrawn and will be required to apply for
+\p If \course{REGN~9999} is not added for each term, graduate students are not
+considered to be registered. Failure to register at least one month prior to
+the beginning of each term will result in non-payment of scholarships and
+stipends.
+
+\p Students who fail to register within the approved deadlines will be
+considered to have \di{lapsed registration}. Such students will not be
+permitted to submit a thesis, nor will they receive any services from the
+University during that academic term. Students who allow their registration to
+lapse will be considered to have withdrawn and will be required to apply for
 readmission\footnote{FGS Regulations, section 5.2.3: Failure to Register
 \href{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10848&loaduseredits=False}{\ExternalLink}.}.
 
-%A1.1	REGN 9999
-\subsection{REGN 9999}
+%%A1.1	REGN 9999
+%\subsection{REGN 9999}
+%
+%\cp
+%
+%\p Students must register at least one month prior to the beginning of each term.
+%
+%\p Students must register for the Fee Generating
+%Course\index{courses!fee-generating} (REGN 9999) in all three terms for the
+%duration of their program. If REGN 9999 is not added for each term, graduate
+%students are not considered to be registered. Failure to register at least one
+%month prior to the beginning of each term will result in non- payment of
+%scholarships and stipends.
 
-\cp
-
-\p Students must register at least one month prior to the beginning of each term.
-
-\p Students must register for the Fee Generating
-Course\index{courses!fee-generating} (REGN 9999) in all three terms for the
-duration of their program. If REGN 9999 is not added for each term, graduate
-students are not considered to be registered. Failure to register at least one
-month prior to the beginning of each term will result in non- payment of
-scholarships and stipends.
-
-\p The \di{Course Registration Number} (\di{CRN}) for each term can be found
-in the Academic Timetable on the Registrar's Office website\footnote{Academic
-Timetable for Oceanography
-\href{https://dalonline.dal.ca/PROD/fysktime.P_DisplaySchedule?s_term=201710,201720&s_subj=OCEA&s_district=100}{\ExternalLink}.}.
-
-%A1.2	THESIS CODE
-\subsection{Thesis Code}
-
-\cp
-
-\p Students must register at least one month prior to the beginning of each term.
-
-\p Students must register for the Thesis Code in all three terms for the duration
-of their program. Failure to do so in a term during which formal classes are
-not being taken will result in a blank term on the student's transcript, which
-means that there will be no documentation demonstrating that work was done on
-the thesis.
-
-\p The CRN for each term can be found in the Academic Timetable under the
-Oceanography course listings (MSc – OCEA 9000, PhD – OCEA 9530).
+%%A1.2	THESIS CODE
+%\subsection{Thesis Code}
+%
+%\cp
+%
+%\p Students must register at least one month prior to the beginning of each term.
+%
+%\p Students must register for the Thesis Code in all three terms for the duration
+%of their program. Failure to do so in a term during which formal classes are
+%not being taken will result in a blank term on the student's transcript, which
+%means that there will be no documentation demonstrating that work was done on
+%the thesis.
+%
+%\p The CRN for each term can be found in the Academic Timetable under the
+%Oceanography course listings (MSc – OCEA 9000, PhD – OCEA 9530).
 
 
 
 % A2	COURSES
-\subsection{Courses}
- 
-
-%A2.1	CORE COURSES
-\subsubsection{\label{sec:core_courses}Core courses}
+\subsection{\label{sec:courses}Courses}
 
 \cp
 
-\p Core courses are broadly based, advanced-level courses that are intended to
-help students gain a wide understanding of the major areas of oceanography, and
-they are to be taken outside, as well as within, the student's research area.
-They are offered every year.
+\p In addition to the artificial courses listed in the previous section,
+students take conventional courses, chosen in consultation with their
+supervisors, and pursuant to the requirements set out in
+section~\ref{sec:msc_course_requirements} or
+section~\ref{sec:phd_course_requirements} for MSc and PhD students,
+respectively.
 
-\p Depending on the degree program, students usually take some combination of the
-core courses\index{courses!core}, OCEA 5110, 5120, 5130, and 5140, which cover
-Marine Geology and Geophysics, Physical Oceanography, Chemical Oceanography and
-Biological Oceanography, respectively. One or more of these sometimes may be
-waived with the consent of the thesis advisory committee, if the student has
-sufficient background.
+\p Within the Department of Oceanography, courses are designated as either
+``core'' or ``non-core.'' The core classes are
+Biological Oceanography (\course{5140}),
+Chemical Oceanography (\course{5130}),
+Geological Oceanography (\course{5110}),
+and
+Physical Oceanography (\course{5120}). These 
+are broadly based courses that are intended to
+help students gain a wide understanding of the major areas of oceanography.
+They are offered every year, typically with Physical and Chemical in the 
+September term, to set the stage for Geological and Biological in the January term.
+Note that these courses are cross-listed to 4th year classes at the 
+Undergraduate level, and there are circumstances in which they may be waived
+for Dalhousie students who have taken them at this lower level.\fixme{cite section numbers}
+
+\p The non-core classes tend to be more advanced and specialized. They include
+Fluid Dynamics (\course{5311}),
+Time Series Analysis (\course{5210}),
+Ocean Dynamics (\course{5221}),
+Estuary, Coast and Shelf Dynamics (\course{5222}),
+Numerical Modelling (\course{5220}),
+Ocean Waves (\course{5223}),
+Introduction to Acoustical Oceanography (\course{5250}),
+Advanced Chemical Oceanography (\course{5290}),
+and
+Advanced Marine Particles (\course{5293}).  Not all of these are offered
+every year. Details of offerings are available in the departmental office 
+and at the Registrar's website\footnote{Academic Timetable for Oceanography
+\href{https://dalonline.dal.ca/PROD/fysktime.P_DisplaySchedule?s_term=201710,201720&s_subj=OCEA&s_district=100}{\ExternalLink}.}.
 
 
-%A2.2	COURSE REQUIREMENTS
-\subsubsection{Course requirements}
+\p Students select courses in consultation with their supervisors, with the
+approval of members of their \advcom. Students must register for the 5000 level
+courses (4000 level is for undergraduates only) prior to the registration
+deadline\footnote{Course registration deadlines can be found in the Graduate
+Studies Academic Calendar
+\href{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2677&loaduseredits=False}{\ExternalLink}.}.
 
-\cp
 
 \p A \di{Graduate Student Program Form} must be submitted to the Graduate
-Secretary within one month of the start of your program.
-
-\p Students must submit a \di{Graduate Student Program Update Form} to the
-Graduate Secretary when a decision to make changes to course requirements is
-made\footnote{Graduate Student Program Forms can be downloaded from the FGS
-website
+Secretary within one month of the start of your program.  Students must submit
+a \di{Graduate Student Program Update Form} to the Graduate Secretary when a
+decision to make changes to course requirements is made\footnote{Graduate
+Student Program Forms can be downloaded from the FGS website
 \href{http://www.dal.ca/faculty/gradstudies/currentstudents/forms.html}{\ExternalLink}.}.
 Failure to do so can result in the assessment of additional fees for courses
 not included in your program requirements, or affect the student's ability to
 graduate.
 
-\p In addition to the core classes as described above, there are several
-classes designed to provide students with the tools and background knowledge
-appropriate to their particular area of research. As explained in sections B
-and C, the detailed requirements differ for MSc and PhD and between the
-sub-disciplines of Oceanography. The choice of classes is made by the student
-in consultation with the thesis supervisor, with the approval of the advisory
-committee. Students must register for the 5000 level courses (4000 level is for
-undergraduates only) prior to the registration deadline\footnote{Course
-registration deadlines can be found in the Graduate Studies Academic Calendar
-\href{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2677&loaduseredits=False}{\ExternalLink}.}.
+%\p In addition to the core classes as described above, there are several
+%classes designed to provide students with the tools and background knowledge
+%appropriate to their particular area of research. As explained in sections B
+%and C, the detailed requirements differ for MSc and PhD and between the
+%sub-disciplines of Oceanography. The choice of classes is made by the student
+%in consultation with the thesis supervisor, with the approval of the advisory
+%committee. Students must register for the 5000 level courses (4000 level is for
+%undergraduates only) prior to the registration deadline\footnote{Course
+%registration deadlines can be found in the Graduate Studies Academic Calendar
+%\href{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2677&loaduseredits=False}{\ExternalLink}.}.
 
 %A2.3	GRADING
-\subsubsection{Grading}
-
-\cp
+%\subsubsection{Grading}
 
 \p FGS Regulations\footnote{FGS Regulations, section 7.6: Classes and Grades
 \href{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10850&loaduseredits=False}{\ExternalLink}.}
 stipulate that graduate students must achieve a grade of B- or higher in all
-classes required as part of their degree program.  The grading scheme follows
-the FGS regulations.
-
-\p Upon failure of any course (grade less than B-), a student will be withdrawn
+classes required as part of their degree program. The only grade that can be assigned
+below a B- is an F. Any student who receives an F
+will be withdrawn
 from the Graduate Program and must apply for re-admission. Such a student may
 apply, in writing, to the department for immediate reinstatement\footnote{FGS
 Regulations, section~5.4.1: Readmission of Students
@@ -283,9 +323,9 @@ on the student's official transcript.
 % above was 5.2.6 but now seems to be 5.4
 
 %A2.4	REGISTERING FOR COURSES AT ANOTHER INSTITUTION
-\subsection{Registering for courses at another institution}
+%\subsection{Registering for courses at another institution}
 
-\cp
+%\cp
 
 \p Classes approved by the Department and Faculty of Graduate Studies (after
 examination of class descriptions\fixme{Q: who approves these? I've done that
@@ -319,9 +359,9 @@ approval will not be given retroactively.
 %\end{itemize}
 
 %\p The acceptance of a thesis proposal is a critical step in a student's program.
-\p For the requirements for \di{thesis proposal}s in the MSc and PhD proposals
-see sections~\ref{sec:msc_thesis_proposal} and~\ref{sec:phd_thesis_proposal}
-respectively.
+
+\p See sections~\ref{sec:msc_thesis_proposal} and~\ref{sec:phd_thesis_proposal}
+for requirements in the MSc and PhD programs, respectively.
 
 %A4	SEA TIME
 \subsection{Sea time}
@@ -401,17 +441,16 @@ PhD Qualifying Exam and the PhD Thesis Proposal Defence.
  
 
 %A6	CHANGE IN STATUS
-\subsection{Change in status}
+\subsection{Status}
 
 \cp
 
 \p Any change in status, such as transfer from MSc to PhD (see
 section~\ref{sec:transfer_to_phd}), a leave of absence, and entrance to another
-degree program must be recommended by the advisory committee to the Graduate
-Oversight Committee. Final approval for a change in status will be made by the
-Graduate Oversight Committee, which will meet as required to review these
-requests.  Students should consult the Graduate Secretary regarding the
-required documentation.
+degree program must be recommended by the \advcom to the \gocom.  Final
+approval for a change in status will be made by the \gocom, which will meet as
+required to review these requests.  Students should consult the Graduate
+Secretary regarding the required documentation.
 
 
 %A7	ANNUAL PROGRESS REPORT
@@ -446,23 +485,81 @@ meetings with the Graduate Coordinator.
 \cp
 
 \p Graduate students have a maximum period of time within which to complete their
-graduate program, 4 years for MSc and 6 years for PhD.
-
-\p Extensions may be granted by FGS on the recommendation of the department, along
-with a satisfactory Progress Report\footnote{FGS Regulations, section 7.1:
-Maximum Time for Degree Completion and Extensions
+graduate program, 4 years for MSc and 6 years for PhD.  Extensions may be
+granted by FGS on the recommendation of the department, along with a
+satisfactory Progress Report\footnote{FGS Regulations, section 7.1: Maximum
+Time for Degree Completion and Extensions
 \href{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10850&loaduseredits=False}{\ExternalLink}.}
 Under no circumstances can a student be registered in a program beyond 10 years
 from their initial registration in the program.
 
+\section{Supervision}
 
-%A9	THESIS ADVISORY COMMITTEE
-\subsection{Thesis advisory committee}
+%A9.3	SUPERVISOR
+\subsection{Supervisor}
 
 \cp
 
-\p The Thesis \advcom must be formed within one month of the start of the
-student's program.
+\p The Supervisor provides direct supervision of the student's research and is expected to
+\begin{itemize}
+\item Advise the student on the choice of a research topic, on the possible directions to emphasize during the work, and the point at which it should be concluded.
+\item Supervise the research, as well as the preparation of the proposal, progress reports and thesis.
+\item Ensure that the resources necessary to the thesis project are made available and that any necessary skills are acquired by the student.
+\item Assess the student's progress, evaluating strengths and weaknesses.
+\item Provide current updates of progress to the student's file.
+\item Ensure that the student is funded
+\item Select thesis examining committee members (following the guidelines for composition of the various examining committees).
+\end{itemize}
+
+\p A supervisor is changed only with the approval of the Department. This may
+arise by mutual agreement within the advisory committee or at the request of
+the student (to either the Graduate Coordinator or the Chair of the
+Department).
+
+\p In order to take advantage of the special expertise and facilities available,
+the role of supervisor is not restricted to permanent faculty members of the
+Department. However, supervisors must be Adjunct Professors or Full Professors
+with Faculty of Graduate Studies membership in Oceanography.\fixme{check on the
+rules, probably citing an FGS table}
+
+\p In the case where a student has a supervisor who is not a full time faculty
+member in the Department of Oceanography, there must be an internal supervisor
+who is a faculty member in the Department. The responsibilities of the
+\di{internal supervisor} include:
+
+\begin{itemize}
+
+\item Advising on academic requirements, course load, waiver of courses,
+    general departmental affairs, etc.
+
+\item Ensuring that the student has suitable office and laboratory space.
+
+\item In consultation with the student, selecting a supervisor and advisory
+    committee appropriate to the student's research interests (In many cases
+    the chair will also be the supervisor.)\fixme{who is the chair?}
+
+\item Ensuring that adequate reports and records of committee meetings are kept
+    and submitted to the appropriate departmental files, and that necessary
+    decisions as to the academic program, (e.g. thesis proposal), are made on
+    an appropriate time-scale.
+
+\item Assessing the progress of the student both in academic work and research.
+
+\end {itemize}
+ 
+
+%B.	MSc  PROGRAM REQUIREMENTS
+
+
+
+
+%A9	THESIS ADVISORY COMMITTEE
+\subsection{Advisory committee}
+
+\cp
+
+\p The \advcom must be formed within one month of the start of the student's
+program.
 
 \p The supervisor will select a provisional committee, in
 consultation with the student. A \di{Graduate Student
@@ -493,9 +590,9 @@ particular people as supervisors and of research facilities and funds (noting
 that most research grants are awarded for specific projects).
 
 %A9.1	ADVISORY COMMITTEE MEETINGS
-\subsection{Advisory committee meetings}
-
-\cp
+%\subsection{Advisory committee meetings}
+%
+%\cp
 
 \p There must be no less than two advisory committee meetings held per academic
 year\footnote{FGS Regulations, section 9.3: Supervisory Committees
@@ -526,13 +623,10 @@ committee may request further revision prior to approving a defence.
 \end{itemize}
 
 
-
-
-
-%A9.2	COMMITTEE APPROVAL
-\subsection{Committee approval}
-
-\cp
+% %A9.2	COMMITTEE APPROVAL
+% \subsection{Committee approval}
+% 
+% \cp
 
 \p At several points in a student's program the approval of the advisory committee is essential:
 \begin{itemize}
@@ -546,77 +640,19 @@ committee may request further revision prior to approving a defence.
 \end{itemize}
 
 
-%A9.3	SUPERVISOR
-\subsection{Supervisor}
-
-\cp
-
-\p The Supervisor provides direct supervision of the student's research and is expected to
-\begin{itemize}
-\item Advise the student on the choice of a research topic, on the possible directions to emphasize during the work, and the point at which it should be concluded.
-\item Supervise the research, as well as the preparation of the proposal, progress reports and thesis.
-\item Ensure that the resources necessary to the thesis project are made available and that any necessary skills are acquired by the student.
-\item Assess the student's progress, evaluating strengths and weaknesses.
-\item Provide current updates of progress to the student's file.
-\item Ensure that the student is funded
-\item Select thesis examining committee members (following the guidelines for composition of the various examining committees).
-\end{itemize}
-
-\p A supervisor is changed only with the approval of the Department. This may
-arise by mutual agreement within the advisory committee or at the request of
-the student (to either the Graduate Coordinator or the Chair of the
-Department).
-
-\p In order to take advantage of the special expertise and facilities available,
-the role of supervisor is not restricted to permanent faculty members of the
-Department. However, supervisors must be Adjunct Professors or Full Professors
-with Faculty of Graduate Studies membership in Oceanography.
-
-\p In the case where a student has a supervisor who is not a full time faculty
-member in the Department of Oceanography, there must be an internal supervisor
-who is a faculty member in the Department.
-
-%A9.4	INTERNAL SUPERVISOR
-\subsection{Internal supervisor}
-
-\cp
-
-\p The responsibilities of the internal supervisor in part are
-
-\begin{itemize}
-
-\item To advise on academic requirements, course load, waiver of courses,
-    general departmental affairs, etc.
-
-\item To ensure that the student has suitable office and laboratory space.
-
-\item In consultation with the student, to select a supervisor and advisory
-    committee appropriate to the student's research interests (In many cases
-    the chair will also be the supervisor).
-
-\item To ensure that adequate reports and records of committee meetings are
-    kept and submitted to the appropriate departmental files, and that
-    necessary decisions as to the academic program, (e.g. thesis proposal), are
-    made on an appropriate time-scale.
-
-\item To assess the progress of the student both in academic work and research.
-
-\end {itemize}
- 
-
 %B.	MSc  PROGRAM REQUIREMENTS
 
 \section{\label{sec:msc_program_requirements}MSc program requirements}
 
 % B1	MSc COURSE REQUIREMENTS
 
-\subsection{MSc course requirements}
+\subsection{\label{sec:msc_course_requirements}MSc course requirements}
 
 \cp
 
 \p MSc students must complete a minimum of 5 half-credits at the 5000-level or
 higher, at least three of which must be chosen from the introductory core
-courses (refer to section~\ref{sec:core_courses}).
+courses (refer to section~\ref{sec:courses}).
 
 \p Any student who anticipates a \index{transfer from MSc to PhD} transfer from
 the MSc program to the PhD program should complete the course-work and
@@ -842,7 +878,7 @@ required to meet, and the committee may recommend advancement to the PhD
 program. A letter from the supervisor, justifying the advancement of the
 student to the PhD program, should be submitted to the Graduate Coordinator
 along with the student's letter no later than one month prior to the
-anniversary of the student's admission date. The \goc will then review the
+anniversary of the student's admission date. The \gocom will then review the
 request.
 
 \p The decision categories for the transfer to the PhD are:
@@ -867,13 +903,13 @@ completion of the required core classes.
 \section{\label{sec:phd_program_requirements}PhD program requirements}
 
 %C1	PhD COURSE REQUIREMENTS
-\subsection{PhD course requirements}
+\subsection{\label{sec:phd_course_requirements}PhD course requirements}
 
 \cp
 
 \p PhD students must complete a minimum of 6 half-credits at the 5000-level or
 higher, at least two of which must be chosen from the introductory core courses
-outside the student's sub-discipline (refer to section~\ref{sec:core_courses}).
+outside the student's sub-discipline (refer to section~\ref{sec:courses}).
 
 % above referred to A2.1 originally
 
@@ -925,6 +961,10 @@ Ocean Dynamics (5221), Estuary, Coast and Shelf Dynamics (5222).
 Modelling (5220), Ocean Waves (5223), Introduction to Acoustical Oceanography
 (5250), Advanced Marine Particles (5293).
 \end{itemize}
+
+\fixme{I don't think we really should say 'advanced' vs 'other'. The waves
+class is surely advanced. And time series is much more ``other'' than
+advanced, since it's not tied to oceanography.}
 
 %C2	PhD COMMITTEE STRUCTURE
 %\subsection{PhD committee structure}
