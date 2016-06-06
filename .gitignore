@@ -160,3 +160,5 @@ pythontex-files-*/
 TSWLatexianTemp*
 *.swp
 oce_handbook.pdf
+.Rhistory
+*.pdf
