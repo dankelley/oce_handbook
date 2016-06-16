@@ -2,7 +2,7 @@ multiline <- TRUE
 library(oce)
 mscData <- "
 month,action
-1,form Advisory Committe;submit Graduate Student Program Form
+1,form Advisory Committee;submit Graduate Student Program Form
 6,meet with Advisory Committee
 12.5,meet with Advisory Committee;submit (& possibly defend) Thesis Proposal;submit Annual Progress Report
 18,meet with Advisory Committee
