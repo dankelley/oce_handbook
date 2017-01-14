@@ -1,5 +1,5 @@
-h=oce_handbook
-all: $(h).pdf timeline.out
+what=oce_handbook
+all: $(what).pdf timeline.out
 %.out: %.R
 	R --no-save < $< > $@
 $(what).pdf: $(what).tex
