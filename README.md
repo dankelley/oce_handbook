@@ -1,4 +1,4 @@
-* [meetings](meetings)
+* [meetings](meetings) -- this is where to look to see the progress on revising the various documents relating to the handbook
 
 * [`OceanographyGradHandbook13-14.docx`](OceanographyGradHandbook13-14.docx) original source document
 
