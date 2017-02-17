@@ -1,5 +1,4 @@
-* `meetings` meeting notes
-    - [meetings/20160527](meetings/20160527) first meeting
+* [meetings](meetings)
 
 * [`OceanographyGradHandbook13-14.docx`](OceanographyGradHandbook13-14.docx) original source document
 
