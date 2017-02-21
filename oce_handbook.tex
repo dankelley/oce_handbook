@@ -29,6 +29,10 @@
 
 \definecolor{fixmeColor}{rgb}{0.8,0,0} % hide them as black
 
+\newcommand\QE{Qualifying Examination\index{PhD Qualifying Examination}\xspace}
+\newcommand\qe{QE\index{PhD Qualifying Examination}\xspace}
+
+
 \newcommand\delete[1]{\color{deleteColor}\sout{\textbf{#1}}\color{black}\xspace%
 \marginpar{\color{deleteColor}$\Delta$\color{black}}}
 
@@ -52,6 +56,13 @@
     } 
 
 \newcommand{\fixme}[1]{\color{fixmeColor}$\{$#1$\}$\color{black}\index{$>>>>$FIXME$<<<<$}}
+
+\newcommand{\discuss}[1]{\footnote{\color{fixmeColor}#1\color{black}}\index{$>>>>$DISCUSS$<<<<$}}
+
+% sm = supplemental material
+\newcommand{\sm}[2]{\textbf{\noindent \texttt{#1} (page~\pageref{#2})}}
+
+
 
 %\newcommand{\npara}[1]{\noindent\textbf{\thesubsection.#1}} % for numbered paragraphs of appeals section
 
@@ -450,7 +461,7 @@ seminars regularly must have the specific agreement of their \advcom that this
 requirement is waived and this must be communicated to the departmental office
 in a written memo signed by the supervisor. It is important to note that
 materials presented in these seminars may form part of the questions for the
-\di{PhD Qualifying Exam} (Section~\ref{sec:phd_qualifying_examination})
+\QE (Section~\ref{sec:phd_qualifying_examination})
 and the \di{PhD Thesis Proposal Defence} (Section~\ref{sec:phd_thesis_proposal}).
 
 
@@ -995,6 +1006,8 @@ must be made.
 \p One member will be from another sub-discipline, and it is desirable that at
 least one member of the committee be from outside the Department.
 
+
+\newpage
 
 %C3	PhD QUALIFYING EXAMINATION
 \subsection{\label{sec:phd_qualifying_examination}PhD Qualifying Examination}
@@ -1628,5 +1641,28 @@ for resolution.
 
 \addcontentsline{toc}{section}{Index}
 \printindex
+
+
+\newpage
+\textbf{\large Notes from GOC meeting on 2016-06-12} \label{mn:20160612}
+
+\includegraphics[height=8in]{meetings/20160612/20160612_meeting_notes.jpg}
+
+\newpage
+\textbf{\large Notes from GOC meeting on 2016-06-17} \label{mn:20160617}
+
+\includegraphics[height=8in]{meetings/20160617/20160617_meeting_notes.jpg}
+
+\newpage
+\textbf{\large Notes from GOC meeting on 2016-07-08} \label{mn:20160708}
+
+\includegraphics[height=8in]{meetings/20160708/20160708_meeting_notes.jpg}
+
+\newpage
+\textbf{\large BioOce QE rules, marked up} \label{boqe}
+
+
+%\includegraphics[height=8in]{marked_up_versions/bo_qe_20160708.pdf}
+
 
 \end{document}
