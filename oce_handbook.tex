@@ -28,7 +28,10 @@
 \definecolor{addColor}{rgb}{0.0,0.5,0}
 
 \definecolor{fixmeColor}{rgb}{0.8,0,0} % hide them as black
+\definecolor{voteColor}{rgb}{0.5,0,1} % hide them as black
 
+\newcommand\ie{i.e.\xspace}
+\newcommand\eg{e.g.\xspace}
 \newcommand\QE{Qualifying Examination\index{PhD Qualifying Examination}\xspace}
 \newcommand\qe{QE\index{PhD Qualifying Examination}\xspace}
 
@@ -56,6 +59,8 @@
     } 
 
 \newcommand{\fixme}[1]{\color{fixmeColor}$\{$#1$\}$\color{black}\index{$>>>>$FIXME$<<<<$}}
+
+\newcommand{\vote}[1]{\color{voteColor}$\ll$#1$\gg$\color{black}\marginpar[$\gg$ vote]{$\ll$ vote}\index{$>>>>$VOTE$<<<<$}}
 
 \newcommand{\discuss}[1]{\footnote{\color{fixmeColor}#1\color{black}}\index{$>>>>$DISCUSS$<<<<$}}
 
@@ -671,8 +676,8 @@ committee is essential:
 
     \item Approval of research plan and direction for thesis proposal (see
         sections~\ref{sec:msc_thesis_proposal}
-        and~\ref{sec:phd_thesis_proposal}. \fixme{DK to GOC: my notes suggest
-        deleting this item, but I suggest keeping it. Is that ok?}
+        and~\ref{sec:phd_thesis_proposal}. \vote{DK to GOC: my notes suggest
+        deleting this item, but I suggest keeping it. OK?}
 
     \item Acceptance of a thesis proposal.
 
@@ -737,7 +742,7 @@ proposal!MSc]{thesis proposal} within one year of enrolling in the program.
 \p This document serves primarily as a well-reasoned course of action, and not
 as an exhaustive literature review nor as a deeply detailed description of
 methods. This should be under fifteen pages of text, double-spaced and
-inclusive of diagrams and citations.\fixme{DK to GOC: I made the length more
+inclusive of diagrams and citations.\vote{DK to GOC: I made the length more
 specific. OK?}
 
 \p The \di[thesis proposal!MSc]{proposal} is developed in consultation with the
@@ -952,10 +957,10 @@ advancement to the PhD program.  A letter from the \supervisor, noting the date
 when the \advcom met and justifying the advancement of the student to the PhD
 program, should then be submitted to the \GS for discussion by the \gocom,
 which makes the decision on whether the student can transfer. Once this
-approval is granted, the students must fill in a student update
-form to indicate the change of program.\fixme{DK: I will give a URL for that
-form. Also, I'll check with Lori on whether the students do this, or whether
-she does it after students hand in a paper form}
+approval is granted, the students must fill in a \di{Graduate Student Program
+Update
+Form}\furl{https://www.dal.ca/content/dam/dalhousie/pdf/fgs/currentstudents/Graduate_Student_Program_Update_Form.pdf}
+to indicate the change of program.
 
 %\p The decision categories for the transfer to the PhD are:
 %\begin{itemize}
@@ -984,24 +989,46 @@ the timing here, in my edits. Let's discuss, please.}
 
 \cp
 
-\p PhD students must complete a minimum of 6 half-credits at the 5000-level or
-higher, at least two of which must be chosen from the introductory core courses
-outside the student's sub-discipline (refer to section~\ref{sec:courses}).
+%\p PhD students must complete a minimum of 6 half-credits at the 5000-level or
+%higher, at least two of which must be chosen from the introductory core courses
+%outside the student's sub-discipline (refer to section~\ref{sec:courses}).
+
+
+\p Students must complete at least 12 credit hours at 5000-level or higher of
+OCEA courses (OCEA \course{5000} does not count towards this requirement), 9 of
+which from core courses, \ie OCEA \course{5110}, OCEA \course{5120}, OCEA
+\course{5130}, and OCEA \course{5140}. For students with an MSc from Dalhousie
+Oceanography, core courses taken at MSc level can be waived\fixme{Q for LL: is
+the word ``waive'' correct? And what is the procedure?} for the PhD
+requirement. For students wit an MSc from other departments or institutions:
+core course equivalencies will be assessed on a case-by-case basis\fixme{Q:
+assessed by whom?}). Additional courses may be required to strengthen a
+student’s background.\vote{DK to GOC: I removed ``in basic science'' from AM's
+text, since it doesn't mean much and is incorrect, since the courses are often
+advanced. OK?}.
 
 % above referred to A2.1 originally
 
-\p Courses are to be chosen in consultation with the advisory committee. The
-various sub-disciplines have individual course requirements, some of which
-exceed the minimum requirements, as explained below.
+\p Courses are chosen in consultation with the \advcom. The various
+sub-disciplines have individual course requirements, some of which exceed the
+minimum requirements, as explained below.
 
 %C1.1	BIOLOGICAL OCEANOGRAPHY GUIDELINES
 %\subsubsection{Biological Oceanography guidelines}
 
 \p The normal course requirements for a PhD in Biological Oceanography are:
+
 \begin{itemize}
-\item Core Classes: Biological Oceanography (5140), Chemical Oceanography (5130), and Physical Oceanography (5120)
-\item A minimum of one other half credit drawn from Geological Oceanography (5110) or a suitable Atmospheric Science course
-\item Other Classes, as required by the Advisory Committee
+
+    \item Core Classes: Biological Oceanography (\course{5140}), Chemical
+        Oceanography (\course{5130}), and Physical Oceanography (\course{5120}).
+
+    \item A minimum of one other half-credit class drawn from Geological
+        Oceanography (\course{5110}) or a suitable Atmospheric Science
+        course.\vote{DK to GOC: I propose deleting AtmSci. OK?}
+
+    \item Other classes, as required by the \advcom.
+
 \end{itemize}
 
 %C1.2	CHEMICAL OCEANOGRAPHY GUIDELINES
@@ -1010,9 +1037,16 @@ exceed the minimum requirements, as explained below.
 \p The normal course requirements for a PhD in Chemical Oceanography are:
 
 \begin{itemize}
-\item Core Classes: Chemical Oceanography (5130), Geological Oceanography (5110), Physical Oceanography (5120), and Biological Oceanography (5140)
-\item Advanced Chemical Oceanography (modular) (5290)\fixme{5290 not offered since 2007/9}
-\item Other Classes, as required by the Advisory Committee
+
+    \item Core Classes: Chemical Oceanography (\course{5130}), Geological
+        Oceanography (\course{5110}), Physical Oceanography (\course{5120}),
+        and Biological Oceanography (\course{5140}).
+
+    \item Advanced Chemical Oceanography (modular) (\course{5290}). \fixme{5290
+        not offered since 2007/9}
+
+    \item Other classes, as required by the \advcom.
+
 \end{itemize}
 
 %C1.3	GEOLOGICAL OCEANOGRAPHY GUIDELINES
@@ -1021,8 +1055,11 @@ exceed the minimum requirements, as explained below.
 \p The normal course requirements for a PhD in Geological Oceanography are:
 
 \begin{itemize}
-\item Core Classes: Geological Oceanography (5110) and two other Introductory Classes.
-\item Other Classes, as required by the Advisory Committee
+
+    \item Core Classes: Geological Oceanography (\course{5110}) and two other Core Class.
+
+    \item Other classes, as required by the \advcom.
+
 \end{itemize}
 
 %C1.4	PHYSICAL OCEANOGRAPHY GUIDELINES
@@ -1031,17 +1068,20 @@ exceed the minimum requirements, as explained below.
 \p The normal course requirements for a PhD in Physical Oceanography are:
 
 \begin{itemize}
-\item Core Classes: Physical Oceanography (5120) and two other Introductory Classes.
-\item Advanced Classes: Fluid Dynamics (5311), Time Series Analysis (5210),
-Ocean Dynamics (5221), Estuary, Coast and Shelf Dynamics (5222).
-\item Other Classes, as required by the Advisory Committee e.g. Numerical
-Modelling (5220), Ocean Waves (5223), Introduction to Acoustical Oceanography
-(5250), Advanced Marine Particles (5293).
-\end{itemize}
 
-\fixme{I don't think we really should say 'advanced' vs 'other'. The waves
-class is surely advanced. And time series is much more ``other'' than
-advanced, since it's not tied to oceanography.}
+    \item Core Classes: Physical Oceanography (\course{5120}) and two other
+        Core Class.
+
+    \item Advanced Classes: Fluid Dynamics (\course{5311}), Time Series
+        Analysis (\course{5210}), Ocean Dynamics (\course{5221}), Estuary,
+        Coast and Shelf Dynamics (\course{5222}).
+
+    \item Other Classes, as required by the Advisory Committee e.g. Numerical
+        Modelling (\course{5220}), Ocean Waves (\course{5223}), Introduction to
+        Acoustical Oceanography (\course{5250}), Advanced Marine Particles
+        (\course{5293}).
+
+\end{itemize}
 
 %C2	PhD COMMITTEE STRUCTURE
 \subsection{\label{sec:phd_advisory_committee_structure}PhD committee structure}
