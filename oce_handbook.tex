@@ -32,6 +32,7 @@
 
 \newcommand\ie{i.e.\xspace}
 \newcommand\eg{e.g.\xspace}
+\newcommand\etc{etc.\xspace}
 \newcommand\qe{PhD Qualifying Examination\index{PhD Qualifying Examination}\xspace}
 \newcommand\QE{PhD Qualifying Examination\index{PhD Qualifying Examination}\xspace}
 
@@ -81,23 +82,23 @@
 \newcommand{\furl}[1]{\footnote{\footnotesize{\url{#1}}}}
 
 % Use macros to get indexing, and ensure uniform representation
-\newcommand{\supervisor}{\index{supervisor}supervisor\xspace}
-\newcommand{\curcom}{\index{Committees!Curriculum}Curriculum Committee\xspace}
-\newcommand{\advcom}{\index{Committees!Advisory}Advisory Committee\xspace}
-\newcommand{\gocom}{\index{Committees!Graduate Oversight}Graduate Oversight Committee\xspace}
+\newcommand{\supervisor}{\color{diColor}supervisor\color{black}\index{supervisor}\xspace}
+\newcommand{\curcom}{\color{diColor}Curriculum Committee\color{black}\index{Committees!Curriculum}\xspace}
+\newcommand{\advcom}{\color{diColor}Advisory Committee\color{black}\index{Committees!Advisory}\xspace}
+\newcommand{\gocom}{\color{diColor}Graduate Oversight Committee\color{black}\index{Committees!Graduate Oversight}\xspace}
 %\newcommand{\GC}{\index{Graduate Coordinator}Graduate Coordinator\xspace}
-\newcommand{\GC}{Graduate Coordinator\xspace}
+\newcommand{\GC}{\color{diColor}Graduate Coordinator\color{black}\index{Graduate Coordinator}\xspace}
 %\newcommand{\GS}{\index{Graduate Secretary}Graduate Secretary\xspace}
-\newcommand{\GS}{Graduate Secretary\xspace}
-\newcommand{\formAPR}{\index{forms!Annual Progress Report}Annual Progress Report Form\xspace}
-\newcommand{\formGSP}{\index{forms!Graduate Student Program}Graduate Student Program Form\xspace}
-\newcommand{\formGSPU}{\index{forms!Graduate Student Program}Graduate Student Program Update Form\xspace}
-\newcommand{\formSPRF}{\index{forms!Supplementary Program Report}Supplementary Program Report Form\xspace}
-\newcommand{\formST}{\index{forms!Sea Time}Sea Time Form\xspace}
-\newcommand{\FGS}{\index{Faculty of Graduate Studies (\textsc{fgs})}\textsc{fgs}\xspace}
-\newcommand{\NSERC}{\index{Natural Sciences and Engineering Research Canada (\textsc{nserc})}\textsc{nserc}\xspace}
-\newcommand{\GSIS}{\index{Graduate Student Information System (\textsc{gsis})}\textsc{gsis}\xspace}
-\newcommand{\dalonline}{\index{Dal Online}DalOnline\xspace}
+\newcommand{\GS}{\color{diColor}Graduate Secretary\color{black}\index{Graduate Secretary}\xspace}
+\newcommand{\formAPR}{\index{forms!Annual Progress Report}\color{diColor}Annual Progress Report Form\color{black}\xspace}
+\newcommand{\formGSP}{\index{forms!Graduate Student Program}\color{diColor}Graduate Student Program Form\color{black}\xspace}
+\newcommand{\formGSPU}{\index{forms!Graduate Student Program}\color{diColor}Graduate Student Program Update Form\color{black}\xspace}
+\newcommand{\formSPRF}{\index{forms!Supplementary Program Report}\color{diColor}Supplementary Program Report Form\color{black}\xspace}
+\newcommand{\formST}{\index{forms!Sea Time}\color{diColor}Sea Time Form\color{black}\xspace}
+\newcommand{\FGS}{\index{Faculty of Graduate Studies (\textsc{fgs})}\color{diColor}\textsc{fgs}\color{black}\xspace}
+\newcommand{\NSERC}{\index{Natural Sciences and Engineering Research Canada (\textsc{nserc})}\color{diColor}\textsc{nserc}\color{black}\xspace}
+\newcommand{\GSIS}{\index{Graduate Student Information System (\textsc{gsis})}\textsc{gsis}\color{black}\xspace}
+\newcommand{\dalonline}{\index{Dal Online}\color{diColor}DalOnline\color{black}\xspace}
 
 
 \setlength{\parskip}{0.7ex plus 0.5ex minus 0.2ex}
@@ -1132,7 +1133,7 @@ granted by the CurrComm?}
 
     \item The Candidate prepares a 1 to 3 page\vote{DK: there has been some
         discussion (by BB and DK) of shortening this further, even to just
-        keywords or a few senetences. I propose to put a flag in the document
+        keywords or a few sentences. I propose to put a flag in the document
         to invite discussion. OK?} summary of their general research interests
         and forwards it to their Supervisor for approval.  The summary is
         intended to guide faculty members in compiling a reading list.
@@ -1154,14 +1155,14 @@ granted by the CurrComm?}
         this forwarding.}
 
     \item The \supervisor vets the papers to ensure appropriateness, and then
-        distributes the list to the Candidate and the relevent
+        distributes the list to the Candidate and the relevant
         faculty.\discuss{DK to GOC: we need to discuss whether the \supervisor vets
         the papers, and also who organizes the whole procedure. I could see
         and argument that papers be sent to the \GS for organization, and that
         seems to be the practice in ChemOce. But of course the \GS cannot vet
         papers. And I don't think we can ask the \GC to vet them, either. So
         there is an open question of whether, or how, to decide on
-        apprriateness. In the days of ``old comps'' there was a committee, but
+        appropriateness. In the days of ``old comps'' there was a committee, but
         the work was 5X less in scope since students wrote common exams.}
             
     \item The qualifying exam must be held within 6 weeks of the reading list
@@ -1201,9 +1202,9 @@ granted by the CurrComm?}
         as appropriate.
 
     \item The committee then questions the Candidate about oceanography and
-        topics related to the Candidate’s research interests where the entry
+        topics related to the Candidate's research interests where the entry
         points into questions and discussions are to be based on the reading
-        material that was provided to the Candidate and Candidate’s
+        material that was provided to the Candidate and Candidate's
         presentation. The exam is not about the proposed research.
 
     \item Upon the completion of questioning, the committee meets \emph{in
@@ -1295,9 +1296,10 @@ granted by the CurrComm?}
 
             \item The entire exam should last no longer than 1.5 hours.\vote{DK
                 to GOC: we should use history to guide this.  And a nominal
-                calculation is: 20 min + 10min/examinar*5examiner=2 hours just
-                for one round, without in-camear.  I think stating 2.5 hours
-                for the non-in-camera part is more sensible. OK?}
+                calculation is: 20 min +
+                10min/examiner*5examiner+10min/discussion yields over 2 hours
+                even with just for one round.  I propose we state 2.5 hours for
+                the non-in-camera part . OK?}
 
             \item Keep notes on significant issues during questioning.
 
@@ -1337,7 +1339,7 @@ granted by the CurrComm?}
                 Chair of the Department and the departmental \GC.  The report
                 shall include a written description of the procedure and
                 outcome of the exam and associated recommendations. The report
-                shall be included in the Candidate’s departmental file.
+                shall be included in the Candidate's departmental file.
 
         \end{itemize}
 
@@ -1353,11 +1355,9 @@ granted by the CurrComm?}
 proposal} and examination of the proposal within 20 months of enrolling in the
 graduate program.
 
-\p The advisory committee sets the exact timing.
-
 \p In order to proceed with the \di[thesis proposal!PhD]{proposal}, the student
 will have completed the required first year courses, have a named \supervisor
-and \advcom, and received approval from the supervisor.
+and \advcom, and received approval from the \supervisor.
 
 \p The requirement consists of a written \di[thesis proposal!PhD]{thesis
 proposal} and a public oral defence.  The written proposal will include an
@@ -1369,7 +1369,7 @@ oceanographic issues, as deemed appropriate by the defence committee.
 
 \p The defence is open to attendance by all interested persons, except for the
 in-camera portion in which the decision is made by the examining committee.
-Notices of the thesis proposal defence, including an abstract will be
+Notices of the thesis proposal defence, including an abstract, will be
 distributed to all members of the Oceanography Department and will be posted.
 
 
@@ -1386,14 +1386,16 @@ designate).
 \p The Chair of the PhD proposal defence is independent of the examining
 committee. The Departmental Representative normally performs this duty.
 
-\p Students must make the proposal available in the Department of Oceanography
-office at least 10 working days prior to the oral defence.  The proposal
-typically receives input from the \supervisor or others prior to its
+\p Students must make the \index{thesis proposal} proposal available in the
+Department of Oceanography office at least 10 working days prior to the oral
+defence\vote{DK to GOC: I think we should have a form for this. OK?}  The
+proposal typically receives input from the \supervisor or others prior to its
 submission. Approval from the \advcom is required to proceed with the oral
 defence.
 
 %C4.2	PROPOSAL TIMELINE
 \subsubsection{Proposal timeline}
+
 
 \cp
 
@@ -1438,187 +1440,192 @@ proposal must be placed on file in the Oceanography office.
 
 \cp
 
-\p The PhD thesis should report original research of high caliber carried out by
-the student. It should be of such value as to merit publication and be in
-satisfactory literary form, with clearly presented figures and other supporting
-material. The thesis should be presented first, in draft form, to the
-supervisor who will provide initial comments and approve distribution to the
-rest of the committee. Typically, the writing phase is very intensive, and
-involves working closely with the \supervisor and \advcom. In many cases, the
-student writes journal articles that link closely with the thesis chapters, and
-the Faculty of Graduate Studies has conventions on how this is to be handled.
-As the thesis reaches completion, the advisory committee will meet to discuss
-any final changes to the thesis and sign the PhD Thesis Submission Form; this
-is just one of a series of steps that the student must keep in mind (see
-section~\ref{sec:phd_thesis_defence_timeline}). 
+\p The expectations of a PhD thesis, and the procedures relating to its defence,
+are laid out in \FGS
+documents\furl{https://www.dal.ca/faculty/gradstudies/currentstudents/thesesanddefences.html}.
+In addition, students are expected to give a Departmental Seminar on the thesis
+topic, after successful completion of the thesis examination.
 
-
-%C5.1	PhD EXAMINING COMMITTEE
-\subsubsection{PhD examining committee}
- 
-\cp
-
-\p It is the {\supervisor}'s responsibility to select the examining committee
-members, following the committee structure guidelines.
-
-\p The examining committee will consist of a minimum of 5 members:
-
-\begin{itemize}
-
-\item 3 members of the advisory committee
-
-    \begin{itemize}
-
-        \item Supervisor(s)
-
-        \item Full-time department faculty member
-
-        \item One other member
-
-    \end{itemize}
-
-\item A Departmental Representative, from outside the committee.  The Graduate
-    Secretary will arrange for the Departmental Representative, normally the
-    Graduate Coordinator or a designate.
-
-\item External examiner (from outside the University)
-
-    \item Chair\footnote{The Chair of the PhD thesis defence is independent of
-        the examining committee. The Faculty of Graduate Studies will appoint
-        the Chair.}
-
-\end{itemize}
-
-
-%C5.2	PhD THESIS DEFENCE TIMELINE
-\subsubsection{\label{sec:phd_thesis_defence_timeline}PhD thesis defence timeline}
-
-\cp
-
-\p Students should be aware of the time scales required by FGS and Departmental
-regulations, which stretch over a period of more than eight months before the
-defence.
-
-\p Prior to proceeding with scheduling the defence, the thesis (in essentially
-final form) should be distributed to the \supervisor and committee to be
-reviewed for suitability and final approval.
-
-
-\begin{itemize}
-    \item Twelve weeks prior to defence:
-
-        \begin{itemize}
-
-            \item Submit Request to Arrange an Oral Defence Form, listing 3
-                choices for external examiners along with CV for external
-                examiner of first choice to the \GS.
-
-        \end{itemize}
-
-    \item Six weeks prior to defence:
-
-        \begin{itemize}
-
-            \item Have a format review of the thesis done by FGS before it is
-                distributed to the examining committee
-
-            \item Submit a PhD Thesis Submission From and copy of the thesis
-                for the External Examiner to the \GS 
-
-            \item Submit a PhD Examination Information Form to the Graduate
-                Secretary
-
-            \item Submit a copy of the student's CV to the \GS 
-
-            \item Submit a Thesis Binding Submission Form and payment to the
-                \GS
-
-            \item Submit an electronic copy of the abstract to the Graduate
-                Secretary
-
-            \item Provide copies of the thesis to the \supervisor for
-                distribution to the internal examining committee members
-
-        \end{itemize}
-
-    \item Four weeks prior to defence:
-
-        \begin{itemize}
-
-            \item Notify the \GS of any Audiovisual requirements
-
-        \end{itemize}
-
-    \item Two weeks prior to defence:
-        
-        \begin{itemize}
-
-            \item Submit a printed copy of the thesis to the \GS 
-
-        \end{itemize}
-
-
-    \item Following Defence:
-
-        \begin{itemize}
-
-            \item Have Examining Committee Members sign the signature page
-
-            \item Submit required changes to the thesis within the specified
-                timeframe
-
-            \item Have a final format check done by FGS
-
-            \item Electronically submit the final version of the thesis via
-                DalSpace\footnote{DalSpace
-                \href{http://dalspace.library.dal.ca/}.}.
-
-            \item Submit original completed forms to \FGS (National Library of
-                Canada Form, Title Page of Thesis, Signature page with original
-                signatures, Copyright Page, Ethics Pages (if applicable),
-                Student Contribution to Manuscripts (if applicable)
-
-            \item Submit final copies of thesis to the \GS for binding (include
-                copies of the signed signature page, and the Copyright Page
-                with original signatures)
-
-            \item Complete Exit Survey
-
-        \end{itemize}
-
-\end{itemize}
-
-\p Some of the above deadlines are set by the Oceanography Office. See the FGS
-website for advice on preparing for a Doctoral defence\footnote{FGS Theses and
-Defences
-\href{http://www.dal.ca/faculty/gradstudies/currentstudents/thesesanddefences/defense.html}.}.
-
-
-%C5.3	PhD THESIS DEFENCE OUTCOME
-\subsubsection{PhD thesis defence outcome}
-
-\cp
-
-\p The student opens the examination with a 20-minute presentation of the thesis.
-Other faculty, students and public may be present, and ask questions, but the
-critical decisions are made in private and are the responsibility of the
-examining committee.
-
-\p Following the defence, the candidate will receive a letter from the Faculty of
-Graduate Studies indicating the nature of any corrections to be made and the
-time frame within which they are to be completed.  In the event of an
-unsuccessful defence, an explanation of the negative outcome is provided.  
+% \p The PhD thesis should report original research of high caliber carried out by
+% the student. It should be of such value as to merit publication and be in
+% satisfactory literary form, with clearly presented figures and other supporting
+% material. The thesis should be presented first, in draft form, to the
+% supervisor who will provide initial comments and approve distribution to the
+% rest of the committee. Typically, the writing phase is very intensive, and
+% involves working closely with the \supervisor and \advcom. In many cases, the
+% student writes journal articles that link closely with the thesis chapters, and
+% the Faculty of Graduate Studies has conventions on how this is to be handled.
+% As the thesis reaches completion, the advisory committee will meet to discuss
+% any final changes to the thesis and sign the PhD Thesis Submission Form; this
+% is just one of a series of steps that the student must keep in mind (see
+% section~\ref{sec:phd_thesis_defence_timeline}). 
+% 
+% 
+% %C5.1	PhD EXAMINING COMMITTEE
+% \subsubsection{PhD examining committee}
+%  
+% \cp
+% 
+% \p It is the {\supervisor}'s responsibility to select the examining committee
+% members, following the committee structure guidelines.
+% 
+% \p The examining committee will consist of a minimum of 5 members:
+% 
+% \begin{itemize}
+% 
+% \item 3 members of the advisory committee
+% 
+%     \begin{itemize}
+% 
+%         \item Supervisor(s)
+% 
+%         \item Full-time department faculty member
+% 
+%         \item One other member
+% 
+%     \end{itemize}
+% 
+% \item A Departmental Representative, from outside the committee.  The Graduate
+%     Secretary will arrange for the Departmental Representative, normally the
+%     Graduate Coordinator or a designate.
+% 
+% \item External examiner (from outside the University)
+% 
+%     \item Chair\footnote{The Chair of the PhD thesis defence is independent of
+%         the examining committee. The Faculty of Graduate Studies will appoint
+%         the Chair.}
+% 
+% \end{itemize}
+%
+% %C5.2	PhD THESIS DEFENCE TIMELINE
+% \subsubsection{\label{sec:phd_thesis_defence_timeline}PhD thesis defence timeline}
+% 
+% \cp
+% 
+% \p Students should be aware of the time scales required by FGS and Departmental
+% regulations, which stretch over a period of more than eight months before the
+% defence.
+% 
+% \p Prior to proceeding with scheduling the defence, the thesis (in essentially
+% final form) should be distributed to the \supervisor and committee to be
+% reviewed for suitability and final approval.
+% 
+% 
+% \begin{itemize}
+%     \item Twelve weeks prior to defence:
+% 
+%         \begin{itemize}
+% 
+%             \item Submit Request to Arrange an Oral Defence Form, listing 3
+%                 choices for external examiners along with CV for external
+%                 examiner of first choice to the \GS.
+% 
+%         \end{itemize}
+% 
+%     \item Six weeks prior to defence:
+% 
+%         \begin{itemize}
+% 
+%             \item Have a format review of the thesis done by FGS before it is
+%                 distributed to the examining committee
+% 
+%             \item Submit a PhD Thesis Submission From and copy of the thesis
+%                 for the External Examiner to the \GS 
+% 
+%             \item Submit a PhD Examination Information Form to the Graduate
+%                 Secretary
+% 
+%             \item Submit a copy of the student's CV to the \GS 
+% 
+%             \item Submit a Thesis Binding Submission Form and payment to the
+%                 \GS
+% 
+%             \item Submit an electronic copy of the abstract to the Graduate
+%                 Secretary
+% 
+%             \item Provide copies of the thesis to the \supervisor for
+%                 distribution to the internal examining committee members
+% 
+%         \end{itemize}
+% 
+%     \item Four weeks prior to defence:
+% 
+%         \begin{itemize}
+% 
+%             \item Notify the \GS of any Audiovisual requirements
+% 
+%         \end{itemize}
+% 
+%     \item Two weeks prior to defence:
+%         
+%         \begin{itemize}
+% 
+%             \item Submit a printed copy of the thesis to the \GS 
+% 
+%         \end{itemize}
+% 
+% 
+%     \item Following Defence:
+% 
+%         \begin{itemize}
+% 
+%             \item Have Examining Committee Members sign the signature page
+% 
+%             \item Submit required changes to the thesis within the specified
+%                 timeframe
+% 
+%             \item Have a final format check done by FGS
+% 
+%             \item Electronically submit the final version of the thesis via
+%                 DalSpace\footnote{DalSpace
+%                 \href{http://dalspace.library.dal.ca/}.}.
+% 
+%             \item Submit original completed forms to \FGS (National Library of
+%                 Canada Form, Title Page of Thesis, Signature page with original
+%                 signatures, Copyright Page, Ethics Pages (if applicable),
+%                 Student Contribution to Manuscripts (if applicable)
+% 
+%             \item Submit final copies of thesis to the \GS for binding (include
+%                 copies of the signed signature page, and the Copyright Page
+%                 with original signatures)
+% 
+%             \item Complete Exit Survey
+% 
+%         \end{itemize}
+% 
+% \end{itemize}
+% 
+% \p Some of the above deadlines are set by the Oceanography Office. See the FGS
+% website for advice on preparing for a Doctoral defence\footnote{FGS Theses and
+% Defences
+% \href{http://www.dal.ca/faculty/gradstudies/currentstudents/thesesanddefences/defense.html}.}.
+% 
+% 
+% %C5.3	PhD THESIS DEFENCE OUTCOME
+% \subsubsection{PhD thesis defence outcome}
+% 
+% \cp
+% 
+% \p The student opens the examination with a 20-minute presentation of the thesis.
+% Other faculty, students and public may be present, and ask questions, but the
+% critical decisions are made in private and are the responsibility of the
+% examining committee.
+% 
+% \p Following the defence, the candidate will receive a letter from the Faculty of
+% Graduate Studies indicating the nature of any corrections to be made and the
+% time frame within which they are to be completed.  In the event of an
+% unsuccessful defence, an explanation of the negative outcome is provided.  
 
 %C5.4 PhD SEMINAR PRESENTATION
-\subsubsection{PhD seminar presentation}
-
-\cp
-
-\p A departmental seminar on the thesis should be presented after successful
-completion of the thesis examination.
+% \subsubsection{PhD seminar presentation}
+% 
+% \cp
+% 
+% \p A departmental seminar on the thesis should be presented after successful
+% completion of the thesis examination.
 
 %D.	FINANCIAL  SUPPORT
-\section{Financial  support}
+\section{Financial support}
 
 \cp
 
@@ -1631,17 +1638,18 @@ Foundation} through Dalhousie, by companies, and by other agencies, both
 national and international. Students are encouraged to apply for external
 support whenever possible.
 
-\p Full-time students without such special scholarship support are generally
-awarded Dalhousie Graduate Fellowships from funds that come partly to the
-Department from the University and mainly from individual faculty members'
-research grants.
+\p Full-time students without such special scholarship support are usually
+awarded Dalhousie Graduate Fellowships from funds that come mainly from
+individual faculty members' research grants, with a minor contribution from
+\FGS.
 
-\p Students may also receive extra support by taking on a teaching assistantship,
-or by demonstrating in undergraduate laboratories.
+\p Students may also receive extra support by taking on a teaching
+assistantship, or by demonstrating in undergraduate laboratories.
 
-\p Students should discuss any additional jobs with their advisory committee to
-ensure that the time commitments outside the Department are not excessive, and
-do not interfere with program expectations.
+\p Students should discuss any additional jobs with their \advcom to ensure
+that the time commitments outside the Department are not excessive, and do not
+interfere with program expectations. (The university also imposes limits on
+external commitments.)
 
 
 %D1	FGS CONFERENCE TRAVEL GRANT
@@ -1658,43 +1666,51 @@ date of travel.  Students must be registered in a graduate program at the time
 of application and at the time of the conference. In order to be eligible,
 students must present a poster of paper based on the results of their graduate
 thesis research at a national or international scholarly meeting or conference.
-Departmental approval must be given to these applications.
+Departmental approval must be given to these applications\discuss{DK to LL: do
+we actually approve these?}.
 
 
 %E.	INTELLECTUAL  PROPERTY
-\section{Intellectual  property}
+\section{Intellectual Property and Conflict of Interest}
 
 \cp
 
-\p The Faculty of Graduate Studies is developing\fixme{probably already exists
--- check into it}  a policy on Intellectual Property, which will be available
-on the Faculty of Graduate Studies website.  If students and/or faculty have
-concerns or doubts about any issue pertaining to any part of Section 6, consult
-with your Chair, \GC, or Supervisor, or contact the Faculty of
-Graduate Studies for advice. If you feel uncomfortable with approaching your
-immediate \supervisor, then go to the next level and ask to be heard in
-confidence\footnote{FGS Regulations, section 6.4: Policy on Intellectual
-Property
-\href{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10849}.}.
+\p Section VI of the \FGS
+calendar\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10849}
+lays out guidelines on \di{intellectual property}, \di{conflict of interest},
+\di{intellectual honesty}, \di{plagiarism}, \di{scholarly integrity}, \etc, and
+students are expected to be familiar with and follow these policies.
 
-%\elink{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10849}, section 6.4.}.
-
+% \p \fixme{DK to LL: I think this is handled by FGS rules. Can you find a URL, if so?}
+% The Faculty of Graduate Studies is developing
+% a policy on Intellectual Property, which will be available
+% on the Faculty of Graduate Studies website.  If students and/or faculty have
+% concerns or doubts about any issue pertaining to any part of Section 6, consult
+% with your Chair, \GC, or Supervisor, or contact the Faculty of
+% Graduate Studies for advice. If you feel uncomfortable with approaching your
+% immediate \supervisor, then go to the next level and ask to be heard in
+% confidence\footnote{FGS Regulations, section 6.4: Policy on Intellectual
+% Property
+% \href{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10849}.}.
+% 
+% %\elink{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10849}, section 6.4.}.
+% 
 %E1	ACADEMIC INTEGRITY
-\section{Academic integrity}
-
-\cp
-
-\p Any material submitted by a student at Dalhousie University may be checked
-for originality to confirm that the student has not plagiarized from other
-sources.  \di[plagiarism]{Plagiarism} is a serious academic offence that may
-lead to a failing grade, suspension or expulsion from the University, or even
-the revocation of a degree.  It is essential that there be correct attribution
-of authorities from which facts and opinions have been derived. Prior to
-submitting any paper in a course, or material for a thesis, students should
-read the Policy on Integrity in Scholarly Activity\footnote{FGS Regulations,
-section 6.3: Policy on Integrity in Scholarly Activity
-\href{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10849}.}.
-
+% \section{Academic integrity}
+%
+%\cp
+%
+%\p Any material submitted by a student at Dalhousie University may be checked
+%for originality to confirm that the student has not plagiarized from other
+%sources.  \di[plagiarism]{Plagiarism} is a serious academic offence that may
+%lead to a failing grade, suspension or expulsion from the University, or even
+%the revocation of a degree.  It is essential that there be correct attribution
+%of authorities from which facts and opinions have been derived. Prior to
+%submitting any paper in a course, or material for a thesis, students should
+%read the Policy on Integrity in Scholarly Activity\footnote{FGS Regulations,
+%section 6.3: Policy on Integrity in Scholarly Activity
+%\href{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10849}.}.
+%
 %\include{appeals}
 
 
@@ -1929,7 +1945,7 @@ that rebuttal to the appellant.
 
 \p The Chair of the Panel will communicate, in writing, the decision of the
 Panel within 3 working days (except for serious time conflicts such as noted
-those mentioned at \ref{sec:the_ad_hoc_appeal_panel}.7 above).\fixme{cross ref}
+those mentioned at \ref{sec:the_ad_hoc_appeal_panel}.7 above).
 
 \p In an appeal process, the student has the right to representation.
 The student is required to inform the Chair of the Panel, in writing, if s/he
@@ -1974,22 +1990,24 @@ for resolution.
 
 
 \newpage
-\textbf{\large Notes from GOC meeting on 2016-06-12} \label{mn:20160612}
+\textbf{\large DK notes from GOC meeting on 2016-06-12} \label{mn:20160612}
 
 \includegraphics[height=8in]{meetings/20160612/20160612_meeting_notes.jpg}
 
 \newpage
-\textbf{\large Notes from GOC meeting on 2016-06-17} \label{mn:20160617}
+\textbf{\large DK notes from GOC meeting on 2016-06-17} \label{mn:20160617}
 
 \includegraphics[height=8in]{meetings/20160617/20160617_meeting_notes.jpg}
 
 \newpage
-\textbf{\large Notes from GOC meeting on 2016-07-08} \label{mn:20160708}
+\textbf{\large DK notes from GOC meeting on 2016-07-08} \label{mn:20160708}
 
 \includegraphics[height=8in]{meetings/20160708/20160708_meeting_notes.jpg}
 
 \newpage
-\textbf{\large BioOce QE rules, marked up} \label{boqe}
+\textbf{\large BioOce QE rules, marked up by DK} \label{boqe}
+
+\includegraphics[height=8in]{marked_up_versions/bo_qe_20160708.pdf}
 
 
 %\includegraphics[height=8in]{marked_up_versions/bo_qe_20160708.pdf}
