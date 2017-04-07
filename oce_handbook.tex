@@ -58,12 +58,14 @@
         {#1 #2}%
     }
 
-\newcommand{\di}[2][EMPTY]%
-    {\ifthenelse%
-        {\equal{#1}{EMPTY}}%
-        {\color{diColor}#2\color{black}\index{#2}}%
-        {\color{diColor}#2\color{black}\index{#1}}%
-    } 
+%\newcommand{\di}[2][EMPTY]%
+%    {\ifthenelse%
+%        {\equal{#1}{EMPTY}}%
+%        {\color{diColor}#2\color{black}\index{#2}}%
+%        {\color{diColor}#2\color{black}\index{#1}}%
+%    } 
+
+\newcommand{\di}[1]{#1}
 
 \newcommand{\fixme}[1]{\color{fixmeColor}$\{$#1$\}$\color{black}\index{$>>>>$FIXME$<<<<$}}
 
@@ -97,26 +99,39 @@
     }
 
 % Use macros to get indexing, and ensure uniform representation
-\newcommand{\supervisor}{\color{diColor}supervisor\color{black}\index{supervisor}\xspace}
-\newcommand{\curcom}{\color{diColor}Curriculum Committee\color{black}\index{Committees!Curriculum}\xspace}
-\newcommand{\advcom}{\color{diColor}Advisory Committee\color{black}\index{Committees!Advisory}\xspace}
-\newcommand{\gocom}{\color{diColor}Graduate Oversight Committee\color{black}\index{Committees!Graduate Oversight}\xspace}
+%\newcommand{\supervisor}{\color{diColor}supervisor\color{black}\index{supervisor}\xspace}
+\newcommand{\supervisor}{supervisor\xspace}
+%\newcommand{\curcom}{\color{diColor}Curriculum Committee\color{black}\index{Committees!Curriculum}\xspace}
+\newcommand{\curcom}{Curriculum Committee\xspace}
+%\newcommand{\supcom}{\color{diColor}Supervisory Committee\color{black}\index{Committees!Supervisory}\xspace}
+\newcommand{\supcom}{Supervisory Committee\xspace}
+%\newcommand{\gocom}{\color{diColor}Graduate Oversight Committee\color{black}\index{Committees!Graduate Oversight}\xspace}
+\newcommand{\gocom}{Graduate Oversight Committee\xspace}
 %\newcommand{\GC}{\index{Graduate Coordinator}Graduate Coordinator\xspace}
-\newcommand{\GC}{\color{diColor}Graduate Coordinator\color{black}\index{Graduate Coordinator}\xspace}
+%\newcommand{\GC}{\color{diColor}Graduate Coordinator\color{black}\index{Graduate Coordinator}\xspace}
+\newcommand{\GC}{Graduate Coordinator\xspace}
 %\newcommand{\GS}{\index{Graduate Secretary}Graduate Secretary\xspace}
-\newcommand{\GS}{\color{diColor}Graduate Secretary\color{black}\index{Graduate Secretary}\xspace}
-\newcommand{\formAPR}{\index{forms!Annual Progress Report}\color{diColor}Annual Progress Report Form\color{black}\xspace}
+%\newcommand{\GS}{\color{diColor}Graduate Secretary\color{black}\index{Graduate Secretary}\xspace}
+\newcommand{\GS}{Graduate Secretary\xspace}
+%\newcommand{\formAPR}{\index{forms!Annual Progress Report}\color{diColor}Annual Progress Report Form\color{black}\xspace}
+\newcommand{\formAPR}{Annual Progress Report Form\xspace}
 \newcommand{\formGSP}{\index{forms!Graduate Student Program}\color{diColor}Graduate Student Program Form\color{black}\xspace}
-\newcommand{\formGSPU}{\index{forms!Graduate Student Program}\color{diColor}Graduate Student Program Update Form\color{black}\xspace}
-\newcommand{\formSPRF}{\index{forms!Supplementary Program Report}\color{diColor}Supplementary Program Report Form\color{black}\xspace}
+%\newcommand{\formGSPU}{\index{forms!Graduate Student Program}\color{diColor}Graduate Student Program Update Form\color{black}\xspace}
+\newcommand{\formGSPU}{Graduate Student Program Update Form\xspace}
+%\newcommand{\formSPRF}{\index{forms!Supplementary Program Report}\color{diColor}Supplementary Program Report Form\color{black}\xspace}
+\newcommand{\formSPRF}{Oceanography Supplementary Program Report Form\xspace}
 \newcommand{\formST}{\index{forms!Sea Time}\color{diColor}Sea Time Form\color{black}\xspace}
 %\newcommand{\FGS}{\index{Faculty of Graduate Studies (\textsc{fgs})}\color{diColor}\textsc{fgs}\color{black}\xspace}
-\newcommand{\FGS}{\index{Faculty of Graduate Studies (FGS)}\color{diColor}FGS\color{black}\xspace}
+%\newcommand{\FGS}{\index{Faculty of Graduate Studies (FGS)}\color{diColor}FGS\color{black}\xspace}
+\newcommand{\FGS}{FGS\xspace}
 %\newcommand{\NSERC}{\index{Natural Sciences and Engineering Research Canada (\textsc{nserc})}\color{diColor}\textsc{nserc}\color{black}\xspace}
-\newcommand{\NSERC}{\index{Natural Sciences and Engineering Research Canada (NSERC)}\color{diColor}NSERC\color{black}\xspace}
+%\newcommand{\NSERC}{\index{Natural Sciences and Engineering Research Canada (NSERC)}\color{diColor}NSERC\color{black}\xspace}
+\newcommand{\NSERC}{NSERC\xspace}
 %\newcommand{\GSIS}{\index{Graduate Student Information System (\textsc{gsis})}\textsc{gsis}\color{black}\xspace}
-\newcommand{\GSIS}{\index{Graduate Student Information System (GSIS)}GSIS\color{black}\xspace}
-\newcommand{\dalonline}{\index{Dal Online}\color{diColor}DalOnline\color{black}\xspace}
+%\newcommand{\GSIS}{\index{Graduate Student Information System (GSIS)}GSIS\color{black}\xspace}
+\newcommand{\GSIS}{GSIS\xspace}
+%\newcommand{\dalonline}{\index{Dal Online}\color{diColor}DalOnline\color{black}\xspace}
+\newcommand{\dalonline}{DalOnline\xspace}
 
 
 \setlength{\parskip}{0.7ex plus 0.5ex minus 0.2ex}
@@ -160,7 +175,7 @@
 
 \title{Oceanography Graduate Handbook}
 \author{}
-\date{takes into account Boudreau's comments dated 2017-03-21}
+\date{Takes into account Boudreau's comments dated 2017-03-21, plus GAC/GOC comments during meeting on 2017-04-07}
 
 
 \begin{document}
@@ -172,10 +187,9 @@
 and cannot, reduce the requirements listed in the rules and regulations
 published in the Graduate Studies Calendar of Dalhousie University.  As such,
 this document adds further requirements that students must accomplish in order
-to complete a degree program in Oceanography.  Such additional prerequisites
-are permitted by Graduate Studies.  In the event of a real or perceived
-conflict in such stipulations, Graduate Studies (\FGS) requirements and rules
-shall prevail.
+to complete a degree program in Oceanography.  In the event of a real or
+perceived conflict in such stipulations, Graduate Studies (\FGS) requirements
+and rules shall prevail.
 
 \newpage
 
@@ -193,19 +207,28 @@ shall prevail.
 %\pagestyle{fancy}
 \setcounter{page}{0}
 
-\section{\label{sec:glossary}Glossary of acronyms and terms}
+\section{\label{sec:glossary}Glossary of Terms and Acronyms}
 
 The following list explains some acronyms and special terms used in this
 document.
 
 \begin{itemize}
 
-    \item ``CRN'' refers to a Course Registration Number. For example, the
-        Physical Oceanography core class, listed as \course{5120} in the University
-        Calendar, has CRN 12070. Consult the Academic Calendar\furl{https://dalonline.dal.ca/PROD/fysktime.P_DisplaySchedule?s_term=201710,201720&s_subj=OCEA&s_district=100} for more information.
+    \item ``CRN'' refers to a Course Registration Number; see the Academic
+        Calendar\furl{https://dalonline.dal.ca/PROD/fysktime.P_DisplaySchedule?s_term=201710,201720&s_subj=OCEA&s_district=100}.
 
-    \item \dalonline is the gateway online system (at
-        \url{https://dalonline.dal.ca}) for student-university interaction.
+    \item \dalonline is the gateway online
+        system\furl{https://dalonline.dal.ca} for student-university
+        interaction.
+
+    \item \FGS stands for Faculty of Graduate Studies. In footnotes to this
+        document, ``FGS \S'' refers to as section of the FGS website.
+
+    \item \NSERC stands for Natural Science and Engineering Research Council.
+
+    \item ``Regular professor'' \fixme{fill in some text, with a link to FGS}
+
+    \item ``Adjunct (x)'' \fixme{fill in some text, with a link to FGS}
 
     \item ``External,'' referring to a person, is employed in this document in
         three different contexts:
@@ -219,14 +242,11 @@ document.
                 This person must have FGS status\footnote{\label{footnote:adjunct}\footnotesize{\url{https://www.dal.ca/faculty/gradstudies/faculty/membership/adjuncts.html}}}.
 
             \item For the purposes of an MSc defence, ``external'' refers to a
-                person who has not been a member of the student's advisory
-                committee (at any time).\discuss{Why "at any time"? Has this
-                been a problem in the past? It might cause difficulties if we
-                start assigning provisional supervisory committees (which might
-                be a way we can get things on track early).}  Such a person may
-                be a Department faculty member, a faculty member from another
-                Department, or an Adjunct from outside the University.  This
-                person must have FGS status\cref{footnote:adjunct}.
+                person who has not been a member of the student's \supcom.
+                Such a person may be a Department faculty member, a faculty
+                member from another Department, or an Adjunct from outside the
+                University.  This person must have FGS
+                status\cref{footnote:adjunct}.
 
             \item For the purpose of a PhD examination, an ``External
                 Examiner'' is someone external to the University and
@@ -236,11 +256,6 @@ document.
 
         \end{enumerate}
         
-    \item \FGS stands for Faculty of Graduate Studies. In footnotes to this
-        document, ``FGS \S'' refers to as section of the FGS website.
-
-    \item \NSERC stands for Natural Science and Engineering Research Council.
-
 \end{itemize}
 
 
@@ -250,18 +265,19 @@ document.
 %A1	REGISTRATION
 \subsection{Registration}
 
-\p Graduate students must maintain their registration in all three terms of
-each year in their program, except in cases where a formal \di[leave of
-absence]{Leave of Absence} has been approved by the Faculty of Graduate
-Studies. Registration involves registering for a ``course'' named ``Registration
+\p Graduate students must maintain their registration in all terms of their
+program, except in cases where a formal Leave of Absence has been approved by
+the Faculty of Graduate
+Studies\furl{https://www.dal.ca/faculty/gradstudies/currentstudents/forms.html}.
+Registration involves registering for a ``course'' named ``Registration
 Course--Graduate'' (designated \course[REGN]{9999}, and also called a
 ``fee-generating course''), as well as either ``Masters Thesis''
 (\course{9000}) or ``PhD thesis'' (\course{9530}); see the FGS
 website\footnote{\url{http://www.dal.ca/faculty/gradstudies/currentstudents/registration.html}}.
 for more information, including the relevant Course Registration Numbers. It is
 critical to register for these courses in time, since failure to register at
-least 1 month prior to the beginning of a term will result in delayed payment of
-scholarships and stipends.
+least 1 month prior to the beginning of a term will result in delayed payment
+of scholarships and stipends.
 
 
 %\p Registration consists of
@@ -273,11 +289,6 @@ scholarships and stipends.
 
 %\fixme{DK: somewhere hereabouts, insert the diagram I made of the timeline for
 %MSc and PhD}
-
-\p If \course[REGN]{9999} is not added for each term, graduate students are not
-considered to be registered. Failure to register at least one month prior to
-the beginning of each term will result in non-payment of scholarships and
-stipends.
 
 \p Students who fail to register within the approved deadlines will be
 considered to have \di{lapsed registration}. Such students will not be
@@ -324,61 +335,46 @@ readmission~\cav{5}{Registration Procedures and Regulations}{http://academiccale
 
 \cp
 
-\p In addition to \course[REGN]{9999}, 
-students take conventional courses, chosen in consultation with their
-supervisors, and pursuant to the requirements set out in
-section~\ref{sec:msc_course_requirements} or
+\p In addition to \course[REGN]{9999}, students take conventional courses,
+chosen in consultation with their supervisor(s), and pursuant to the
+requirements set out in section~\ref{sec:msc_course_requirements} or
 section~\ref{sec:phd_course_requirements} for MSc and PhD students,
 respectively.
 
 \p Within the Department of Oceanography, courses are designated as either
-``core'' or ``non-core.'' The \di{core classes} are
-Biological Oceanography (\course{5140}),
-Chemical Oceanography (\course{5130}),
-Geological Oceanography (\course{5110}),
-and
-Physical Oceanography (\course{5120}). These 
-are broadly based courses that are intended to
-help students gain a broad understanding of the major areas of Oceanography.
-They are offered every year, typically with Physical and Chemical in the 
-Fall term, to set the stage for Geological and Biological in the Winter term.
+``core'' or ``non-core.'' The \di{core classes} are Biological Oceanography
+(\course{5140}), Chemical Oceanography (\course{5130}), Geological Oceanography
+(\course{5110}), and Physical Oceanography (\course{5120}). These courses are
+intended to help students gain a broad understanding of the major areas of
+Oceanography.  They are offered every year, typically with Physical and
+Chemical in the Fall term and Geological and Biological in the Winter term.
 Note that these courses are cross-listed to 4th year classes at the
 Undergraduate level, and there are circumstances in which they may be waived
-for Dalhousie students who have taken them at this lower level (see
+for Dalhousie students who have taken them as undergraduates (see
 Section~\ref{sec:msc_course_requirements} for MSc and
 Section~\ref{sec:phd_course_requirements} for PhD).
 
-\p The non-core classes tend to be more advanced and specialized. They include
-Fluid Dynamics (\course{5311}),
-Time Series Analysis (\course{5210}),
-Ocean Dynamics (\course{5221}),
-Estuary, Coast and Shelf Dynamics (\course{5222}),
-Numerical Modelling (\course{5220}),
-Ocean Waves (\course{5223}),
-Introduction to Acoustical Oceanography (\course{5250}),
-Advanced Chemical Oceanography (\course{5290}),
-and
-Advanced Marine Particles (\course{5293}).  Not all of these are offered every
-year. Details of offerings are available online\furl{https://dalonline.dal.ca/PROD/fysktime.P_DisplaySchedule?s_term=201710,201720&s_subj=OCEA&s_district=100}.
+\p The non-core classes tend to be more advanced and specialized.  Not all of
+these are offered every year. Details of offerings are available
+online\furl{https://dalonline.dal.ca/PROD/fysktime.P_DisplaySchedule?s_term=201710,201720&s_subj=OCEA&s_district=100}.
 
 
-\p Students select courses in consultation with their {\supervisor}s, with the
-approval of members of their \advcom. Students must register for the 5000
-stream of any courses that are cross-listed to the 4000 levels (see
-Section~\ref{sec:msc_course_requirements} or \ref{sec:phd_course_requirements}
-for notes on the case in which 4000-level classes were taken previously) prior
-to the registration deadline.  See the Graduate Studies Academic
-Calendar for deadlines\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2677}.
+\p Students must register for the 5xxx stream of any courses that are
+cross-listed to the 4000 levels (see Section~\ref{sec:msc_course_requirements}
+or \ref{sec:phd_course_requirements} for notes on the case in which 4000-level
+classes were taken previously) prior to the registration deadline.  See the
+Graduate Studies Academic Calendar for
+deadlines\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2677}.
 
 
-\p A \formGSP must be submitted to the \GC within one month of the start of
-your program.  Students must submit a \formGSPU to the \GS when a decision to
-make changes to course requirements is made.  Graduate Student Program
-Forms can be downloaded from the FGS
+\p A \formGSP must be submitted to the \GC within one month of the start of the
+program.  Students must submit a \formGSPU to the \GS when a decision to make
+changes to course requirements is made.  Graduate Student Program Forms can be
+downloaded from the FGS
 website\footnote{\label{footnote:fgs_forms}\footnotesize{\url{http://www.dal.ca/faculty/gradstudies/currentstudents/forms.html}}}.
 Failure to submit a \formGSP within the stated timetable can result in the
 assessment of additional fees for courses not included in the program
-requirements, or affect the ability to graduate.
+requirements, and (or) affect the ability to graduate.
 
 %\p In addition to the core classes as described above, there are several
 %classes designed to provide students with the tools and background knowledge
@@ -400,7 +396,7 @@ graduate students must achieve a grade of B- or higher in all
 classes required as part of their degree program \cav{7}{Degree Requirements}{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10850}. The only grade that can be
 assigned below a ``B-'' is an ``F''. Any student who receives an~F will be withdrawn
 from the Graduate Program and must apply for re-admission. Such a student may
-apply, in writing, to the department for immediate reinstatement~\cav{5.4.1}{Reinstatement of Students}{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10848}.
+apply for reinstatement~\cav{5.4.1}{Reinstatement of Students}{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10848}.
 Reinstatement to a program after a failing grade must be supported by the \GC,
 and must be approved in writing by the Faculty of Graduate Studies. If
 readmitted, any subsequent ``F'' will result in a final program dismissal. Any
@@ -413,19 +409,15 @@ official transcript.
 
 %\cp
 
-\p Classes approved by the Department and \FGS (after
-examination of class descriptions\fixme{Q: who approves these? I've done that
-as the professor for my own course. Is that the rule, or the habit?}) can be
-taken at other universities as part of the graduate degree program, provided
-the class is not available at Dalhousie\cav{7.6.6}{Letters of Permission}{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10850}.
+\p Classes approved by the \supcom may be taken at other universities as part
+of the graduate degree program, provided the class is not available at
+Dalhousie\cav{7.6.6}{Letters of
+Permission}{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10850}.
 The Letter of Permission, available at the \FGS
-website\cref{footnote:fgs_forms},
-must be completed and submitted to the \GC in advance. Such approval will not
-be given retroactively.\fixme{NB: need to check with Lori on what we have done
-in the past, and what FGS or the registrar says we must do now.}
+website\cref{footnote:fgs_forms}, must be completed and submitted to the \GC in
+advance. Such approval will not be given retroactively.
 
 
-%A3	THESIS PROPOSAL
 \subsection{Thesis proposal}
 
 \cp
@@ -502,7 +494,7 @@ time available to go to sea may be granted a waiver of the sea-time
 requirement. To apply for a waiver, the student composes a letter to the
 \gocom stating the reason for the request and proposing commensurate
 replacement experience. An accompanying letter supporting the student's request
-must be composed by the \supervisor and signed by the \advcom. The
+must be composed by the \supervisor and signed by the \supcom. The
 decision to grant or deny the request for a sea time waiver is the
 responsibility of the \gocom.
 
@@ -511,9 +503,9 @@ responsibility of the \gocom.
 \subsection{Seminars}
 
 \p Students are required to attend the general \di{departmental
-seminars}\index{seminars} and to attend, and participate in, the specialty
+seminars} and to attend, and participate in, the specialty
 seminars in their field of study, if such exists. Students who are unable to attend
-seminars regularly must have the specific agreement of their \advcom that this
+seminars regularly must have the specific agreement of their \supcom that this
 requirement is waived and this must be communicated to the departmental office
 in a written memo signed by the \supervisor. It is important to note that
 materials presented in these seminars may form part of the questions for the
@@ -531,7 +523,7 @@ and the \di{PhD Thesis Proposal Defence} (Section~\ref{sec:phd_thesis_proposal})
 
 \p Any change in status, such as transfer from MSc to PhD (see
 Section~\ref{sec:transfer_to_phd}), a leave of absence, and entrance to another
-degree program must be recommended by the \advcom to the \gocom.  Final
+degree program must be recommended by the \supcom to the \gocom.  Final
 approval for a change in status will be made by the \gocom, which will meet as
 required to review these requests.  Students should consult the Graduate
 Secretary regarding the required documentation.
@@ -542,14 +534,13 @@ Secretary regarding the required documentation.
 
 \cp
 
-\p According to \FGS regulations, students must submit an \formAPR each year,
-one month prior to the anniversary of their admission date. Failure to submit
-this report will result in delays in registration and funding.  This report is
-submitted by the student through \dalonline, with that system later prompting
-the \supervisor and then the \GC for approval.  The system relies on emails, so
-it can be subject to failure if a message goes missing, so students are advised
-to check the status of these reports on \dalonline after they submit
-them.\fixme{Can students check that? I phoned LL to ask}
+\p According to \FGS regulations, students must submit an \formAPR, one month
+prior to the anniversary of their admission date. Failure to submit this report
+will result in delays in registration and funding.  This report is submitted by
+the student through \dalonline, with that system later prompting the
+\supervisor and then the \GC for approval.  The system relies on emails, so it
+can be subject to failure if a message goes missing, so students are advised to
+check the status of these reports on \dalonline after they submit them.
 
 \p In addition to the above, students must submit a \formSPRF each year. A
 blank version of this document is available from the \GS. This form is a way to
@@ -563,11 +554,21 @@ are advised to keep this up to date.
 
 \p Graduate students have a maximum period of time within which to complete
 their graduate program, 5~years for MSc and 6~years for PhD~\cav{7.1}{Maximum Time for Degree Completion and Extensions}{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10850}.  Extensions may be
-granted by FGS on the recommendation of the Department, along with a
-satisfactory Progress
-Report\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10850}.\fixme{I don't think we should state this ``along with''}
+granted by FGS on the recommendation of the Department.
+
+%, along with a
+%satisfactory Progress
+%Report\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10850}.\fixme{DK:
+%I don't think we should state this ``along with.'' It makes it look as though
+%submitting that document is sufficient. I would prefer to be vague on this; the
+%GOC should probably take each case individually. This is not so common that we
+%would be asking much of the GOC to take on this task.}\fixme{the links here are messed up}
 
 \section{Supervision}
+
+\fixme{the meeting on 2017-04-10 will address this section in the context of the FGS rules}
+
+
 
 %A9.3	SUPERVISOR
 \subsection{Supervisor}
@@ -600,7 +601,7 @@ Report\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewc
 \end{itemize}
 
 \p A \supervisor is changed only with the approval of the Department. This may
-arise by mutual agreement within the advisory committee or at the request of
+arise by mutual agreement within the \supcom or at the request of
 the student (to either the \GC or the Chair of the Department).
 
 \p In order to take advantage of the special expertise and facilities
@@ -619,7 +620,7 @@ responsibilities of a co-supervisor include:
 
 \item Ensuring that the student has suitable office and laboratory space.
 
-\item In consultation with the student and \supervisor, select \advcom
+\item In consultation with the student and \supervisor, select \supcom
     appropriate to the student's research interests.\vote{Is this OK? I altered
         this text; previously it said the co-supervisor would help to pick a
         supervisor, in contradiction to text given above. Plus, do we really
@@ -642,23 +643,23 @@ responsibilities of a co-supervisor include:
 
 
 %A9	THESIS ADVISORY COMMITTEE
-\subsection{\label{sec:advisory_committee_structure}Advisory Committee structure}
+\subsection{\label{sec:supervisory_committee_structure}Supervisory Committee Structure}
 
 \cp
 
-\p Advisory committees are formally sub-committees of the Department appointed
+\p Supervisory committees are formally sub-committees of the Department appointed
 both to provide expert advice to students and to evaluate and report on student
-progress.  Members of \advcom must either hold faculty positions at Dalhousie
-University, or have an adjunct status registered with \FGS.  The \advcom
+progress.  Members of \supcom must either hold faculty positions at Dalhousie
+University, or have an adjunct status registered with \FGS.  The \supcom
 structure differs for MSc and PhD, as explained in
-Sections~\ref{sec:msc_advisory_committee_structure} and
-\ref{sec:phd_advisory_committee_structure}, respectively.
+Sections~\ref{sec:msc_supervisory_committee_structure} and
+\ref{sec:phd_supervisory_committee_structure}, respectively.
 
-\p The \advcom must be formed within one month of the start of the student's
+\p The \supcom must be formed within one month of the start of the student's
 program, and it may be changed through the progress of a student's program.
 The \supervisor chooses committee members, in consultation with the student.
 
-\p Students must inform the department of \advcom structure (and any changes to
+\p Students must inform the department of \supcom structure (and any changes to
 that structure) by filling out a \formGSP and submitting it to the \GS. 
 
 
@@ -674,8 +675,8 @@ that structure) by filling out a \formGSP and submitting it to the \GS.
 %
 %\cp
 
-\subsection{Advisory committee meeting schedule}
-\cp \p There must be no less than two advisory committee meetings held per
+\subsection{Supervisory committee meeting schedule}
+\cp \p There must be no less than two \supcom meetings held per
 academic
 year\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10852},
 but meetings may be more frequent, as required by the student and/or
@@ -685,7 +686,7 @@ meetings are recorded and are filed with the \GS.
 
 \p \fixme{DK to GOC: my notes suggest deleting this paragraph and the itemized
 list below it, but now I think it should be kept.  Do others agree to keep it? DK=yes; BB=yes}
-Following approval of the thesis proposal by the \advcom, the student should
+Following approval of the thesis proposal by the \supcom, the student should
 have several meetings in addition to the regular committee meetings as follows:
 
 \begin{itemize}
@@ -695,12 +696,12 @@ have several meetings in addition to the regular committee meetings as follows:
 \item A final progress meeting at which the committee agrees that sufficient
     research has been conducted, and that thesis writing may proceed.
 
-\item Individual meetings with advisory committee members to receive input on
-    drafts or chapters.
+\item Individual meetings with \supcom members to receive input on drafts or
+    chapters.
 
-\item A meeting at which the advisory committee agrees that the thesis is
-    defensible and that a defence may be scheduled. Alternatively, the advisory
-    committee may request further revision prior to approving a defence.
+\item A meeting at which the \supcom agrees that the thesis is defensible and
+    that a defence may be scheduled. Alternatively, the \supcom may
+    request further revision prior to approving a defence.
 
 \end{itemize}
 
@@ -710,8 +711,8 @@ have several meetings in addition to the regular committee meetings as follows:
 % 
 % \cp
 
-\p At several points in a student's program the approval of the advisory
-committee is essential:
+\p At several points in a student's program the approval of the \supcom is
+essential:
 
 \begin{itemize}
 
@@ -748,7 +749,7 @@ courses, namely \course{5110}, \course{5120}, \course{5130} and \course{5140}.
 (Students who took the core classes at the 4000 level as undergraduates, having
 achieved grades of ``A'' or ``A+'' need not to take them again at the 5000
 level.) In addition to the above, additional courses may be required to
-strengthen a student's background; the \supervisor and \advcom advises on this
+strengthen a student's background; the \supervisor and \supcom advises on this
 matter.
 
 % \p MSc students must complete a minimum of 5 half-credits at the 5000-level or
@@ -760,18 +761,17 @@ the MSc program to the PhD program should complete the course-work and other
 requirements as listed in the PhD program requirements (see
 Section~\ref{sec:phd_program_requirements}).
 
-%B2	MSc COMMITTEE STRUCTURE
-\subsection{\label{sec:msc_advisory_committee_structure}MSc Advisory Committee structure}
+\subsection{\label{sec:msc_supervisory_committee_structure}MSc Supervisory Committee Structure}
 
 \cp
         
-\p As noted in Section~\ref{sec:advisory_committee_structure}, the \advcom must
+\p As noted in Section~\ref{sec:supervisory_committee_structure}, the \supcom must
 be formed within one month of the start of the student's program.  This
 committee consists of at least three members. There must be two full-time
 faculty members (with \FGS status) from the Oceanography Department.  If a
 regular faculty member serving on the committee leaves the Department, reducing
 the number of regular members to below two, then a replacement with another
-regular faculty member must be made. At least one of the members of the \advcom
+regular faculty member must be made. At least one of the members of the \supcom
 should be from a sub-discipline other than the student's own.
 
 
@@ -790,12 +790,12 @@ inclusive of diagrams and citations.\vote{DK to GOC: I made the length more
 specific. OK? DK=yes, BB=yes}
 
 \p The \di[thesis proposal!MSc]{proposal} is developed in consultation with the
-\supervisor and \advcom. The scope of the research should be such that the
+\supervisor and \supcom. The scope of the research should be such that the
 program can be completed within one year.
 
 \p Students may be required to defend their thesis proposals, at the discretion
-of their \advcom.  Such defences normally occur during a meeting of the
-\advcom, unlike in the PhD case, where they are public events.
+of their \supcom.  Such defences normally occur during a meeting of the
+\supcom, unlike in the PhD case, where they are public events.
 
 \p The \supervisor will notify the Oceanography Office that the \di[thesis
 proposal!MSc]{proposal} requirement has been satisfied and a copy of the
@@ -830,7 +830,7 @@ Oceanography Department.
 
 \p It is the {\supervisor}'s responsibility to select the examining committee
 members, according to the guidelines stated below. Note that short-term absence
-of members of the \advcom are not a sufficient reason to schedule a defence in
+of members of the \supcom are not a sufficient reason to schedule a defence in
 violation of these guidelines.\vote{DK: I rewrote some of this because the text
 was a mish-mash, as BB pointed out. Are the few lines before and after this OK?
 DK=yes}
@@ -840,7 +840,7 @@ I'll look up the FGS rules to check that what is written below is OK. I'll also
 add a link to the site where FGS gives those rules.}
 
 \begin{itemize}
-    \item All members of the advisory committee\vote{In the previous version,
+    \item All members of the \supcom\vote{In the previous version,
         and in the handbook for many years, it said "3 members". But BB suggested
         using "All", so I've changed it. OK? DK=yes}
         \begin{itemize}
@@ -852,11 +852,10 @@ add a link to the site where FGS gives those rules.}
     \item Departmental Representative, who chairs the meeting (without asking
         questions or voting on the outcome) and writes a report on the outcome.
         This person must be a regular faculty member, and not a member of the
-        \advcom.  (The \GS consults with the \GC on the selection of the
+        \supcom.  (The \GS consults with the \GC on the selection of the
         Departmental Representative, who is often a member of the \gocom.)
 
-    \item External examiner from outside the advisory
-        committee\footnote{Adjunct professors may fulfill the requirement of an
+    \item External examiner from outside the \supcom\footnote{Adjunct professors may fulfill the requirement of an
         external examiner.}
 
 \end{itemize}
@@ -997,17 +996,15 @@ copy of the report will be provided to the \GS.
 % admission date.
 
 \p An MSc student may transfer to a PhD program without completing a MSc.
-Students wishing to transfer should provide a letter to their advisory
-committee stating the reason for the transfer, and justification that they are
+Students wishing to transfer should provide a letter to their \supcom
+stating the reason for the transfer, and justification that they are
 qualified for the PhD program. A one-page explanation is sufficient. The
-student's \advcom is required to meet, and the \advcom may recommend
+student's \supcom is required to meet, and the \supcom may recommend
 advancement to the PhD program.  A letter from the \supervisor, noting the date
-when the \advcom met and justifying the advancement of the student to the PhD
+when the \supcom met and justifying the advancement of the student to the PhD
 program, should then be submitted to the \GS for discussion by the \gocom,
 which makes the decision on whether the student can transfer. Once this
-approval is granted, the students must fill in a \di{Graduate Student Program
-Update
-Form}\furl{https://www.dal.ca/content/dam/dalhousie/pdf/fgs/currentstudents/Graduate_Student_Program_Update_Form.pdf}
+approval is granted, the students must fill in a \formGSPU\furl{https://www.dal.ca/content/dam/dalhousie/pdf/fgs/currentstudents/Graduate_Student_Program_Update_Form.pdf}
 to indicate the change of program.
 
 %\p The decision categories for the transfer to the PhD are:
@@ -1057,7 +1054,7 @@ advanced. OK? DK=yes, BB=yes}.
 
 % above referred to A2.1 originally
 
-\p Courses are chosen in consultation with the \advcom. The various
+\p Courses are chosen in consultation with the \supcom. The various
 sub-disciplines have individual course requirements, some of which exceed the
 minimum requirements, as explained below.
 
@@ -1075,7 +1072,7 @@ minimum requirements, as explained below.
         Oceanography (\course{5110}) or a suitable Atmospheric Science
         course.\vote{DK to GOC: I propose deleting AtmSci. OK? DK=yes, BB=yes}
 
-    \item Other classes, as required by the \advcom.
+    \item Other classes, as required by the \supcom.
 
 \end{itemize}
 
@@ -1094,7 +1091,7 @@ minimum requirements, as explained below.
         to GOC: 5290 has not offered since 2007/9. I propose deleting this
         item. OK? DK=yes, BB=yes}
 
-    \item Other classes, as required by the \advcom.
+    \item Other classes, as required by the \supcom.
 
 \end{itemize}
 
@@ -1107,7 +1104,7 @@ minimum requirements, as explained below.
 
     \item Core Classes: Geological Oceanography (\course{5110}) and two other Core Class.
 
-    \item Other classes, as required by the \advcom.
+    \item Other classes, as required by the \supcom.
 
 \end{itemize}
 
@@ -1125,7 +1122,7 @@ minimum requirements, as explained below.
         Analysis (\course{5210}), Ocean Dynamics (\course{5221}), Estuary,
         Coast and Shelf Dynamics (\course{5222}).
 
-    \item Other Classes, as required by the \advcom, \eg Numerical
+    \item Other Classes, as required by the \supcom, \eg Numerical
         Modelling (\course{5220}), Ocean Waves (\course{5223}), Introduction to
         Acoustical Oceanography (\course{5250}), Advanced Marine Particles
         (\course{5293}).
@@ -1133,13 +1130,13 @@ minimum requirements, as explained below.
 \end{itemize}
 
 %C2	PhD COMMITTEE STRUCTURE
-\subsection{\label{sec:phd_advisory_committee_structure}PhD committee structure}
+\subsection{\label{sec:phd_supervisory_committee_structure}PhD Supervisory Committee Structure}
 
-\p The \advcom must be formed within the first month of the program.
+\p The \supcom must be formed within the first month of the program.
 
-\p The PhD \advcom consists of at least four members. There must be two
+\p The PhD \supcom consists of at least four members. There must be two
 full-time faculty members from the Oceanography Department (not Adjunct FGS) on
-the \advcom. If a regular faculty member serving on the committee leaves the
+the \supcom. If a regular faculty member serving on the committee leaves the
 department, a replacement with another faculty member must be made.
 
 \p One member will be from another sub-discipline, and it is desirable that at
@@ -1266,7 +1263,7 @@ granted by the CurrComm? BB answers "no"}
 
     \item Upon the completion of questioning, the committee meets \emph{in
         camera} to agree on the exam outcome and recommendations to the
-        Candidate and their \advcom, as appropriate.
+        Candidate and their \supcom, as appropriate.
 
     \item The possible outcomes of the Qualifying Examination are:
 
@@ -1420,7 +1417,7 @@ graduate program.
 
 \p In order to proceed with the \di[thesis proposal!PhD]{proposal}, the student
 will have completed the required first-year courses, have a named \supervisor
-and \advcom, completed a \QE, and received approval from the \supervisor.\fixme{I added the QE part, on advice of BB}
+and \supcom, completed a \QE, and received approval from the \supervisor.\fixme{I added the QE part, on advice of BB}
 
 \p The requirement consists of a written \di[thesis proposal!PhD]{thesis
 proposal} and a public oral defence.  The written proposal will include an
@@ -1441,7 +1438,7 @@ distributed to all members of the Oceanography Department and will be posted.
 
 \cp
 
-\p The examining committee is selected by the \advcom, and consists of members
+\p The examining committee is selected by the \supcom, and consists of members
 from that committee, external members, and a departmental representative. The
 \GS will arrange for the Departmental Representative (normally the \GC or a
 designate).
@@ -1454,7 +1451,7 @@ this duty.
 Department of Oceanography office at least 10 working days prior to the oral
 defence\vote{DK to GOC: I think we should have a form for this. OK? DK=yes,
 BB=yes}  The proposal typically receives input from the \supervisor or others
-prior to its submission. Approval from the \advcom is required to proceed with
+prior to its submission. Approval from the \supcom is required to proceed with
 the oral defence.
 
 %C4.2	PROPOSAL TIMELINE
@@ -1464,7 +1461,7 @@ the oral defence.
 \cp
 
 \p It is the student's responsibility to initiate the proposal process and
-develop the proposal in coordination with the \supervisor and \advcom. Two
+develop the proposal in coordination with the \supervisor and \supcom. Two
 terms are more than adequate to complete this requirement. The scheduling of
 the proposal defence should be planned well in advance so that it can be
 carried out prior to the 20th month of the program.
@@ -1516,7 +1513,7 @@ topic, after successful completion of the thesis examination.
 % material. The thesis should be presented first, in draft form, to the
 % supervisor who will provide initial comments and approve distribution to the
 % rest of the committee. Typically, the writing phase is very intensive, and
-% involves working closely with the \supervisor and \advcom. In many cases, the
+% involves working closely with the \supervisor and \supcom. In many cases, the
 % student writes journal articles that link closely with the thesis chapters, and
 % the Faculty of Graduate Studies has conventions on how this is to be handled.
 % As the thesis reaches completion, the advisory committee will meet to discuss
@@ -1711,7 +1708,7 @@ possible\vote{BB suggested this change. OK? DK=yes, BB=yes} contribution from
 \p Students may also receive extra support by taking on a teaching
 assistantship, or by demonstrating in undergraduate laboratories.
 
-\p Students should discuss any additional employment with their \advcom to
+\p Students should discuss any additional employment with their \supcom to
 ensure that the time commitments outside the Department are not excessive, and
 do not interfere with program expectations. (The university also imposes limits
 on external commitments.)
