@@ -1,5 +1,6 @@
 TEX=$(wildcard *.tex)
-what=oce_handbook_20170329
+what=oce_handbook
+#what=oce_handbook_20170329
 all: $(what).pdf timeline.out
 %.out: %.R
 	R --no-save < $< > $@

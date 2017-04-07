@@ -1,3 +1,4 @@
+%% Some items may need adjustment from time to time; search for ``FIXME'' in this document.
 \documentclass[12pt]{article}
 \usepackage{fullpage}
 %\usepackage{mathptmx}
@@ -13,6 +14,12 @@
 \usepackage{titlesec}
 \usepackage{tikz}
 \usepackage[plainpages=false,debug]{hyperref} % should be last package
+
+% Next two lines let us use \cref{} for footnote cross references
+% http://tex.stackexchange.com/questions/10102/multiple-references-to-the-same-footnote-with-hyperref-support-is-there-a-bett
+\usepackage{cleveref}
+\crefformat{footnote}{#2\footnotemark[#1]#3}
+
 
 %\usepackage{fancyhdr}
 %
@@ -79,6 +86,9 @@
 \newcommand\p{\stepcounter{parcount}\leavevmode{\raisebox{0.2ex}{\scriptsize[\parnum]}}\hspace{0.2em}}
 \newcommand\cp{\setcounter{parcount}{0}}
 
+% cav = chapter and verse. arg1=section number (roman); arg2=section name; arg3=url
+\newcommand{\cav}[3]{(FGS \S#1 \textsl{#2}\footnote{\footnotesize{\url{#3}}})}
+
 \newcommand{\furl}[2][EMPTY]%
     {\ifthenelse%
         {\equal{#1}{EMPTY}}%
@@ -100,8 +110,11 @@
 \newcommand{\formGSPU}{\index{forms!Graduate Student Program}\color{diColor}Graduate Student Program Update Form\color{black}\xspace}
 \newcommand{\formSPRF}{\index{forms!Supplementary Program Report}\color{diColor}Supplementary Program Report Form\color{black}\xspace}
 \newcommand{\formST}{\index{forms!Sea Time}\color{diColor}Sea Time Form\color{black}\xspace}
+%\newcommand{\FGS}{\index{Faculty of Graduate Studies (\textsc{fgs})}\color{diColor}\textsc{fgs}\color{black}\xspace}
 \newcommand{\FGS}{\index{Faculty of Graduate Studies (FGS)}\color{diColor}FGS\color{black}\xspace}
-\newcommand{\NSERC}{\index{Natural Sciences and Engineering Research Canada (\textsc{nserc})}\color{diColor}NSERC\color{black}\xspace}
+%\newcommand{\NSERC}{\index{Natural Sciences and Engineering Research Canada (\textsc{nserc})}\color{diColor}\textsc{nserc}\color{black}\xspace}
+\newcommand{\NSERC}{\index{Natural Sciences and Engineering Research Canada (NSERC)}\color{diColor}NSERC\color{black}\xspace}
+%\newcommand{\GSIS}{\index{Graduate Student Information System (\textsc{gsis})}\textsc{gsis}\color{black}\xspace}
 \newcommand{\GSIS}{\index{Graduate Student Information System (GSIS)}GSIS\color{black}\xspace}
 \newcommand{\dalonline}{\index{Dal Online}\color{diColor}DalOnline\color{black}\xspace}
 
@@ -147,7 +160,7 @@
 
 \title{Oceanography Graduate Handbook}
 \author{}
-\date{for GOC/GAC discussion March 10, 2017}
+\date{takes into account Boudreau's comments dated 2017-03-21}
 
 
 \begin{document}
@@ -189,15 +202,42 @@ document.
 
     \item ``CRN'' refers to a Course Registration Number. For example, the
         Physical Oceanography core class, listed as \course{5120} in the University
-        Calendar, has CRN 12070. Consult the Registrar's website\furl{https://dalonline.dal.ca/PROD/fysktime.P_DisplaySchedule?s_term=201710,201720&s_subj=OCEA&s_district=100} for more information.
+        Calendar, has CRN 12070. Consult the Academic Calendar\furl{https://dalonline.dal.ca/PROD/fysktime.P_DisplaySchedule?s_term=201710,201720&s_subj=OCEA&s_district=100} for more information.
 
     \item \dalonline is the gateway online system (at
         \url{https://dalonline.dal.ca}) for student-university interaction.
 
-    \item ``External'' \fixme{write a few lines here, with the 3 types
-        discussed in the meeting of 20160527}.
+    \item ``External,'' referring to a person, is employed in this document in
+        three different contexts:
+        \begin{enumerate}
 
-    \item \FGS stands for Faculty of Graduate Studies.
+            \item For the purposes of a Qualifying Examination (QE),
+                ``external'' refers to a person outside of the subdiscipline(s)
+                of the examination.  Such a person may be a Department faculty
+                member outside the subdiscipline(s), a faculty member from
+                another Department, or an Adjunct from outside the University.
+                This person must have FGS status\footnote{\label{footnote:adjunct}\footnotesize{\url{https://www.dal.ca/faculty/gradstudies/faculty/membership/adjuncts.html}}}.
+
+            \item For the purposes of an MSc defence, ``external'' refers to a
+                person who has not been a member of the student's advisory
+                committee (at any time).\discuss{Why "at any time"? Has this
+                been a problem in the past? It might cause difficulties if we
+                start assigning provisional supervisory committees (which might
+                be a way we can get things on track early).}  Such a person may
+                be a Department faculty member, a faculty member from another
+                Department, or an Adjunct from outside the University.  This
+                person must have FGS status\cref{footnote:adjunct}.
+
+            \item For the purpose of a PhD examination, an ``External
+                Examiner'' is someone external to the University and
+                unassociated with the student's work, who is appointed by \FGS
+                (at the suggestion of the Department) to examine a PhD thesis.
+                FGS sets the rules on the nature and appointment of External Examiners~\cav{10.6.1}{Appointment of External Examiner}{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10853&loaduseredits=False}.
+
+        \end{enumerate}
+        
+    \item \FGS stands for Faculty of Graduate Studies. In footnotes to this
+        document, ``FGS \S'' refers to as section of the FGS website.
 
     \item \NSERC stands for Natural Science and Engineering Research Council.
 
@@ -213,14 +253,14 @@ document.
 \p Graduate students must maintain their registration in all three terms of
 each year in their program, except in cases where a formal \di[leave of
 absence]{Leave of Absence} has been approved by the Faculty of Graduate
-Studies. This involves registering for a ``course'' named ``Registration
+Studies. Registration involves registering for a ``course'' named ``Registration
 Course--Graduate'' (designated \course[REGN]{9999}, and also called a
 ``fee-generating course''), as well as either ``Masters Thesis''
-(\course{9000}) or ``PhD thesis'' (\course{9530}); see the Registrar's
+(\course{9000}) or ``PhD thesis'' (\course{9530}); see the FGS
 website\footnote{\url{http://www.dal.ca/faculty/gradstudies/currentstudents/registration.html}}.
 for more information, including the relevant Course Registration Numbers. It is
 critical to register for these courses in time, since failure to register at
-least 1 month prior to the beginning of a term will result in non-payment of
+least 1 month prior to the beginning of a term will result in delayed payment of
 scholarships and stipends.
 
 
@@ -231,10 +271,10 @@ scholarships and stipends.
 %    \item Courses (if applicable)
 %\end{enumerate}
 
-\fixme{DK: somewhere hereabouts, insert the diagram I made of the timeline for
-MSc and PhD}
+%\fixme{DK: somewhere hereabouts, insert the diagram I made of the timeline for
+%MSc and PhD}
 
-\p If \course{REGN~9999} is not added for each term, graduate students are not
+\p If \course[REGN]{9999} is not added for each term, graduate students are not
 considered to be registered. Failure to register at least one month prior to
 the beginning of each term will result in non-payment of scholarships and
 stipends.
@@ -244,7 +284,8 @@ considered to have \di{lapsed registration}. Such students will not be
 permitted to submit a thesis, nor will they receive any services from the
 University during that academic term. Students who allow their registration to
 lapse will be considered to have withdrawn and will be required to apply for
-readmission (see \furl[FGS V. Registration Procedures and Regulations]{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10848}).
+readmission~\cav{5}{Registration Procedures and Regulations}{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10848}
+
 
 %%A1.1	REGN 9999
 %\subsection{REGN 9999}
@@ -283,7 +324,7 @@ readmission (see \furl[FGS V. Registration Procedures and Regulations]{http://ac
 
 \cp
 
-\p In addition to the artificial courses listed in the previous section,
+\p In addition to \course[REGN]{9999}, 
 students take conventional courses, chosen in consultation with their
 supervisors, and pursuant to the requirements set out in
 section~\ref{sec:msc_course_requirements} or
@@ -298,9 +339,9 @@ Geological Oceanography (\course{5110}),
 and
 Physical Oceanography (\course{5120}). These 
 are broadly based courses that are intended to
-help students gain a wide understanding of the major areas of oceanography.
+help students gain a broad understanding of the major areas of Oceanography.
 They are offered every year, typically with Physical and Chemical in the 
-September term, to set the stage for Geological and Biological in the January term.
+Fall term, to set the stage for Geological and Biological in the Winter term.
 Note that these courses are cross-listed to 4th year classes at the
 Undergraduate level, and there are circumstances in which they may be waived
 for Dalhousie students who have taken them at this lower level (see
@@ -318,19 +359,16 @@ Introduction to Acoustical Oceanography (\course{5250}),
 Advanced Chemical Oceanography (\course{5290}),
 and
 Advanced Marine Particles (\course{5293}).  Not all of these are offered every
-year. Details of offerings are available in the departmental office and at the
-Registrar's
-website\furl{https://dalonline.dal.ca/PROD/fysktime.P_DisplaySchedule?s_term=201710,201720&s_subj=OCEA&s_district=100}.
+year. Details of offerings are available online\furl{https://dalonline.dal.ca/PROD/fysktime.P_DisplaySchedule?s_term=201710,201720&s_subj=OCEA&s_district=100}.
 
 
 \p Students select courses in consultation with their {\supervisor}s, with the
 approval of members of their \advcom. Students must register for the 5000
-stream of courses that are cross-listed at the 4000 and 500 levels (see
+stream of any courses that are cross-listed to the 4000 levels (see
 Section~\ref{sec:msc_course_requirements} or \ref{sec:phd_course_requirements}
 for notes on the case in which 4000-level classes were taken previously) prior
 to the registration deadline.  See the Graduate Studies Academic
-Calendar\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2677}
-for deadlines.
+Calendar for deadlines\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2677}.
 
 
 \p A \formGSP must be submitted to the \GC within one month of the start of
@@ -356,10 +394,10 @@ requirements, or affect the ability to graduate.
 %A2.3	GRADING
 %\subsubsection{Grading}
 
-\p FGS
-Regulations\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10850}
-stipulate that graduate students must achieve a grade of B- or higher in all
-classes required as part of their degree program. The only grade that can be
+\p 
+All Dalhousie 
+graduate students must achieve a grade of B- or higher in all
+classes required as part of their degree program \cav{7}{Degree Requirements}{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10850}. The only grade that can be
 assigned below a ``B-'' is an ``F''. Any student who receives an F will be withdrawn
 from the Graduate Program and must apply for re-admission. Such a student may
 apply, in writing, to the department for immediate reinstatement; see \FGS
@@ -382,8 +420,7 @@ examination of class descriptions\fixme{Q: who approves these? I've done that
 as the professor for my own course. Is that the rule, or the habit?}) can be
 taken at other universities as part of the graduate degree program, provided
 the class is not available at Dalhousie; see \FGS Regulations, section 7.6.6:
-Letters of Permission
-\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10850}.
+Letters of Permission\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10850}.
 The Letter of Permission, available at the \FGS
 website\furl{http://www.dal.ca/faculty/gradstudies/currentstudents/forms.html},
 must be completed and submitted to the \GC in advance. Such approval will not
@@ -422,7 +459,7 @@ for requirements in the MSc and PhD programs, respectively.
 \cp
 
 % \p Graduate students in Oceanography are required to spend time at sea on
-% oceanographic ships to familiarize themselves with oceanographic techniques,
+% Oceanographic ships to familiarize themselves with Oceanographic techniques,
 % even if their research does not require measurements at sea. Students are
 % required to submit a \di[sea time]{Sea Time} Form to the Graduate Secretary.
 % The \curcom must approve completed forms. Requests for special consideration by
@@ -466,11 +503,11 @@ students with extensive experience at sea prior to coming to Dalhousie, or
 students with demanding nearshore/intertidal field research projects that limit
 time available to go to sea may be granted a waiver of the sea-time
 requirement. To apply for a waiver, the student composes a letter to the
-\curcom stating the reason for the request and proposing commensurate
+\gocom stating the reason for the request and proposing commensurate
 replacement experience. An accompanying letter supporting the student's request
 must be composed by the \supervisor and signed by the \advcom. The
 decision to grant or deny the request for a sea time waiver is the
-responsibility of the \curcom.
+responsibility of the \gocom.
 
 
 % A5	SEMINARS
@@ -478,7 +515,7 @@ responsibility of the \curcom.
 
 \p Students are required to attend the general \di{departmental
 seminars}\index{seminars} and to attend, and participate in, the specialty
-seminars in their field of interest.  Students who are unable to attend
+seminars in their field of study, if such exists. Students who are unable to attend
 seminars regularly must have the specific agreement of their \advcom that this
 requirement is waived and this must be communicated to the departmental office
 in a written memo signed by the \supervisor. It is important to note that
@@ -513,7 +550,9 @@ one month prior to the anniversary of their admission date. Failure to submit
 this report will result in delays in registration and funding.  This report is
 submitted by the student through \dalonline, with that system later prompting
 the \supervisor and then the \GC for approval.  The system relies on emails, so
-students are advised 
+it can be subject to failure if a message goes missing, so students are advised
+to check the status of these reports on \dalonline after they submit
+them.\fixme{Can students check that? I phoned LL to ask}
 
 \p In addition to the above, students must submit a \formSPRF each year. A
 blank version of this document is available from the \GS. This form is a way to
@@ -573,8 +612,8 @@ of the Department; see the \FGS
 website\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10852}
 for details. However, students who have a \supervisor who is not a full time
 faculty member in the Department of Oceanography, must also find a regular
-member of the department who can act as a \di{internal supervisor}. The
-responsibilities of an \di{internal supervisor} include:
+member of the department who can act as a co-supervisor. The
+responsibilities of a co-supervisor include:
 
 \begin{itemize}
 
@@ -583,9 +622,12 @@ responsibilities of an \di{internal supervisor} include:
 
 \item Ensuring that the student has suitable office and laboratory space.
 
-\item In consultation with the student, selecting a \supervisor and \advcom
-    appropriate to the student's research interests (In many cases the chair
-    will also be the supervisor.)\fixme{who is the chair?}
+\item In consultation with the student and \supervisor, select \advcom
+    appropriate to the student's research interests.\vote{Is this OK? I altered
+        this text; previously it said the co-supervisor would help to pick a
+        supervisor, in contradiction to text given above. Plus, do we really
+        want to say we are accepting students we cannot supervise, even in
+        advance of finding an external supervisor?}
 
 \item Ensuring that adequate reports and records of committee meetings are kept
     and submitted to the appropriate departmental files, and that necessary
@@ -645,7 +687,7 @@ meetings are held. The \supervisor will ensure that brief minutes of these
 meetings are recorded and are filed with the \GS.
 
 \p \fixme{DK to GOC: my notes suggest deleting this paragraph and the itemized
-list below it, but now I think it should be kept.  Do others agree to keep it?}
+list below it, but now I think it should be kept.  Do others agree to keep it? DK=yes; BB=yes}
 Following approval of the thesis proposal by the \advcom, the student should
 have several meetings in addition to the regular committee meetings as follows:
 
@@ -682,7 +724,7 @@ committee is essential:
     \item Approval of research plan and direction for thesis proposal (see
         sections~\ref{sec:msc_thesis_proposal}
         and~\ref{sec:phd_thesis_proposal}. \vote{DK to GOC: my notes suggest
-        deleting this item, but I suggest keeping it. OK?}
+        deleting this item, but I suggest keeping it. OK? DK=yes, BB=yes}
 
     \item Acceptance of a thesis proposal.
 
@@ -748,7 +790,7 @@ proposal!MSc]{thesis proposal} within one year of enrolling in the program.
 as an exhaustive literature review nor as a deeply detailed description of
 methods. This should be under fifteen pages of text, double-spaced and
 inclusive of diagrams and citations.\vote{DK to GOC: I made the length more
-specific. OK?}
+specific. OK? DK=yes, BB=yes}
 
 \p The \di[thesis proposal!MSc]{proposal} is developed in consultation with the
 \supervisor and \advcom. The scope of the research should be such that the
@@ -790,16 +832,20 @@ Oceanography Department.
 \cp
 
 \p It is the {\supervisor}'s responsibility to select the examining committee
-members, following the committee structure guidelines. The defence may
-\emph{not} proceed in violation of the below composition of the examining
-committee due to short-term absence of committee members.
+members, according to the guidelines stated below. Note that short-term absence
+of members of the \advcom are not a sufficient reason to schedule a defence in
+violation of these guidelines.\vote{DK: I rewrote some of this because the text
+was a mish-mash, as BB pointed out. Are the few lines before and after this OK?
+DK=yes}
 
 \p The examining committee will consist of a minimum of 5 members:\fixme{DK:
 I'll look up the FGS rules to check that what is written below is OK. I'll also
 add a link to the site where FGS gives those rules.}
 
 \begin{itemize}
-    \item 3 members of the advisory committee
+    \item All members of the advisory committee\vote{In the previous version,
+        and in the handbook for many years, it said "3 members". But BB suggested
+        using "All", so I've changed it. OK? DK=yes}
         \begin{itemize}
             \item Supervisor(s)
             \item Full-time department faculty member
@@ -829,22 +875,20 @@ final form) should be distributed to the \supervisor and committee to be
 reviewed for suitability and final approval.\fixme{DK: I will check into
 whether FGS has a timeline, and refer to it here, if so.}
 
-\fixme{If the list below is on the \FGS website, then I think we should just
-refer to that. It is difficult having to keep a lot of text synchronized with
-\FGS, and it is very problematic if the rules drift apart.}
+\vote{DK to GOC: I had suggested removing the material below if it's on \FGS,
+but BB suggested keeping it, so it is still here. OK? DK=yes, BB=yes}
 
 \begin{itemize}
     \item Six weeks prior to defence:
 
         \begin{itemize}
 
-            \item Have a format review done by FGS before the thesis is
-                distributed to your examining committee\fixme{why ``before''?
-                I don't think committee members care, and they might appreciate
-                having more time to read.}
+            \item Have a format review done by \FGS. \vote{DK to GOC:
+                previously it said to do the check before distributing to the
+                committee. I asked if that made sense. BB said to remove that
+                phrase, so I did. Is new text OK? DK=yes, BB=yes}
 
-            \item Submit an MSc Examination Information Form to the Graduate
-                Secretary
+            \item Submit an MSc Examination Information Form to the \GS
 
             \item Submit a Thesis Binding Submission Form and payment to the
                 \GS
@@ -853,10 +897,9 @@ refer to that. It is difficult having to keep a lot of text synchronized with
                 Secretary
 
             \item Provide copies of the thesis to the \supervisor for
-                distribution to the examining committee\fixme{DK: this seems
-                crazy to me. There are similar rules for PhD, with the \GC
-                being told to distribute; I've not seen that done once in 30
-                years}
+                distribution to the examining committee\vote{DK: I suggested
+                deleting this because I have never seen it done, and BB agreed.
+                OK? DK=yes, BB=yes}
 
         \end{itemize}
 
@@ -880,28 +923,31 @@ refer to that. It is difficult having to keep a lot of text synchronized with
         \begin{itemize}
 
             \item Have Examining Committee Members sign the signature
-                page.\fixme{Does such a form still exist?}
+                page.\fixme{ask LL: does such a form still exist? Both DK and
+                BB think it does not.}
 
             \item Submit required changes to the \supervisor within the
-                specified timeframe.
+                specified time-frame.
 
             \item Have a final format check of the thesis done by \FGS.
 
-            \item Electronically submit the final version of the thesis via
+            \item Electronically submit the final PDF version of the thesis via
                 DalSpace\furl{http://dalspace.library.dal.ca/}.
 
-            \item Submit original completed forms to FGS (National Library of
+            \item Submit original completed forms to \FGS (National Library of
                 Canada Form, Title Page of Thesis, Signature page with original
                 signatures, Copyright Page, Ethics Pages (if applicable),
-                Student Contribution to Manuscripts (if applicable).
+                Student Contribution to Manuscripts (if applicable).\fixme{Ask
+                LL: do these things all still exist?}
 
             \item Submit final copies of thesis to the \GS for binding (include
                 copies of the signed signature page, and the Copyright Page
-                with original signatures).\fixme{Do we still need to require
-                this? Why should the student have to pay for binding? Maybe the
-                student should submit in PDF and the department should print,
-                if it wants to. Students submit PDF to \FGS and a nation-wide
-                agency, anyway, so that is now the official copy.}
+                with original signatures).\fixme{Ask LL: check with \FGS
+                on all of this. For example, I don't think signatures are part
+                of a thesis anymore, owing to privacy issues.}\vote{DK to GOC:
+                should we keep the binding requirement? If the department wants
+                copies, why doesn't it print them and bind them. The archival copy is
+                a PDF that is on the web, after all.}
 
             \item Complete the \FGS Exit Survey
 
@@ -913,10 +959,10 @@ refer to that. It is difficult having to keep a lot of text synchronized with
 %B4.3	MSc THESIS DEFENCE OUTCOME
 \subsection{MSc thesis defence outcome}
 
-\fixme{DK to GOC: my notes say to delete this whole section. But I wrote
-``probably chop'' instead of ``chop'' so we should revisit this.  My vote today
-would be to delete this, and to refer to \FGS rules, to avoid problems that
-arise when rules drift apart.}
+\vote{DK to GOC: my notes say to delete this whole section. BB agrees, stating
+that we should just refer to FGS. But it's a lot of text to chop without
+discussion. Should we delete the rest of this section, retaining only a
+sentence stating an FGS link? DK=yes, BB=yes}
 
 \cp
 
@@ -1005,12 +1051,12 @@ which from core courses, \ie OCEA \course{5110}, OCEA \course{5120}, OCEA
 \course{5130}, and OCEA \course{5140}. For students with an MSc from Dalhousie
 Oceanography, core courses taken at MSc level can be waived\fixme{Q for LL: is
 the word ``waive'' correct? And what is the procedure?} for the PhD
-requirement. For students wit an MSc from other departments or institutions:
-core course equivalencies will be assessed on a case-by-case basis\fixme{Q:
-assessed by whom?}). Additional courses may be required to strengthen a
-student’s background.\vote{DK to GOC: I removed ``in basic science'' from AM's
-text, since it doesn't mean much and is incorrect, since the courses are often
-advanced. OK?}.
+requirement. For students with an MSc from other departments or institutions:
+core course equivalencies will be assessed by the \gocom on a case-by-case
+basis. Additional courses may be required to strengthen a student’s
+background.\vote{DK to GOC: I removed ``in basic science'' from AM's text,
+since it doesn't mean much and is incorrect, since the courses are often
+advanced. OK? DK=yes, BB=yes}.
 
 % above referred to A2.1 originally
 
@@ -1030,7 +1076,7 @@ minimum requirements, as explained below.
 
     \item A minimum of one other half-credit class drawn from Geological
         Oceanography (\course{5110}) or a suitable Atmospheric Science
-        course.\vote{DK to GOC: I propose deleting AtmSci. OK?}
+        course.\vote{DK to GOC: I propose deleting AtmSci. OK? DK=yes, BB=yes}
 
     \item Other classes, as required by the \advcom.
 
@@ -1047,8 +1093,9 @@ minimum requirements, as explained below.
         Oceanography (\course{5110}), Physical Oceanography (\course{5120}),
         and Biological Oceanography (\course{5140}).
 
-    \item Advanced Chemical Oceanography (modular) (\course{5290}). \fixme{5290
-        not offered since 2007/9}
+    \item Advanced Chemical Oceanography (modular) (\course{5290}). \fixme{DK
+        to GOC: 5290 has not offered since 2007/9. I propose deleting this
+        item. OK? DK=yes, BB=yes}
 
     \item Other classes, as required by the \advcom.
 
@@ -1091,21 +1138,19 @@ minimum requirements, as explained below.
 %C2	PhD COMMITTEE STRUCTURE
 \subsection{\label{sec:phd_advisory_committee_structure}PhD committee structure}
 
-\p The \advcom must be formed by October 1st of the first year of
-study.\fixme{Need to restate in terms of months in program.}
+\p The \advcom must be formed within the first month of the program.
 
 \p The PhD \advcom consists of at least four members. There must be two
-full-time faculty members from the Oceanography Department (not Adjunct
-Professors)\fixme{Need new wording on adj-prof} on the \advcom. If a regular
-faculty member serving on the committee leaves the department, a replacement
-with another faculty member must be made.
+full-time faculty members from the Oceanography Department (not Adjunct FGS) on
+the \advcom. If a regular faculty member serving on the committee leaves the
+department, a replacement with another faculty member must be made.
 
 \p One member will be from another sub-discipline, and it is desirable that at
 least one member of the committee be from outside the Department.
 
 
 %C3	PhD QUALIFYING EXAMINATION
-\subsection{\label{sec:phd_qualifying_examination}PhD Qualifying Examination}
+\subsection{\label{sec:phd_qualifying_examination}PhD Qualifying Examination (\QE)}
 
 %C3	PhD QUALIFYING EXAMINATION
 %\subsection{\label{sec:phd_qualifying_examination}PhD Qualifying Examination}
@@ -1125,12 +1170,12 @@ process, not a Supervisory Committee process. The Department delegates its
 administration to the regular Professors in the student's subdiscipline(s).
 (If the student is co-supervised by an Adjunct Professor or a cross-listed
 Professor, then that individual also takes part in the \qe.)\discuss{DK: do I
-have this exception correct?}
+have this exception correct? BB says "yes".}
 
 \p The \qe should be completed between months 9 and 12 of the PhD program.
 Students who have transferred from the MSc program should take the QE within 12
 months of their transfer.\discuss{DK: did we say that exceptions could be
-granted by the CurrComm?}
+granted by the CurrComm? BB answers "no"}
 
 \p The details and timing are as follows.
 
@@ -1139,9 +1184,11 @@ granted by the CurrComm?}
     \item The Candidate prepares a 1 to 3 page\vote{DK: there has been some
         discussion (by BB and DK) of shortening this further, even to just
         keywords or a few sentences. I propose to put a flag in the document
-        to invite discussion. OK?} summary of their general research interests
-        and forwards it to their Supervisor for approval.  The summary is
-        intended to guide faculty members in compiling a reading list.
+        to invite discussion by the whole department. OK? In the meantime, both
+        DK and BB would agree with requesting just a title and up to 10
+        keywords} summary of their general research interests and forwards it
+        to their Supervisor for approval.  The summary is intended to guide
+        faculty members in compiling a reading list.
 
     \item The Supervisor forwards the summary to faculty members in the
         student's subdiscipline(s), along with a request that they, and the
@@ -1149,17 +1196,18 @@ granted by the CurrComm?}
         acceptable) to make up a reading list that is relevant to the summary.
         The list should not contain anything written by a member of the Examining
         Committee.\vote{DK to GOC: if we don't agree on this, there should be an
-        indication of this in the document, to invite wider opinions.}
+        indication of this in the document, to invite wider opinions. In
+        BB's comment, he agreed we should flag this as something for the department to vote on.}
         At least three faculty members, including the supervisor, must
         contribute to the reading list. The list must contain between 4 and 6
-        papers\discuss{DK: I wrote in ``6'' here \ldots I don't recall if we
+        papers\fixme{DK: I wrote `6' here \ldots I don't recall if we
         set a limit, and I've seen more than 6, but I don't want us sliding
         into a system where every prof gives 2 papers so we can have 10 papers
         in total, potentially}. The suggested papers must be forwarded to the
-        Supervisor within 2 weeks of the request.\discuss{I don't understand
-        this forwarding.}
+        Supervisor within 2 weeks of the request.\fixme{I don't understand
+        this forwarding.}\fixme{BB suggests writing `5' and 7' here}
 
-    \item The \supervisor vets the papers to ensure appropriateness, and then
+    \item The \supervisor examines the papers to ensure appropriateness,\fixme{BB had some editing mark at this word but nothing came up in my Adobe reader} and then
         distributes the list to the Candidate and the relevant
         faculty.\discuss{DK to GOC: we need to discuss whether the \supervisor vets
         the papers, and also who organizes the whole procedure. I could see
@@ -1174,19 +1222,22 @@ granted by the CurrComm?}
         being distributed. 
 
     \item It is the responsibility of the \supervisor to form the Examining
-        Committee and schedule the exam. The committee must include a Chair
-        drawn from the student's subdiscipline(s), at least three members of
+        Committee and schedule the exam. The committee must include a Chair (normally
+        the \GC or a designate who is not associated with the student),
+        at least three members of
         the subdisicpline, including the \supervisor, and an External Examiner
         drawn from the Oceanography faculty outside the sub-discipline(s) and
         preferably in a sub-discipline closely related to the candidate’s
         research interests. \emph{In exceptional circumstances an External from
         outside the department may be nominated by the \supervisor. The
-        nomination must be approved by at least three BO faculty members. The
-        nominee must have no conflict of interest with the Candidate’s research
-        programme.}\discuss{I think the highlighted text should be deleted.}
+        nomination must be approved by the majority of the other
+        examiners, and the
+        nominee must have no conflict of interest with the Candidate's research
+        programme.}\fixme{I think the highlighted text should be
+        deleted.}\fixme{BB asks what 'conflict of interest' refers to.}
 
     \item The form of the Examining Committee must be approved by at least
-        three members of the subdisciplinary faculty no later than 3 weeks
+        three members of the subdisciplinary faculty no later than 6 weeks\vote{This was 3 weeks, but BB suggested 6 weeks. I made that change. OK? DK=yes, BB=yes}
         prior to the date of the exam. Once approved, the \supervisor forwards
         the research summary, the reading list, and these guidelines to the
         External Examiner and to the Chair. The External is not required to
@@ -1194,8 +1245,8 @@ granted by the CurrComm?}
         having been at a lot of these, is that examiners often have not read
         the other papers, especially if they are specialized (which I think
         is a mistaken choice of paper, but that's just my own view).}
-        \vote{Does the external provide a paper? I think there is a lot of
-        merit in that, and I vote ``yes''.} At the same time, the Candidate is
+        \vote{Does the external provide a paper? DK=yes, BB=yes}
+        At the same time, the Candidate is
         advised of the committee membership. 
 
     \item The Chair moderates the exam (see guidelines below) and does not
@@ -1203,14 +1254,18 @@ granted by the CurrComm?}
         1.5~hours. The exam begins with a 20-minute presentation by the
         Candidate who will attempt to demonstrate an understanding of the
         concepts and contents of the papers, perhaps highlighting common
-        threads or links to the rest of the literature or the student's plans,
-        as appropriate.
+        threads or links to the rest of the literature,
+        as appropriate.\vote{I removed a phrase about being relevant to the
+        student's plans, at BB's suggestion. OK? DK=yes, BB=yes}
 
-    \item The committee then questions the Candidate about oceanography and
+    \item The committee then questions the Candidate about Oceanography and
         topics related to the Candidate's research interests where the entry
         points into questions and discussions are to be based on the reading
         material that was provided to the Candidate and Candidate's
-        presentation. The exam is not about the proposed research.
+        presentation. \sout{The exam is not about the proposed
+        research.}\fixme{BB struck the preceding sentence out, and wrote a note
+        saying "Entered as a main point above" but I don't understand whether
+        he means that it has been entered or should be. FIXME: DK to check.}
 
     \item Upon the completion of questioning, the committee meets \emph{in
         camera} to agree on the exam outcome and recommendations to the
@@ -1235,7 +1290,8 @@ granted by the CurrComm?}
             \item The candidate is transferred to, or continued in, the MSc
                 programme.  \vote{DK to GOC: I added this, based on discussions
                 with BB and others about the fact that this is a formal
-                examination, and we had no ``failure'' mode.  OK?}
+                examination, and we had no ``failure'' mode.  OK? DK=yes,
+                BB=yes}
 
         \end{enumerate}
 
@@ -1273,7 +1329,9 @@ granted by the CurrComm?}
             \item Summarise exam procedure: presentation, questioning, in
                 camera meeting, decision and recommendation.
 
-            \item Keep presentation by the Candidate to 20 minutes; at 25 warn a cut off.
+            \item Keep presentation by the Candidate to 20 minutes; if it gets
+                to 25 minutes, signal a one-minute warning about cutting
+                the presentation off.
 
             \item Announce the questioning order, beginning with External and
                 ending with \supervisor.
@@ -1291,7 +1349,7 @@ granted by the CurrComm?}
                 track.\discuss{I don't know what this means, or how to
                 accomplish it}
 
-            \item Discourage too much discussion back and forth between members
+            \item Discourage \sout{too much} discussion back and forth between members
                 of the Examining Committee; questions should be directed at the
                 student and the student should be permitted to respond.
 
@@ -1299,12 +1357,14 @@ granted by the CurrComm?}
 
             \item Keep the process just, calm and professional.
 
-            \item The entire exam should last no longer than 1.5 hours.\vote{DK
+            \item The entire exam should last no longer than \sout{1.5} $????$ hours.\vote{DK
                 to GOC: we should use history to guide this.  And a nominal
                 calculation is: 20 min +
-                10min/examiner*5examiner+10min/discussion yields over 2 hours
-                even with just for one round.  I propose we state 2.5 hours for
-                the non-in-camera part . OK?}
+                10min/examiner*5examiner + 10min/discussion yields over 2 hours
+                even with just for one round.  I proposed a 2.5 hour limit for
+                the non-in-camera part. BB suggested 2h in the text, but then
+                said he agreed with the 2.5h limit stated in this comment. Let's
+                come up with a number in a meeting.}
 
             \item Keep notes on significant issues during questioning.
 
@@ -1328,7 +1388,8 @@ granted by the CurrComm?}
                 can cast a deciding vote. The point is we cannot have a
                 non-outcome. This is an examination; after all, and students
                 cannot be told that the professors cannot decide whether they
-                pass or fail.}
+                pass or fail. BB agreed, and stated that a non-outcome would
+                not be acceptable to Senate.}
 
             \item Keep notes on significant issues that should be included in
                 the report sent to the Chair and the departmental \GC.
@@ -1361,8 +1422,8 @@ proposal} and examination of the proposal within 20 months of enrolling in the
 graduate program.
 
 \p In order to proceed with the \di[thesis proposal!PhD]{proposal}, the student
-will have completed the required first year courses, have a named \supervisor
-and \advcom, and received approval from the \supervisor.
+will have completed the required first-year courses, have a named \supervisor
+and \advcom, completed a \QE, and received approval from the \supervisor.\fixme{I added the QE part, on advice of BB}
 
 \p The requirement consists of a written \di[thesis proposal!PhD]{thesis
 proposal} and a public oral defence.  The written proposal will include an
@@ -1370,7 +1431,7 @@ overview of the research topic and relevant background material, and a plan for
 carrying out the PhD research.  The oral portion is a defence of the proposal,
 including other relevant areas of Oceanography. The topics covered in the
 defence may relate not just to the planned research, but also to wider
-oceanographic issues, as deemed appropriate by the defence committee.
+Oceanographic issues, as deemed appropriate by the defence committee.
 
 \p The defence is open to attendance by all interested persons, except for the
 in-camera portion in which the decision is made by the examining committee.
@@ -1389,14 +1450,15 @@ from that committee, external members, and a departmental representative. The
 designate).
 
 \p The Chair of the PhD proposal defence is independent of the examining
-committee. The Departmental Representative normally performs this duty.
+committee. The Departmental Representative or a designate normally performs
+this duty.
 
 \p Students must make the \index{thesis proposal} proposal available in the
 Department of Oceanography office at least 10 working days prior to the oral
-defence\vote{DK to GOC: I think we should have a form for this. OK?}  The
-proposal typically receives input from the \supervisor or others prior to its
-submission. Approval from the \advcom is required to proceed with the oral
-defence.
+defence\vote{DK to GOC: I think we should have a form for this. OK? DK=yes,
+BB=yes}  The proposal typically receives input from the \supervisor or others
+prior to its submission. Approval from the \advcom is required to proceed with
+the oral defence.
 
 %C4.2	PROPOSAL TIMELINE
 \subsubsection{Proposal timeline}
@@ -1645,16 +1707,17 @@ support whenever possible.
 
 \p Full-time students without such special scholarship support are usually
 awarded Dalhousie Graduate Fellowships from funds that come mainly from
-individual faculty members' research grants, with a minor contribution from
+individual faculty members' research grants, with a \sout{minor}
+possible\vote{BB suggested this change. OK? DK=yes, BB=yes} contribution from
 \FGS.
 
 \p Students may also receive extra support by taking on a teaching
 assistantship, or by demonstrating in undergraduate laboratories.
 
-\p Students should discuss any additional jobs with their \advcom to ensure
-that the time commitments outside the Department are not excessive, and do not
-interfere with program expectations. (The university also imposes limits on
-external commitments.)
+\p Students should discuss any additional employment with their \advcom to
+ensure that the time commitments outside the Department are not excessive, and
+do not interfere with program expectations. (The university also imposes limits
+on external commitments.)
 
 
 %D1	FGS CONFERENCE TRAVEL GRANT
@@ -1671,8 +1734,9 @@ date of travel.  Students must be registered in a graduate program at the time
 of application and at the time of the conference. In order to be eligible,
 students must present a poster of paper based on the results of their graduate
 thesis research at a national or international scholarly meeting or conference.
-Departmental approval must be given to these applications\discuss{DK to LL: do
-we actually approve these?}.
+\sout{Departmental approval must be given to these applications.}\vote{BB
+suggested deleting this last sentence, arguing that it could be challenged as a
+violation of the right to work. OK to delete? DK=yes, BB=yes}.
 
 
 %E.	INTELLECTUAL  PROPERTY
@@ -1877,43 +1941,45 @@ specify.
 
 \p Decisions on appeals are made by an Ad Hoc Appeal Panel.
 
-\p The Panel does not have fixed membership.  Instead, it will consist
-of three faculty members, chosen on a fixed rotating basis from all the faculty
-in the Department.  The professor(s) responsible for the process being appealed
-will be excluded.  For graduate students, the student's \supervisor or
-co-supervisors, or for undergraduates, the student's honors supervisor (if
-applicable) will also be excluded from the list.
+\p The Panel does not have fixed membership.  Instead, it will consist of
+\sout{three} two \fixme{change from BB} faculty members, chosen on a fixed
+rotating basis from all the faculty in the Department.  The professor(s)
+responsible for the process being appealed will be excluded.  For graduate
+students, the student's \supervisor or co-supervisors, or for undergraduates,
+the student's honors supervisor (if applicable) will also be excluded from the
+list.
 
 \p An appropriate graduate student (for undergraduate appeals) or
 Post-doctoral fellow (for graduate appeals) will constitute the fourth and
 final member of the Panel.  Any student on the Panel will not have a personal
 or academic conflict of interest with respect to the appellant.  For
-undergraduates, the student will be chosen from the graduate students.  For
-graduate students, the student member will be chosen from the Post-doctoral
-Fellows, without conflict of interest.  
+undergraduates, the student will be chosen from the graduate students, without
+a conflict of interest.  For graduate students, the Post-doctoral member will
+be chosen from the Post-doctoral Fellows, without conflict of interest.  
 
-\p The Panel will examine the appeal and determine if a \emph{prima
+\p \sout{The Panel will examine the appeal and determine if a \emph{prima
 facie} case exists for the appeal.  (\emph{Prima facie} in this context means
 the appeal document contains sufficient evidence to support the stated claim.)
-If such a case exists, then the Panel will convene a formal Appeal Hearing at
-the first opportunity when all involved, i.e., appellant, the faculty member
+If such a case exists, then the} A panel will convene a formal Appeal Hearing
+at the first opportunity when all involved, i.e., appellant, the faculty member
 who owns the process, and the Panel members can meet to hear verbal arguments
 on the appeal, but preferably within three weeks of constitution of the Panel.
-If there is no \emph{prima facie} case, the Panel will inform the Chair and the
-appeal will be dismissed at the Departmental level.
+\sout{If there is no \emph{prima facie} case, the Panel will inform the Chair
+and the appeal will be dismissed at the Departmental level.} \fixme{Changes in
+this paragraph are from BB}
 
-\p If a Hearing is convened, the Panel will chose a Chair who will
-control and direct all communication.
+\p If a Hearing is convened, The \fixme{DK to BB: why is it "The" here?} Panel
+will chose a Chair who will control and direct all communication.
 
 \p The Chair of the Panel will make the faculty owner of the process
 aware of the appeal and provide, in a timely manner, a copy of the appeal
 document to the process-owner (faculty member).  
 
 \p Before the Hearing, the process owner will provide the Panel with a
-written rebuttal to the appeal within 5 working days of the appeal being
-received.  (Exceptions will be made to accommodate persons being at sea or
-subject to other serious limitations in availability.)  The Panel will forward
-that rebuttal to the appellant.
+written rebuttal to the appeal within \sout{5} 10 working days of the appeal
+being received.  (Exceptions will be made to accommodate persons being at sea
+or subject to other serious limitations in availability.)  The Panel will
+forward that rebuttal to the appellant. \fixme{the change is from BB}
 
 
 \subsection{The Appeal Hearing}
@@ -1934,12 +2000,14 @@ that rebuttal to the appellant.
     presentations; however, any Panel member may interrupt the presentation to
     ask questions;
 
-\item At the end of the presentations, the appellant will be invited to direct
+\item At the end of these presentations, the appellant will be invited to direct
     questions to the faculty owner for the purpose of seeking clarifications
     (only); after that is completed, the faculty owner will be invited to do
     the same;  the Panel members may interrupt these questioning sessions at
     any time to ask their own questions; the Chair of the panel will ensure
     that this questioning remains civil and on topic;
+
+\item Each party will then be asked for short summary arguments.
 
 \item At the end of the questioning, the Chair of the Panel will ask the
     appellant and faculty owner to leave and convene an \emph{in-camera}
@@ -1989,6 +2057,8 @@ requested resolution contains such points, these must be ignored and dismissed.
 graduate student will be referred directly to the Faculty of Graduate Studies
 for resolution.  
 
+\p Students have the option to appeal a decision of the departmental appeal
+process to the Senate; see the Senate regulations for details.
 
 \addcontentsline{toc}{section}{Index}
 \printindex
