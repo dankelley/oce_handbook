@@ -79,7 +79,12 @@
 \newcommand\p{\stepcounter{parcount}\leavevmode{\raisebox{0.2ex}{\scriptsize[\parnum]}}\hspace{0.2em}}
 \newcommand\cp{\setcounter{parcount}{0}}
 
-\newcommand{\furl}[1]{\footnote{\footnotesize{\url{#1}}}}
+\newcommand{\furl}[2][EMPTY]%
+    {\ifthenelse%
+        {\equal{#1}{EMPTY}}%
+        {\footnote{\footnotesize{\url{#2}}}}%
+        {#1\footnote{\footnotesize{\url{#2}}}}%
+    }
 
 % Use macros to get indexing, and ensure uniform representation
 \newcommand{\supervisor}{\color{diColor}supervisor\color{black}\index{supervisor}\xspace}
@@ -95,9 +100,9 @@
 \newcommand{\formGSPU}{\index{forms!Graduate Student Program}\color{diColor}Graduate Student Program Update Form\color{black}\xspace}
 \newcommand{\formSPRF}{\index{forms!Supplementary Program Report}\color{diColor}Supplementary Program Report Form\color{black}\xspace}
 \newcommand{\formST}{\index{forms!Sea Time}\color{diColor}Sea Time Form\color{black}\xspace}
-\newcommand{\FGS}{\index{Faculty of Graduate Studies (\textsc{fgs})}\color{diColor}\textsc{fgs}\color{black}\xspace}
-\newcommand{\NSERC}{\index{Natural Sciences and Engineering Research Canada (\textsc{nserc})}\color{diColor}\textsc{nserc}\color{black}\xspace}
-\newcommand{\GSIS}{\index{Graduate Student Information System (\textsc{gsis})}\textsc{gsis}\color{black}\xspace}
+\newcommand{\FGS}{\index{Faculty of Graduate Studies (FGS)}\color{diColor}FGS\color{black}\xspace}
+\newcommand{\NSERC}{\index{Natural Sciences and Engineering Research Canada (\textsc{nserc})}\color{diColor}NSERC\color{black}\xspace}
+\newcommand{\GSIS}{\index{Graduate Student Information System (GSIS)}GSIS\color{black}\xspace}
 \newcommand{\dalonline}{\index{Dal Online}\color{diColor}DalOnline\color{black}\xspace}
 
 
@@ -239,7 +244,7 @@ considered to have \di{lapsed registration}. Such students will not be
 permitted to submit a thesis, nor will they receive any services from the
 University during that academic term. Students who allow their registration to
 lapse will be considered to have withdrawn and will be required to apply for
-readmission\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10848}.
+readmission (see \furl[FGS V. Registration Procedures and Regulations]{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10848}).
 
 %%A1.1	REGN 9999
 %\subsection{REGN 9999}
