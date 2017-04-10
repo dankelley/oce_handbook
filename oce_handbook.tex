@@ -34,6 +34,8 @@
 \definecolor{deleteColor}{rgb}{1,0,0}
 \definecolor{addColor}{rgb}{0.0,0.5,0}
 
+\definecolor{oldColor}{rgb}{0.55,0.1,0.1}
+\definecolor{newColor}{rgb}{0.29,0.44,0.14}
 \definecolor{provisionalColor}{rgb}{0.28,0.24,0.55}
 \definecolor{fixmeColor}{rgb}{0.8,0,0}
 \definecolor{voteColor}{rgb}{0.5,0,1}
@@ -46,8 +48,7 @@
 %\newcommand\QE{PhD Qualifying Examination\index{PhD Qualifying Examination}\xspace}
 \newcommand\QE{PhD Qualifying Examination\xspace}
 
-\newcommand\delete[1]{\color{deleteColor}\sout{\textbf{#1}}\color{black}\xspace%
-\marginpar{\color{deleteColor}$\Delta$\color{black}}}
+\newcommand\delete[1]{\color{deleteColor}\sout{\textbf{#1}}\color{black}\xspace}
 
 \newcommand\add[1]{\color{addColor}\textbf{#1}\color{black}\xspace%
 \marginpar{\color{addColor}$\Delta$\color{black}}}
@@ -71,6 +72,8 @@
 \newcommand{\di}[1]{#1}
 
 \newcommand{\provisional}[1]{\color{provisionalColor}#1\color{black}\index{$>>>>$PROVISIONAL TEXT$<<<<$}}
+
+\newcommand{\replace}[2]{\color{oldColor}\sout{#1}\color{newColor}#2\color{black}\xspace}
 
 \newcommand{\fixme}[1]{\color{fixmeColor}$\{$#1$\}$\color{black}\index{$>>>>$FIXME$<<<<$}}
 
@@ -105,7 +108,7 @@
 
 % Use macros to get indexing, and ensure uniform representation
 %\newcommand{\supervisor}{\color{diColor}supervisor\color{black}\index{supervisor}\xspace}
-\newcommand{\supervisor}{supervisor\xspace}
+\newcommand{\supervisor}{Supervisor\xspace}
 %\newcommand{\curcom}{\color{diColor}Curriculum Committee\color{black}\index{Committees!Curriculum}\xspace}
 \newcommand{\curcom}{Curriculum Committee\xspace}
 %\newcommand{\supcom}{\color{diColor}Supervisory Committee\color{black}\index{Committees!Supervisory}\xspace}
@@ -574,25 +577,25 @@ granted by FGS on the recommendation of the Department.
 
 \section{Supervision}
 
-\fixme{the meeting on 2017-04-10 will address this section in the context of the FGS rules}\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10852}
+Rules and guidelines for supervisors and {\supcom}s are provided in Section~9
+of the \fgsregs. In addition, the Department imposes the following
+requirements:
 
-
-
-\provisional{Rules and guidelines for supervisors and {\supcom}s are provided in Section~9 of the \fgsregs. In addition,
-the Department imposes the following requirements:
 \begin{enumerate}
-    \item The \supcom shall be formed within 1 month of the students entry into the academic program.
 
-    \item Each \supcom shall have at least one member from outside the student's subdiscipline(s).
+    \item The \supcom shall be formed within 1 month of the students entry into
+        the academic program.
 
-    \item Committees shall meet at least twice per year.
+    \item MSc {\supcom}s must have 3 or more members. PhD {\supcom}s must
+        have 4 or more members.
+
+    \item Each \supcom shall have at least one member from outside the
+        student's subdiscipline(s).
+
+    \item Committees, or a quorum thereof, shall meet at least twice per year.
 
     \item Committee approval should be sought on significant milestones in the
-        program, \eg MSc-PhD transfer, thesis defence, \etc.
-
-    \item Within a week of the meeting, students must upload a meeting report
-        to \dalonline. They are also responsible for ensuring ensure that their
-        supervisor and the \GC submit approval within a reasonable time.
+        program, \eg MSc-PhD transfer, thesis defence, \etc
 
     \item Students or supervisors must provide minutes of each meeting to the
         main office in paper form, signed by both student and supervisor.
@@ -600,73 +603,71 @@ the Department imposes the following requirements:
         meeting.
 
 \end{enumerate}
-}
 
-%A9.3	SUPERVISOR
-\subsection{Supervisor}
-
-\cp
-
-\p The Supervisor provides direct supervision of the student's research and is expected to
-
-\begin{itemize}
-
-    \item Advise the student on the choice of a research topic, on the possible
-        directions to emphasize during the work, and the point at which it
-        should be concluded.
-
-    \item Supervise the research, as well as the preparation of the proposal,
-        progress reports and thesis.
-
-    \item Ensure that the resources necessary to the thesis project are made
-        available and that any necessary skills are acquired by the student.
-
-    \item Assess the student's progress, evaluating strengths and weaknesses.
-
-    \item Provide current updates of progress to the student's file.
-
-    \item Ensure that the student is funded
-
-    \item Select thesis examining committee members (following the guidelines
-        for composition of the various examining committees).
-
-\end{itemize}
-
-\p A \supervisor is changed only with the approval of the Department. This may
-arise by mutual agreement within the \supcom or at the request of
-the student (to either the \GC or the Chair of the Department).
-
-\p In order to take advantage of the special expertise and facilities
-available, the role of \supervisor is not restricted to regular faculty members
-of the Department; see the \FGS
-website\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10852}
-for details. However, students who have a \supervisor who is not a full time
-faculty member in the Department of Oceanography, must also find a regular
-member of the department who can act as a co-supervisor. The
-responsibilities of a co-supervisor include:
-
-\begin{itemize}
-
-\item Advising on academic requirements, course load, waiver of courses,
-    general departmental affairs, etc.
-
-\item Ensuring that the student has suitable office and laboratory space.
-
-\item In consultation with the student and \supervisor, select \supcom
-    appropriate to the student's research interests.\vote{Is this OK? I altered
-        this text; previously it said the co-supervisor would help to pick a
-        supervisor, in contradiction to text given above. Plus, do we really
-        want to say we are accepting students we cannot supervise, even in
-        advance of finding an external supervisor?}
-
-\item Ensuring that adequate reports and records of committee meetings are kept
-    and submitted to the appropriate departmental files, and that necessary
-    decisions as to the academic program, (\eg thesis proposal), are made on
-    an appropriate time-scale.
-
-\item Assessing the progress of the student both in academic work and research.
-
-\end {itemize}
+%\subsection{Supervisor}
+%
+%\cp
+%
+%\p The Supervisor provides direct supervision of the student's research and is expected to
+%
+%\begin{itemize}
+%
+%    \item Advise the student on the choice of a research topic, on the possible
+%        directions to emphasize during the work, and the point at which it
+%        should be concluded.
+%
+%    \item Supervise the research, as well as the preparation of the proposal,
+%        progress reports and thesis.
+%
+%    \item Ensure that the resources necessary to the thesis project are made
+%        available and that any necessary skills are acquired by the student.
+%
+%    \item Assess the student's progress, evaluating strengths and weaknesses.
+%
+%    \item Provide current updates of progress to the student's file.
+%
+%    \item Ensure that the student is funded
+%
+%    \item Select thesis examining committee members (following the guidelines
+%        for composition of the various examining committees).
+%
+%\end{itemize}
+%
+%\p A \supervisor is changed only with the approval of the Department. This may
+%arise by mutual agreement within the \supcom or at the request of
+%the student (to either the \GC or the Chair of the Department).
+%
+%\p In order to take advantage of the special expertise and facilities
+%available, the role of \supervisor is not restricted to regular faculty members
+%of the Department; see the \FGS
+%website\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10852}
+%for details. However, students who have a \supervisor who is not a full time
+%faculty member in the Department of Oceanography, must also find a regular
+%member of the department who can act as a co-supervisor. The
+%responsibilities of a co-supervisor include:
+%
+%\begin{itemize}
+%
+%\item Advising on academic requirements, course load, waiver of courses,
+%    general departmental affairs, etc.
+%
+%\item Ensuring that the student has suitable office and laboratory space.
+%
+%\item In consultation with the student and \supervisor, select \supcom
+%    appropriate to the student's research interests.\vote{Is this OK? I altered
+%        this text; previously it said the co-supervisor would help to pick a
+%        supervisor, in contradiction to text given above. Plus, do we really
+%        want to say we are accepting students we cannot supervise, even in
+%        advance of finding an external supervisor?}
+%
+%\item Ensuring that adequate reports and records of committee meetings are kept
+%    and submitted to the appropriate departmental files, and that necessary
+%    decisions as to the academic program, (\eg thesis proposal), are made on
+%    an appropriate time-scale.
+%
+%\item Assessing the progress of the student both in academic work and research.
+%
+%\end {itemize}
  
 
 %B.	MSc  PROGRAM REQUIREMENTS
@@ -674,25 +675,24 @@ responsibilities of a co-supervisor include:
 
 
 
-%A9	THESIS ADVISORY COMMITTEE
-\subsection{\label{sec:supervisory_committee_structure}Supervisory Committee Structure}
-
-\cp
-
-\p Supervisory committees are formally sub-committees of the Department appointed
-both to provide expert advice to students and to evaluate and report on student
-progress.  Members of \supcom must either hold faculty positions at Dalhousie
-University, or have an adjunct status registered with \FGS.  The \supcom
-structure differs for MSc and PhD, as explained in
-Sections~\ref{sec:msc_supervisory_committee_structure} and
-\ref{sec:phd_supervisory_committee_structure}, respectively.
-
-\p The \supcom must be formed within one month of the start of the student's
-program, and it may be changed through the progress of a student's program.
-The \supervisor chooses committee members, in consultation with the student.
-
-\p Students must inform the department of \supcom structure (and any changes to
-that structure) by filling out a \formGSP and submitting it to the \GS. 
+% \subsection{\label{sec:supervisory_committee_structure}Supervisory Committee Structure}
+% 
+% \cp
+% 
+% \p Supervisory committees are formally sub-committees of the Department appointed
+% both to provide expert advice to students and to evaluate and report on student
+% progress.  Members of \supcom must either hold faculty positions at Dalhousie
+% University, or have an adjunct status registered with \FGS.  The \supcom
+% structure differs for MSc and PhD, as explained in
+% Sections~\ref{sec:msc_supervisory_committee_structure} and
+% \ref{sec:phd_supervisory_committee_structure}, respectively.
+% 
+% \p The \supcom must be formed within one month of the start of the student's
+% program, and it may be changed through the progress of a student's program.
+% The \supervisor chooses committee members, in consultation with the student.
+% 
+% \p Students must inform the department of \supcom structure (and any changes to
+% that structure) by filling out a \formGSP and submitting it to the \GS. 
 
 
 % above was: sections B and C
@@ -707,35 +707,35 @@ that structure) by filling out a \formGSP and submitting it to the \GS.
 %
 %\cp
 
-\subsection{Supervisory committee meeting schedule}
-\cp \p There must be no less than two \supcom meetings held per
-academic
-year\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10852},
-but meetings may be more frequent, as required by the student and/or
-supervisor. It is the responsibility of the student to ensure that committee
-meetings are held. The \supervisor will ensure that brief minutes of these
-meetings are recorded and are filed with the \GS.
-
-\p \fixme{DK to GOC: my notes suggest deleting this paragraph and the itemized
-list below it, but now I think it should be kept.  Do others agree to keep it? DK=yes; BB=yes}
-Following approval of the thesis proposal by the \supcom, the student should
-have several meetings in addition to the regular committee meetings as follows:
-
-\begin{itemize}
-
-\item An interim progress meeting to verify that the research is on track.
-
-\item A final progress meeting at which the committee agrees that sufficient
-    research has been conducted, and that thesis writing may proceed.
-
-\item Individual meetings with \supcom members to receive input on drafts or
-    chapters.
-
-\item A meeting at which the \supcom agrees that the thesis is defensible and
-    that a defence may be scheduled. Alternatively, the \supcom may
-    request further revision prior to approving a defence.
-
-\end{itemize}
+%\subsection{Supervisory committee meeting schedule}
+%\cp \p There must be no less than two \supcom meetings held per
+%academic
+%year\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10852},
+%but meetings may be more frequent, as required by the student and/or
+%supervisor. It is the responsibility of the student to ensure that committee
+%meetings are held. The \supervisor will ensure that brief minutes of these
+%meetings are recorded and are filed with the \GS.
+%
+%\p \fixme{DK to GOC: my notes suggest deleting this paragraph and the itemized
+%list below it, but now I think it should be kept.  Do others agree to keep it? DK=yes; BB=yes}
+%Following approval of the thesis proposal by the \supcom, the student should
+%have several meetings in addition to the regular committee meetings as follows:
+%
+%\begin{itemize}
+%
+%\item An interim progress meeting to verify that the research is on track.
+%
+%\item A final progress meeting at which the committee agrees that sufficient
+%    research has been conducted, and that thesis writing may proceed.
+%
+%\item Individual meetings with \supcom members to receive input on drafts or
+%    chapters.
+%
+%\item A meeting at which the \supcom agrees that the thesis is defensible and
+%    that a defence may be scheduled. Alternatively, the \supcom may
+%    request further revision prior to approving a defence.
+%
+%\end{itemize}
 
 
 % %A9.2	COMMITTEE APPROVAL
@@ -743,27 +743,27 @@ have several meetings in addition to the regular committee meetings as follows:
 % 
 % \cp
 
-\p At several points in a student's program the approval of the \supcom is
-essential:
-
-\begin{itemize}
-
-    \item Initial discussion of proposed research; this should occur as early
-        as possible in the student's program.
-
-    \item Approval of research plan and direction for thesis proposal (see
-        sections~\ref{sec:msc_thesis_proposal}
-        and~\ref{sec:phd_thesis_proposal}. \vote{DK to GOC: my notes suggest
-        deleting this item, but I suggest keeping it. OK? DK=yes, BB=yes}
-
-    \item Acceptance of a thesis proposal.
-
-    \item Change of status, such as advancement to the PhD program (see
-        section~\ref{sec:transfer_to_phd}).
-
-    \item The acceptance of the thesis, in final form, as being ready for defence.
-
-\end{itemize}
+%\p At several points in a student's program the approval of the \supcom is
+%essential:
+%
+%\begin{itemize}
+%
+%    \item Initial discussion of proposed research; this should occur as early
+%        as possible in the student's program.
+%
+%    \item Approval of research plan and direction for thesis proposal (see
+%        sections~\ref{sec:msc_thesis_proposal}
+%        and~\ref{sec:phd_thesis_proposal}. \vote{DK to GOC: my notes suggest
+%        deleting this item, but I suggest keeping it. OK? DK=yes, BB=yes}
+%
+%    \item Acceptance of a thesis proposal.
+%
+%    \item Change of status, such as advancement to the PhD program (see
+%        section~\ref{sec:transfer_to_phd}).
+%
+%    \item The acceptance of the thesis, in final form, as being ready for defence.
+%
+%\end{itemize}
 
 
 %B.	MSc  PROGRAM REQUIREMENTS
@@ -776,34 +776,52 @@ essential:
 
 \cp
 
-\p Students must complete OCEA 5000 and an additional 6 credit hours from core
-courses, namely \course{5110}, \course{5120}, \course{5130} and \course{5140}.
-(Students who took the core classes at the 4000 level as undergraduates, having
-achieved grades of ``A'' or ``A+'' need not to take them again at the 5000
-level.) In addition to the above, additional courses may be required to
-strengthen a student's background; the \supervisor and \supcom advises on this
-matter.
+\p MSc students must complete \course{5000} and at least 6 credit hours (\ie 2
+courses) selected from the core courses (\course{5110}, 5120, 5130, 5140).
+Students who completed one or two of the core courses at the undergraduate
+(4000) level with either ``A'' or ``A+'' grades may apply for advanced
+placement, and if approved need not repeat them at the 5000 level, in which
+case they must complete 3 or 6 credit hours at the 5000 or higher level
+selected in consultation with the \supervisor. Additional courses may be
+required by the \supervisor, perhaps in consultation with other members of the
+\supcom.
+
+\p Students anticipating a transfer from the MSc to the PhD program should
+complete the course-work requirements listed in
+Section~\ref{sec:phd_course_requirements}.
+
+
+
+% \cp
+% 
+% \p Students must complete OCEA 5000 and an additional 6 credit hours from core
+% courses, namely \course{5110}, \course{5120}, \course{5130} and \course{5140}.
+% (Students who took the core classes at the 4000 level as undergraduates, having
+% achieved grades of ``A'' or ``A+'' need not to take them again at the 5000
+% level.) In addition to the above, additional courses may be required to
+% strengthen a student's background; the \supervisor and \supcom advises on this
+% matter.
 
 % \p MSc students must complete a minimum of 5 half-credits at the 5000-level or
 % higher, at least three of which must be chosen from the introductory core
 % courses (refer to section~\ref{sec:courses}).
 
-\p Any student who anticipates a transfer from the MSc program to the PhD
-program should complete the course-work and other requirements as listed in the
-PhD program requirements (see Section~\ref{sec:phd_program_requirements}).
+% \p Any student who anticipates a transfer from the MSc program to the PhD
+% program should complete the course-work and other requirements as listed in the
+% PhD program requirements (see Section~\ref{sec:phd_program_requirements}).
 
-\subsection{\label{sec:msc_supervisory_committee_structure}MSc Supervisory Committee Structure}
-
-\cp
-        
-\p As noted in Section~\ref{sec:supervisory_committee_structure}, the \supcom must
-be formed within one month of the start of the student's program.  This
-committee consists of at least three members. There must be two full-time
-faculty members (with \FGS status) from the Oceanography Department.  If a
-regular faculty member serving on the committee leaves the Department, reducing
-the number of regular members to below two, then a replacement with another
-regular faculty member must be made. At least one of the members of the \supcom
-should be from a sub-discipline other than the student's own.
+%    \subsection{\label{sec:msc_supervisory_committee_structure}MSc Supervisory Committee Structure}
+%
+%\cp
+%        
+%\p As noted in Section~\ref{sec:supervisory_committee_structure}, the \supcom must
+%be formed within one month of the start of the student's program.  This
+%committee consists of at least three members. There must be two full-time
+%faculty members (with \FGS status) from the Oceanography Department.  If a
+%regular faculty member serving on the committee leaves the Department, reducing
+%the number of regular members to below two, then a replacement with another
+%regular faculty member must be made. At least one of the members of the \supcom
+%should be from a sub-discipline other than the student's own.
 
 
 %B3	MSc THESIS PROPOSAL
@@ -816,16 +834,15 @@ year of enrolling in the program.
 
 \p This document serves primarily as a well-reasoned course of action, and not
 as an exhaustive literature review nor as a deeply detailed description of
-methods. This should be under fifteen pages of text, double-spaced and
-inclusive of diagrams and citations.\vote{DK to GOC: I made the length more
-specific. OK? DK=yes, BB=yes}
+methods. This should be under 15 pages of text, double-spaced and inclusive of
+diagrams and citations.
 
 \p The proposal is developed in consultation with the \supervisor and \supcom.
 The scope of the research should be such that the program can be completed
 within one year.
 
 \p Students may be required to defend their thesis proposals, at the discretion
-of their \supcom.  Such defences normally occur during a meeting of the
+of their \supcom.  Such defences \replace{normally}{will} occur during a meeting of the
 \supcom, unlike in the PhD case, where they are public events.
 
 \p The \supervisor will notify the Oceanography Office that the proposal
@@ -835,74 +852,102 @@ both student and \supervisor, must be placed on file with the \GS.
 
 
 %B4	MSc THESIS
-\subsection{\label{sec:msc_thesis}MSc thesis}
+\subsection{\label{sec:msc_thesis}MSc thesis defence}
 
 \cp
 
-\p The MSc thesis requirements are subject to detailed regulations of the
-Faculty of Graduate
-Studies\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10853}.
+\p Rules and guidelines for MSc thesis requirements are provided in
+Section~10 of the \fgsregs. In addition, the Department imposes the following
+requirements:
 
-\p The MSc thesis should report original research and be in a satisfactory and
-consistent literary form. Faculty of Graduate Studies thesis formatting
-requirements are available on their
-website\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=2&chapterid=399&topicgroupid=1435}. \fixme{Link seems to have changed over the past few months.}
+\begin{enumerate}
+
+    \item All members of the \supcom must approval of a thesis before its
+        defence can be scheduled.
+
+    \item Readers are normally drawn from the \supcom, but another person may
+        be selected in the case of serious scheduling conflicts.
+
+    \item The defence is chaired by the \GC or a designate, the latter being a
+        faculty member who is not a member the \supcom.
+
+    \item The examination committee must contain a member who is not within the
+        student's subdiscipline, so if that member of the \supcom is not
+        available for the defence, another reader from outside the student's
+        subdiscipline must be found.
+
+    \item Examiners who cannot attend in person may send questions to be asked
+        at the defence. \fixme{I argue against this. Who poses the questions?
+        Who judges the answers?  This scheme is not permitted for PhD, so why
+        do it at the MSc level?}
+
+    \item \fixme{Insert a statement here about remote participation (allowed?
+        who sets it up? who judges when to cut the cord?) or, recognizing the
+        changing facts of technology, avoid bringing up this topic}
+
+
+
+\end{enumerate}
+
+% \p The MSc thesis should report original research and be in a satisfactory and
+% consistent literary form.
+% Faculty of Graduate Studies thesis formatting
+% requirements are available on their
+% website.
+
+%\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=2&chapterid=399&topicgroupid=1435}.
+
+\p It is the {\supervisor}'s responsibility to select the examining committee
+members, according to the guidelines stated above. Note that short-term absence
+of members of the \supcom are not a sufficient reason to schedule a defence in
+violation of these guidelines.
 
 \p The oral defence of the thesis is open to all members of the department and
 to other interested persons. Notices of the thesis defence, including an
 abstract, will be posted and distributed by the \GS to all members of the
 Oceanography Department.
 
-%B4.1	MSc EXAMINING COMMITTEE
-\subsection{\label{sec:msc_examining_committee}MSc examining committee}
+% %B4.1	MSc EXAMINING COMMITTEE
+% \subsection{\label{sec:msc_examining_committee}MSc examining committee}
+% 
+% \cp
 
-\cp
+% \p The examining committee will consist of a minimum of 5 members:\fixme{DK:
+% I'll look up the FGS rules to check that what is written below is OK. I'll also
+% add a link to the site where FGS gives those rules.}
+% 
+% \begin{itemize}
+%     \item All members of the \supcom\vote{In the previous version,
+%         and in the handbook for many years, it said "3 members". But BB suggested
+%         using "All", so I've changed it. OK? DK=yes}
+%         \begin{itemize}
+%             \item Supervisor(s)
+%             \item Full-time department faculty member
+%             \item One other member
+%         \end{itemize}
+% 
+%     \item Departmental Representative, who chairs the meeting (without asking
+%         questions or voting on the outcome) and writes a report on the outcome.
+%         This person must be a regular faculty member, and not a member of the
+%         \supcom.  (The \GS consults with the \GC on the selection of the
+%         Departmental Representative, who is often a member of the \gocom.)
+% 
+%     \item External examiner from outside the \supcom\footnote{Adjunct professors may fulfill the requirement of an
+%         external examiner.}
+% 
+% \end{itemize}
+% 
 
-\p It is the {\supervisor}'s responsibility to select the examining committee
-members, according to the guidelines stated below. Note that short-term absence
-of members of the \supcom are not a sufficient reason to schedule a defence in
-violation of these guidelines.\vote{DK: I rewrote some of this because the text
-was a mish-mash, as BB pointed out. Are the few lines before and after this OK?
-DK=yes}
-
-\p The examining committee will consist of a minimum of 5 members:\fixme{DK:
-I'll look up the FGS rules to check that what is written below is OK. I'll also
-add a link to the site where FGS gives those rules.}
-
-\begin{itemize}
-    \item All members of the \supcom\vote{In the previous version,
-        and in the handbook for many years, it said "3 members". But BB suggested
-        using "All", so I've changed it. OK? DK=yes}
-        \begin{itemize}
-            \item Supervisor(s)
-            \item Full-time department faculty member
-            \item One other member
-        \end{itemize}
-
-    \item Departmental Representative, who chairs the meeting (without asking
-        questions or voting on the outcome) and writes a report on the outcome.
-        This person must be a regular faculty member, and not a member of the
-        \supcom.  (The \GS consults with the \GC on the selection of the
-        Departmental Representative, who is often a member of the \gocom.)
-
-    \item External examiner from outside the \supcom\footnote{Adjunct professors may fulfill the requirement of an
-        external examiner.}
-
-\end{itemize}
-
-
-%B4.2	MSc THESIS DEFENCE TIMELINE
 \subsection{MSc thesis defence timeline}
+
 
 \cp
 
 \p Prior to proceeding with scheduling the defence, the thesis (in essentially
-final form) should be distributed to the \supervisor and committee to be
-reviewed for suitability and final approval.\fixme{DK: I will check into
-whether FGS has a timeline, and refer to it here, if so.}
+final form) should be distributed to the \supervisor and \supcom to be reviewed
+for suitability and final approval.
 
-\vote{DK to GOC: I had suggested removing the material below if it's on \FGS,
-but BB suggested keeping it, so it is still here. OK? DK=yes, BB=yes}
+\fixme{LL will rewrite the rest of this section; DK can help}
 
 \begin{itemize}
     \item Six weeks prior to defence:
@@ -982,59 +1027,56 @@ but BB suggested keeping it, so it is still here. OK? DK=yes, BB=yes}
 \end{itemize}
 
 
-%B4.3	MSc THESIS DEFENCE OUTCOME
-\subsection{MSc thesis defence outcome}
-
-\vote{DK to GOC: my notes say to delete this whole section. BB agrees, stating
-that we should just refer to FGS. But it's a lot of text to chop without
-discussion. Should we delete the rest of this section, retaining only a
-sentence stating an FGS link? DK=yes, BB=yes}
-
-\cp
-
-\p Outcomes: All theses are either approved or not approved. The categories are:
-
-\begin{itemize}
-
-    \item Approve as submitted
-
-    \item Approved pending corrections and a clear timetable for completion
-        (normally within one month)
-
-    \item Rejected but with permission to re-submit a revised thesis for
-        re-examination with a clear timetable for completion (within one year)
-
-    \item Rejected outright
-
-\end{itemize}
-
-\p A simple majority determines the outcome, based on all the examiners except
-the Departmental Representative, who will vote only in the event of a tie.
-
-\p Following the defence, the candidate will receive a letter from the Chair of
-the examining committee indicating the nature of any corrections to be made and
-the time frame within which they are to be completed. In the event of an
-unsuccessful defence, an explanation of the negative outcome is provided. A
-copy of the report will be provided to the \GS.
+%%B4.3	MSc THESIS DEFENCE OUTCOME
+%\subsection{MSc thesis defence outcome}
+%
+%\vote{DK to GOC: my notes say to delete this whole section. BB agrees, stating
+%that we should just refer to FGS. But it's a lot of text to chop without
+%discussion. Should we delete the rest of this section, retaining only a
+%sentence stating an FGS link? DK=yes, BB=yes}
+%
+%\cp
+%
+%\p Outcomes: All theses are either approved or not approved. The categories are:
+%
+%\begin{itemize}
+%
+%    \item Approve as submitted
+%
+%    \item Approved pending corrections and a clear timetable for completion
+%        (normally within one month)
+%
+%    \item Rejected but with permission to re-submit a revised thesis for
+%        re-examination with a clear timetable for completion (within one year)
+%
+%    \item Rejected outright
+%
+%\end{itemize}
+%
+%\p A simple majority determines the outcome, based on all the examiners except
+%the Departmental Representative, who will vote only in the event of a tie.
+%
+%\p Following the defence, the candidate will receive a letter from the Chair of
+%the examining committee indicating the nature of any corrections to be made and
+%the time frame within which they are to be completed. In the event of an
+%unsuccessful defence, an explanation of the negative outcome is provided. A
+%copy of the report will be provided to the \GS.
 
 \subsection{\label{sec:transfer_to_phd}Transfer to PhD}
 
 \cp
 
-% \p A request to \index{transfer from MSc to PhD} transfer from the MSc program to the PhD program should be
-% completed no later than one month prior to the anniversary of the student's
-% admission date.
-
-\p An MSc student may transfer to a PhD program without completing a MSc.
-Students wishing to transfer should provide a letter to their \supcom
-stating the reason for the transfer, and justification that they are
-qualified for the PhD program. A one-page explanation is sufficient. The
-student's \supcom is required to meet, and the \supcom may recommend
-advancement to the PhD program.  A letter from the \supervisor, noting the date
-when the \supcom met and justifying the advancement of the student to the PhD
-program, should then be submitted to the \GS for discussion by the \gocom,
-which makes the decision on whether the student can transfer. Once this
-approval is granted, the students must fill in a \formGSPU\furl{https://www.dal.ca/content/dam/dalhousie/pdf/fgs/currentstudents/Graduate_Student_Program_Update_Form.pdf}
+Rules and guidelines for supervisors and {\supcom}s are provided in
+Section~3.3.1 of the \fgsregs.  Students wishing to transfer should provide a
+letter to their \supcom stating the reason for the transfer, and justification
+that they are qualified for the PhD program. A one-page explanation is
+sufficient. The student's \supcom is required to meet, and the \supcom may
+recommend advancement to the PhD program.  A letter from the \supervisor,
+noting the date when the \supcom met and justifying the advancement of the
+student to the PhD program, should then be submitted to the \GS for discussion
+by the \gocom, which makes the decision on whether the student can transfer.
+Once this approval is granted, the students must fill in a
+Graduate Student Program Form\furl{https://www.dal.ca/content/dam/dalhousie/pdf/fgs/currentstudents/Graduate_Student_Program_Update_Form.pdf}
 to indicate the change of program.
 
 %\p The decision categories for the transfer to the PhD are:
@@ -1048,11 +1090,11 @@ to indicate the change of program.
 % \begin{itemize} \item Approved \item Not approved \item Deferred
 % \end{itemize}
 
-\p Students anticipating a transfer from MSc to PhD should take the required
-core courses and take the qualifying examinations (see
-Section~\ref{sec:phd_qualifying_examination}) in the first year following
-completion of those required core classes.\fixme{DK to GOC: I may have mangled
-the timing here, in my edits. Let's discuss, please.}
+%\p Students anticipating a transfer from MSc to PhD should take the required
+%core courses and take the qualifying examinations (see
+%Section~\ref{sec:phd_qualifying_examination}) in the first year following
+%completion of those required core classes.\fixme{DK to GOC: I may have mangled
+%the timing here, in my edits. Let's discuss, please.}
 
 % above referred to C3 for QE
 
@@ -1069,95 +1111,109 @@ the timing here, in my edits. Let's discuss, please.}
 %outside the student's sub-discipline (refer to section~\ref{sec:courses}).
 
 
-\p Students must complete at least 12 credit hours at 5000-level or higher of
-OCEA courses (OCEA \course{5000} does not count towards this requirement), 9 of
-which from core courses, \ie OCEA \course{5110}, OCEA \course{5120}, OCEA
-\course{5130}, and OCEA \course{5140}. For students with an MSc from Dalhousie
-Oceanography, core courses taken at MSc level can be waived\fixme{Q for LL: is
-the word ``waive'' correct? And what is the procedure?} for the PhD
-requirement. For students with an MSc from other departments or institutions:
-core course equivalencies will be assessed by the \gocom on a case-by-case
-basis. Additional courses may be required to strengthen a student’s
-background.\vote{DK to GOC: I removed ``in basic science'' from AM's text,
-since it doesn't mean much and is incorrect, since the courses are often
-advanced. OK? DK=yes, BB=yes}.
+\p Students must complete and at least 12 credit hours at the 5000 or higher
+level (exclusive of \course{5000}), of which 9 credit hours are selected from
+the core courses (OCEA 5110, 5120, 5130, 5140).  Student who completed an MSc
+in Oceanography at Dalhousie may apply for advanced placement for any of the
+core courses \fixme{or any 5000 level courses?} completed in the MSc program.
+For students with an MSc from other departments or institutions having
+completed core course equivalencies, the above core course requirements will
+\fixme{can, at request??} be assessed by the Graduate Oversight Committee on a
+case-by-case basis. Additional courses may be required by the \supervisor,
+possibly in consultation with the \supcom.
+
+\fixme{ask LL: what about the rule on adv-placement?}
+
+
+\p \fixme{OLD TEXT:} Students must complete at least 12 credit hours (4
+classes) at the 5000-level or higher of OCEA courses (excluding \course{5000}),
+9 credit hours of which from core courses, \ie OCEA \course{5110}, OCEA
+\course{5120}, OCEA \course{5130}, and OCEA \course{5140}.  For students with
+an MSc from Dalhousie Oceanography, core courses taken at MSc level can be
+waived\fixme{Q for LL: is the word ``waive'' correct? And what is the
+procedure?} for the PhD requirement. For students with an MSc from other
+departments or institutions: core course equivalencies will be assessed by the
+\gocom on a case-by-case basis.  Additional courses may be required to
+strengthen a student’s background.\vote{DK to GOC: I removed ``in basic
+science'' from AM's text, since it doesn't mean much and is incorrect, since
+the courses are often advanced. OK? DK=yes, BB=yes}.
 
 % above referred to A2.1 originally
 
-\p Courses are chosen in consultation with the \supcom. The various
-sub-disciplines have individual course requirements, some of which exceed the
-minimum requirements, as explained below.
-
-%C1.1	BIOLOGICAL OCEANOGRAPHY GUIDELINES
-%\subsubsection{Biological Oceanography guidelines}
-
-\p The normal course requirements for a PhD in Biological Oceanography are:
-
-\begin{itemize}
-
-    \item Core Classes: Biological Oceanography (\course{5140}), Chemical
-        Oceanography (\course{5130}), and Physical Oceanography (\course{5120}).
-
-    \item A minimum of one other half-credit class drawn from Geological
-        Oceanography (\course{5110}) or a suitable Atmospheric Science
-        course.\vote{DK to GOC: I propose deleting AtmSci. OK? DK=yes, BB=yes}
-
-    \item Other classes, as required by the \supcom.
-
-\end{itemize}
-
-%C1.2	CHEMICAL OCEANOGRAPHY GUIDELINES
-%\subsubsection{Chemical Oceanography guidelines}
-
-\p The normal course requirements for a PhD in Chemical Oceanography are:
-
-\begin{itemize}
-
-    \item Core Classes: Chemical Oceanography (\course{5130}), Geological
-        Oceanography (\course{5110}), Physical Oceanography (\course{5120}),
-        and Biological Oceanography (\course{5140}).
-
-    \item Advanced Chemical Oceanography (modular) (\course{5290}). \fixme{DK
-        to GOC: 5290 has not offered since 2007/9. I propose deleting this
-        item. OK? DK=yes, BB=yes}
-
-    \item Other classes, as required by the \supcom.
-
-\end{itemize}
-
-%C1.3	GEOLOGICAL OCEANOGRAPHY GUIDELINES
-%\subsubsection{Geological Oceanography guidelines}
-
-\p The normal course requirements for a PhD in Geological Oceanography are:
-
-\begin{itemize}
-
-    \item Core Classes: Geological Oceanography (\course{5110}) and two other Core Class.
-
-    \item Other classes, as required by the \supcom.
-
-\end{itemize}
-
-%C1.4	PHYSICAL OCEANOGRAPHY GUIDELINES
-%\subsubsection{Physical Oceanography guidelines}
-
-\p The normal course requirements for a PhD in Physical Oceanography are:
-
-\begin{itemize}
-
-    \item Core Classes: Physical Oceanography (\course{5120}) and two other
-        Core Class.
-
-    \item Advanced Classes: Fluid Dynamics (\course{5311}), Time Series
-        Analysis (\course{5210}), Ocean Dynamics (\course{5221}), Estuary,
-        Coast and Shelf Dynamics (\course{5222}).
-
-    \item Other Classes, as required by the \supcom, \eg Numerical
-        Modelling (\course{5220}), Ocean Waves (\course{5223}), Introduction to
-        Acoustical Oceanography (\course{5250}), Advanced Marine Particles
-        (\course{5293}).
-
-\end{itemize}
+%\p Courses are chosen in consultation with the \supcom. The various
+%sub-disciplines have individual course requirements, some of which exceed the
+%minimum requirements, as explained below.
+%
+%%C1.1	BIOLOGICAL OCEANOGRAPHY GUIDELINES
+%%\subsubsection{Biological Oceanography guidelines}
+%
+%\p The normal course requirements for a PhD in Biological Oceanography are:
+%
+%\begin{itemize}
+%
+%    \item Core Classes: Biological Oceanography (\course{5140}), Chemical
+%        Oceanography (\course{5130}), and Physical Oceanography (\course{5120}).
+%
+%    \item A minimum of one other half-credit class drawn from Geological
+%        Oceanography (\course{5110}) or a suitable Atmospheric Science
+%        course.\vote{DK to GOC: I propose deleting AtmSci. OK? DK=yes, BB=yes}
+%
+%    \item Other classes, as required by the \supcom.
+%
+%\end{itemize}
+%
+%%C1.2	CHEMICAL OCEANOGRAPHY GUIDELINES
+%%\subsubsection{Chemical Oceanography guidelines}
+%
+%\p The normal course requirements for a PhD in Chemical Oceanography are:
+%
+%\begin{itemize}
+%
+%    \item Core Classes: Chemical Oceanography (\course{5130}), Geological
+%        Oceanography (\course{5110}), Physical Oceanography (\course{5120}),
+%        and Biological Oceanography (\course{5140}).
+%
+%    \item Advanced Chemical Oceanography (modular) (\course{5290}). \fixme{DK
+%        to GOC: 5290 has not offered since 2007/9. I propose deleting this
+%        item. OK? DK=yes, BB=yes}
+%
+%    \item Other classes, as required by the \supcom.
+%
+%\end{itemize}
+%
+%%C1.3	GEOLOGICAL OCEANOGRAPHY GUIDELINES
+%%\subsubsection{Geological Oceanography guidelines}
+%
+%\p The normal course requirements for a PhD in Geological Oceanography are:
+%
+%\begin{itemize}
+%
+%    \item Core Classes: Geological Oceanography (\course{5110}) and two other Core Class.
+%
+%    \item Other classes, as required by the \supcom.
+%
+%\end{itemize}
+%
+%%C1.4	PHYSICAL OCEANOGRAPHY GUIDELINES
+%%\subsubsection{Physical Oceanography guidelines}
+%
+%\p The normal course requirements for a PhD in Physical Oceanography are:
+%
+%\begin{itemize}
+%
+%    \item Core Classes: Physical Oceanography (\course{5120}) and two other
+%        Core Class.
+%
+%    \item Advanced Classes: Fluid Dynamics (\course{5311}), Time Series
+%        Analysis (\course{5210}), Ocean Dynamics (\course{5221}), Estuary,
+%        Coast and Shelf Dynamics (\course{5222}).
+%
+%    \item Other Classes, as required by the \supcom, \eg Numerical
+%        Modelling (\course{5220}), Ocean Waves (\course{5223}), Introduction to
+%        Acoustical Oceanography (\course{5250}), Advanced Marine Particles
+%        (\course{5293}).
+%
+%\end{itemize}
 
 %C2	PhD COMMITTEE STRUCTURE
 \subsection{\label{sec:phd_supervisory_committee_structure}PhD Supervisory Committee Structure}
