@@ -34,8 +34,9 @@
 \definecolor{deleteColor}{rgb}{1,0,0}
 \definecolor{addColor}{rgb}{0.0,0.5,0}
 
-\definecolor{fixmeColor}{rgb}{0.8,0,0} % hide them as black
-\definecolor{voteColor}{rgb}{0.5,0,1} % hide them as black
+\definecolor{provisionalColor}{rgb}{0.28,0.24,0.55}
+\definecolor{fixmeColor}{rgb}{0.8,0,0}
+\definecolor{voteColor}{rgb}{0.5,0,1}
 
 \newcommand\ie{i.e.\xspace}
 \newcommand\eg{e.g.\xspace}
@@ -68,6 +69,8 @@
 %    } 
 
 \newcommand{\di}[1]{#1}
+
+\newcommand{\provisional}[1]{\color{provisionalColor}#1\color{black}\index{$>>>>$PROVISIONAL TEXT$<<<<$}}
 
 \newcommand{\fixme}[1]{\color{fixmeColor}$\{$#1$\}$\color{black}\index{$>>>>$FIXME$<<<<$}}
 
@@ -128,6 +131,7 @@
 %\newcommand{\FGS}{\index{Faculty of Graduate Studies (\textsc{fgs})}\color{diColor}\textsc{fgs}\color{black}\xspace}
 %\newcommand{\FGS}{\index{Faculty of Graduate Studies (FGS)}\color{diColor}FGS\color{black}\xspace}
 \newcommand{\FGS}{FGS\xspace}
+\newcommand{\fgsregs}{FGS Regulations\xspace}
 %\newcommand{\NSERC}{\index{Natural Sciences and Engineering Research Canada (\textsc{nserc})}\color{diColor}\textsc{nserc}\color{black}\xspace}
 %\newcommand{\NSERC}{\index{Natural Sciences and Engineering Research Canada (NSERC)}\color{diColor}NSERC\color{black}\xspace}
 \newcommand{\NSERC}{NSERC\xspace}
@@ -571,6 +575,32 @@ granted by FGS on the recommendation of the Department.
 \section{Supervision}
 
 \fixme{the meeting on 2017-04-10 will address this section in the context of the FGS rules}\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=58&chapterid=2678&topicgroupid=10852}
+
+
+
+\provisional{Rules and guidelines for supervisors and {\supcom}s are provided in Section~9 of the \fgsregs. In addition,
+the Department imposes the following requirements:
+\begin{enumerate}
+    \item The \supcom shall be formed within 1 month of the students entry into the academic program.
+
+    \item Each \supcom shall have at least one member from outside the student's subdiscipline(s).
+
+    \item Committees shall meet at least twice per year.
+
+    \item Committee approval should be sought on significant milestones in the
+        program, \eg MSc-PhD transfer, thesis defence, \etc.
+
+    \item Within a week of the meeting, students must upload a meeting report
+        to \dalonline. They are also responsible for ensuring ensure that their
+        supervisor and the \GC submit approval within a reasonable time.
+
+    \item Students or supervisors must provide minutes of each meeting to the
+        main office in paper form, signed by both student and supervisor.
+        These reports are also expected to be provided within a week of the
+        meeting.
+
+\end{enumerate}
+}
 
 %A9.3	SUPERVISOR
 \subsection{Supervisor}
