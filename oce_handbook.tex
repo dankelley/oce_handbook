@@ -44,7 +44,7 @@
 \newcommand\eg{e.g.\xspace}
 \newcommand\etc{etc.\xspace}
 %\newcommand\qe{PhD Qualifying Examination\index{PhD Qualifying Examination}\xspace}
-\newcommand\qe{PhD Qualifying Examination\xspace}
+\newcommand\qe{QE\xspace}
 %\newcommand\QE{PhD Qualifying Examination\index{PhD Qualifying Examination}\xspace}
 \newcommand\QE{PhD Qualifying Examination\xspace}
 
@@ -78,6 +78,8 @@
 \newcommand{\fixme}[1]{\color{fixmeColor}$\{$#1$\}$\color{black}\index{$>>>>$FIXME$<<<<$}}
 
 \newcommand{\vote}[1]{\color{voteColor}$\ll$#1$\gg$\color{black}\marginpar[$\gg$ vote]{$\ll$ vote}\index{$>>>>$VOTE$<<<<$}}
+
+\newcommand{\mutable}[1]{\textbf{$\ll$#1$\gg$}\marginpar[$\gg$]{$\ll$}}
 
 \newcommand{\discuss}[1]{\footnote{\color{fixmeColor}#1\color{black}}\index{$>>>>$DISCUSS$<<<<$}}
 
@@ -776,15 +778,27 @@ requirements:
 
 \cp
 
-\p MSc students must complete \course{5000} and at least 6 credit hours (\ie 2
-courses) selected from the core courses (\course{5110}, 5120, 5130, 5140).
-Students who completed one or two of the core courses at the undergraduate
-(4000) level with either ``A'' or ``A+'' grades may apply for advanced
-placement, and if approved need not repeat them at the 5000 level, in which
-case they must complete 3 or 6 credit hours at the 5000 or higher level
-selected in consultation with the \supervisor. Additional courses may be
-required by the \supervisor, perhaps in consultation with other members of the
-\supcom.
+\p The Academic
+Calendar\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=70&chapterid=3716&topicgroupid=15375} lists
+course requirements as
+\begin{quotation}
+``Students must complete \course{5001} and an additional 6 credit hours from
+core courses (5110.03-5140.03); (unless taken as an undergraduate at 4000-level
+(4110.03-4140.03) with minimum grade of A or 5000-level as advanced placement).
+Additional courses may be required\dots
+\end{quotation}
+The requirements for additional courses (if any) are set by the \supervisor, perhaps in
+consultation with other members of the \supcom.
+
+%\p MSc students must complete \course{5000} and at least 6 credit hours (\ie 2
+%courses) selected from the core courses (\course{5110}, 5120, 5130, 5140).
+%Students who completed one or two of the core courses at the undergraduate
+%(4000) level with either ``A'' or ``A+'' grades may apply for advanced
+%placement, and if approved need not repeat them at the 5000 level, in which
+%case they must complete 3 or 6 credit hours at the 5000 or higher level
+%selected in consultation with the \supervisor. Additional courses may be
+%required by the \supervisor, perhaps in consultation with other members of the
+%\supcom.
 
 \p Students anticipating a transfer from the MSc to the PhD program should
 complete the course-work requirements listed in
@@ -830,25 +844,20 @@ Section~\ref{sec:phd_course_requirements}.
 \cp
 
 \p MSc students are expected to produce an approved thesis proposal within one
-year of enrolling in the program.
-
-\p This document serves primarily as a well-reasoned course of action, and not
-as an exhaustive literature review nor as a deeply detailed description of
-methods. This should be under 15 pages of text, double-spaced and inclusive of
-diagrams and citations.
-
-\p The proposal is developed in consultation with the \supervisor and \supcom.
-The scope of the research should be such that the program can be completed
-within one year.
+year of enrolling in the program.  This document serves primarily as a
+well-reasoned course of action, and not as an exhaustive literature review nor
+as a deeply detailed description of methods. This should be under 15 pages of
+text, double-spaced and inclusive of diagrams and citations.  The proposal is
+developed in consultation with the \supervisor and \supcom.  The scope of the
+research should be such that the program can be completed within one year.
 
 \p Students may be required to defend their thesis proposals, at the discretion
-of their \supcom.  Such defences \replace{normally}{will} occur during a meeting of the
-\supcom, unlike in the PhD case, where they are public events.
+of their \supcom.  Such defences normally occur during a meeting of the
+\supcom, unlike the PhD case, where defences are public events.
 
 \p The \supervisor will notify the Oceanography Office that the proposal
 requirement has been satisfied and a copy of the approved proposal, signed by
 both student and \supervisor, must be placed on file with the \GS.
-
 
 
 %B4	MSc THESIS
@@ -862,7 +871,7 @@ requirements:
 
 \begin{enumerate}
 
-    \item All members of the \supcom must approval of a thesis before its
+    \item All members of the \supcom must approve of a thesis before its
         defence can be scheduled.
 
     \item Readers are normally drawn from the \supcom, but another person may
@@ -876,16 +885,14 @@ requirements:
         available for the defence, another reader from outside the student's
         subdiscipline must be found.
 
-    \item Examiners who cannot attend in person may send questions to be asked
-        at the defence. \fixme{I argue against this. Who poses the questions?
-        Who judges the answers?  This scheme is not permitted for PhD, so why
-        do it at the MSc level?}
+    %\item Examiners who cannot attend in person may send questions to be asked
+    %    at the defence. \fixme{I argue against this. Who poses the questions?
+    %    Who judges the answers?  This scheme is not permitted for PhD, so why
+    %    do it at the MSc level?}
 
-    \item \fixme{Insert a statement here about remote participation (allowed?
-        who sets it up? who judges when to cut the cord?) or, recognizing the
-        changing facts of technology, avoid bringing up this topic}
-
-
+    \item In exceptional cases, arrangements may be made for remote
+        participation of some members of the examining committee, but not the
+        \supervisor.
 
 \end{enumerate}
 
@@ -906,6 +913,14 @@ violation of these guidelines.
 to other interested persons. Notices of the thesis defence, including an
 abstract, will be posted and distributed by the \GS to all members of the
 Oceanography Department.
+
+\p Following the defence, the Chair of the Examining Committee will write a
+report indicating the nature of any corrections to be made and the time frame
+within which they are to be completed. In the event of an unsuccessful defence,
+an explanation of the negative outcome is provided. A copy of this report will
+be provided to the \GS, for inclusion in the student's file and for
+distribution to the student, the \supervisor, and the members of the Examining
+Committee.
 
 % %B4.1	MSc EXAMINING COMMITTEE
 % \subsection{\label{sec:msc_examining_committee}MSc examining committee}
@@ -945,32 +960,20 @@ Oceanography Department.
 
 \p Prior to proceeding with scheduling the defence, the thesis (in essentially
 final form) should be distributed to the \supervisor and \supcom to be reviewed
-for suitability and final approval.
-
-\fixme{LL will rewrite the rest of this section; DK can help}
+for suitability and final approval. Details of the timeline are as follows.
 
 \begin{itemize}
     \item Six weeks prior to defence:
 
         \begin{itemize}
 
-            \item Have a format review done by \FGS. \vote{DK to GOC:
-                previously it said to do the check before distributing to the
-                committee. I asked if that made sense. BB said to remove that
-                phrase, so I did. Is new text OK? DK=yes, BB=yes}
+            \item Have a format review done by \FGS.
 
-            \item Submit an MSc Examination Information Form to the \GS
+            \item Submit an MSc Examination Information Form to the \GS.
 
-            \item Submit a Thesis Binding Submission Form and payment to the
-                \GS
+            \item Submit an electronic copy of the abstract to the \GS.
 
-            \item Submit an electronic copy of the abstract to the Graduate
-                Secretary
-
-            \item Provide copies of the thesis to the \supervisor for
-                distribution to the examining committee\vote{DK: I suggested
-                deleting this because I have never seen it done, and BB agreed.
-                OK? DK=yes, BB=yes}
+            \item Provide copies of the thesis to the \supervisor and \supcom.
 
         \end{itemize}
 
@@ -978,14 +981,15 @@ for suitability and final approval.
 
         \begin{itemize}
 
-            \item Notify the \GS of any Audiovisual requirements
+            \item Notify the \GS of any audiovisual or remote-participation requirements.
 
         \end{itemize}
 
     \item Ten working days prior to defence:
         \begin{itemize}
 
-            \item Submit a printed copy of the thesis to the \GS
+            \item Submit a printed copy of the thesis to the \GS for public
+                display in the main office.
 
         \end{itemize}
 
@@ -994,11 +998,10 @@ for suitability and final approval.
         \begin{itemize}
 
             \item Have Examining Committee Members sign the signature
-                page.\fixme{ask LL: does such a form still exist? Both DK and
-                BB think it does not.}
+                page.
 
-            \item Submit required changes to the \supervisor within the
-                specified time-frame.
+            \item Submit any required changes to the \supervisor, within the
+                time-table set out at the defence (see next section).
 
             \item Have a final format check of the thesis done by \FGS.
 
@@ -1011,16 +1014,12 @@ for suitability and final approval.
                 Student Contribution to Manuscripts (if applicable).\fixme{Ask
                 LL: do these things all still exist?}
 
-            \item Submit final copies of thesis to the \GS for binding (include
-                copies of the signed signature page, and the Copyright Page
-                with original signatures).\fixme{Ask LL: check with \FGS
-                on all of this. For example, I don't think signatures are part
-                of a thesis anymore, owing to privacy issues.}\vote{DK to GOC:
-                should we keep the binding requirement? If the department wants
-                copies, why doesn't it print them and bind them. The archival copy is
-                a PDF that is on the web, after all.}
+            \item Submit a Thesis Binding Submission Form and payment to the
+                \GS.
 
-            \item Complete the \FGS Exit Survey
+            \item Submit final copies of thesis to the \GS for binding.
+
+            \item Complete the \FGS Exit Survey.
 
         \end{itemize}
 
@@ -1106,37 +1105,55 @@ to indicate the change of program.
 
 \cp
 
+\p The Academic
+Calendar\furl{http://academiccalendar.dal.ca/Catalog/ViewCatalog.aspx?pageid=viewcatalog&catalogid=70&chapterid=3716&topicgroupid=15376}
+lists course requirements as
+\begin{quotation}
+Students must complete at least 12 credit hours at 5000-level or higher of OCEA
+courses (OCEA 5001 does not count towards this requirement), 9 of which from
+core courses (5110.03-5140.03) (with MSc from Dal Oceanography: core courses
+taken at MSc can be waived for the PhD requirement; with MSc from other
+departments or institutions: core course equivalencies will be assessed on case
+by case). Additional courses may be required \dots
+\end{quotation}
+The requirements for additional courses (if any) are set by the
+\supervisor, perhaps in consultation with other members of the \supcom.
+
+\fixme{ask LL: what about the rule on adv-placement or waiving? We
+should provide a URL and summary statement}
+
+
+
 %\p PhD students must complete a minimum of 6 half-credits at the 5000-level or
 %higher, at least two of which must be chosen from the introductory core courses
 %outside the student's sub-discipline (refer to section~\ref{sec:courses}).
 
 
-\p Students must complete and at least 12 credit hours at the 5000 or higher
-level (exclusive of \course{5000}), of which 9 credit hours are selected from
-the core courses (OCEA 5110, 5120, 5130, 5140).  Student who completed an MSc
-in Oceanography at Dalhousie may apply for advanced placement for any of the
-core courses \fixme{or any 5000 level courses?} completed in the MSc program.
-For students with an MSc from other departments or institutions having
-completed core course equivalencies, the above core course requirements will
-\fixme{can, at request??} be assessed by the Graduate Oversight Committee on a
-case-by-case basis. Additional courses may be required by the \supervisor,
-possibly in consultation with the \supcom.
-
-\fixme{ask LL: what about the rule on adv-placement?}
+% \p Students must complete and at least 12 credit hours at the 5000 or higher
+% level (exclusive of \course{5000}), of which 9 credit hours are selected from
+% the core courses (OCEA 5110, 5120, 5130, 5140).  Student who completed an MSc
+% in Oceanography at Dalhousie may apply for advanced placement for any of the
+% core courses \fixme{or any 5000 level courses?} completed in the MSc program.
+% For students with an MSc from other departments or institutions having
+% completed core course equivalencies, the above core course requirements will
+% \fixme{can, at request??} be assessed by the Graduate Oversight Committee on a
+% case-by-case basis. Additional courses may be required by the \supervisor,
+% possibly in consultation with the \supcom.
 
 
-\p \fixme{OLD TEXT:} Students must complete at least 12 credit hours (4
-classes) at the 5000-level or higher of OCEA courses (excluding \course{5000}),
-9 credit hours of which from core courses, \ie OCEA \course{5110}, OCEA
-\course{5120}, OCEA \course{5130}, and OCEA \course{5140}.  For students with
-an MSc from Dalhousie Oceanography, core courses taken at MSc level can be
-waived\fixme{Q for LL: is the word ``waive'' correct? And what is the
-procedure?} for the PhD requirement. For students with an MSc from other
-departments or institutions: core course equivalencies will be assessed by the
-\gocom on a case-by-case basis.  Additional courses may be required to
-strengthen a student’s background.\vote{DK to GOC: I removed ``in basic
-science'' from AM's text, since it doesn't mean much and is incorrect, since
-the courses are often advanced. OK? DK=yes, BB=yes}.
+
+% \p \fixme{OLD TEXT:} Students must complete at least 12 credit hours (4
+% classes) at the 5000-level or higher of OCEA courses (excluding \course{5000}),
+% 9 credit hours of which from core courses, \ie OCEA \course{5110}, OCEA
+% \course{5120}, OCEA \course{5130}, and OCEA \course{5140}.  For students with
+% an MSc from Dalhousie Oceanography, core courses taken at MSc level can be
+% waived\fixme{Q for LL: is the word ``waive'' correct? And what is the
+% procedure?} for the PhD requirement. For students with an MSc from other
+% departments or institutions: core course equivalencies will be assessed by the
+% \gocom on a case-by-case basis.  Additional courses may be required to
+% strengthen a student's background.\vote{DK to GOC: I removed ``in basic
+% science'' from AM's text, since it doesn't mean much and is incorrect, since
+% the courses are often advanced. OK? DK=yes, BB=yes}.
 
 % above referred to A2.1 originally
 
@@ -1215,18 +1232,18 @@ the courses are often advanced. OK? DK=yes, BB=yes}.
 %
 %\end{itemize}
 
-%C2	PhD COMMITTEE STRUCTURE
-\subsection{\label{sec:phd_supervisory_committee_structure}PhD Supervisory Committee Structure}
-
-\p The \supcom must be formed within the first month of the program.
-
-\p The PhD \supcom consists of at least four members. There must be two
-full-time faculty members from the Oceanography Department (not Adjunct FGS) on
-the \supcom. If a regular faculty member serving on the committee leaves the
-department, a replacement with another faculty member must be made.
-
-\p One member will be from another sub-discipline, and it is desirable that at
-least one member of the committee be from outside the Department.
+%%C2	PhD COMMITTEE STRUCTURE
+%\subsection{\label{sec:phd_supervisory_committee_structure}PhD Supervisory Committee Structure}
+%
+%\cp
+%\p The 
+%\p The \supcom must be formed within the first month of the program.  This
+%committee consists of at least four members. There must be two full-time
+%faculty members from the Oceanography Department (not Adjunct FGS) on the
+%\supcom. If a regular faculty member serving on the committee leaves the
+%department, a replacement with another faculty member must be made.  One member
+%will be from another sub-discipline, and it is desirable that at least one
+%member of the committee be from outside the Department.
 
 
 %C3	PhD QUALIFYING EXAMINATION
@@ -1245,98 +1262,77 @@ least one member of the committee be from outside the Department.
 \cp
 
 \p The \QE (\qe, henceforth) is an oral examination based on a reading list
-tailored to the PhD candidate's general research area. It is a Department
-process, not a Supervisory Committee process. The Department delegates its
-administration to the regular Professors in the student's subdiscipline(s).
-(If the student is co-supervised by an Adjunct Professor or a cross-listed
-Professor, then that individual also takes part in the \qe.)\discuss{DK: do I
-have this exception correct? BB says "yes".}
+tailored to the PhD candidate's general research area. This examination is not
+a mini-proposal defence or a pre-proposal exercise. It is designed to test a
+student's ability to read, understand, and relay to an examining body the
+content, meaning and relevance of chosen papers in the Oceanographic
+literature.
+
+\p The \qe is a Department process, not a Supervisory Committee process.  The
+Department delegates its administration to the regular Professors in the
+student's subdiscipline(s).  (If the student is co-supervised by an Adjunct
+Professor or a cross-listed Professor, then that individual also takes part in
+the \qe.)
 
 \p The \qe should be completed between months 9 and 12 of the PhD program.
 Students who have transferred from the MSc program should take the QE within 12
-months of their transfer.\discuss{DK: did we say that exceptions could be
-granted by the CurrComm? BB answers "no"}
+months of their transfer.\fixme{I'm lost in my notes on the suggested new rules
+on timing. We may have decided ``between 8 and 20 months of finishing core
+classes'' LORI -- is this in your notes?}
 
-\p The details and timing are as follows.
+\p The \qe Examining Committee includes a Chair (normally the \GC or a
+designate who is not associated with the student), at least three members of
+the subdiscipline, including the \supervisor, and an External Examiner drawn
+from the Oceanography faculty outside the sub-discipline(s).  It is the
+\supervisor's responsibility to set up this committee and to arrange the timing
+of the \qe.
+
+\p The procedure is as follows.
 
 \begin{enumerate}
 
-    \item The Candidate prepares a 1 to 3 page\vote{DK: there has been some
-        discussion (by BB and DK) of shortening this further, even to just
-        keywords or a few sentences. I propose to put a flag in the document
-        to invite discussion by the whole department. OK? In the meantime, both
-        DK and BB would agree with requesting just a title and up to 10
-        keywords} summary of their general research interests and forwards it
-        to their Supervisor for approval.  The summary is intended to guide
-        faculty members in compiling a reading list.
+    \item The Candidate prepares a short outline (\mutable{300 words}, maximum)
+        of his/her general research interests, and submits this to the
+        \supervisor for approval. This document is intended to guide faculty
+        members in compiling a reading list. A dated copy must be provided to
+        the \GS for inclusion in the student's file.
 
-    \item The Supervisor forwards the summary to faculty members in the
-        student's subdiscipline(s), along with a request that they, and the
-        Supervisor, each provide one or two papers (book chapters are also
-        acceptable) to make up a reading list that is relevant to the summary.
-        The list should not contain anything written by a member of the Examining
-        Committee.\vote{DK to GOC: if we don't agree on this, there should be an
-        indication of this in the document, to invite wider opinions. In
-        BB's comment, he agreed we should flag this as something for the department to vote on.}
-        At least three faculty members, including the supervisor, must
-        contribute to the reading list. The list must contain between 4 and 6
-        papers\fixme{DK: I wrote `6' here \ldots I don't recall if we
-        set a limit, and I've seen more than 6, but I don't want us sliding
-        into a system where every prof gives 2 papers so we can have 10 papers
-        in total, potentially}. The suggested papers must be forwarded to the
-        Supervisor within 2 weeks of the request.\fixme{I don't understand
-        this forwarding.}\fixme{BB suggests writing `5' and 7' here}
+    \item Within \mutable{2 weeks} of receipt of the summary, the \supervisor
+        selects the members of the Examining Committee, sends a copy of the
+        research summary to them, and schedules the \qe.
+        
+    \item The Supervisor forwards the summary to the members of the Examining
+        Committee, along with a request that they join the Supervisor in each
+        providing one or two papers (book chapters are also acceptable) to make
+        up a reading list for the \qe.  \mutable{The list should not contain
+        anything written by any member of the Examining Committee.} At least
+        three faculty members, including the supervisor, must contribute to the
+        reading list, and the list must contain between \mutable{5 and 8}
+        papers.  The papers must be forwarded to the Supervisor within
+        \mutable{2 weeks} of the request.
 
-    \item The \supervisor examines the papers to ensure appropriateness,\fixme{BB had some editing mark at this word but nothing came up in my Adobe reader} and then
-        distributes the list to the Candidate and the relevant
-        faculty.\discuss{DK to GOC: we need to discuss whether the \supervisor vets
-        the papers, and also who organizes the whole procedure. I could see
-        and argument that papers be sent to the \GS for organization, and that
-        seems to be the practice in ChemOce. But of course the \GS cannot vet
-        papers. And I don't think we can ask the \GC to vet them, either. So
-        there is an open question of whether, or how, to decide on
-        appropriateness. In the days of ``old comps'' there was a committee, but
-        the work was 5X less in scope since students wrote common exams.}
+    \item Once the list is settled, the \supervisor distributes the list to the
+        Candidate and the members of the Examining Committee.
             
-    \item The qualifying exam must be held within 6 weeks of the reading list
-        being distributed. 
-
-    \item It is the responsibility of the \supervisor to form the Examining
-        Committee and schedule the exam. The committee must include a Chair (normally
-        the \GC or a designate who is not associated with the student),
-        at least three members of
-        the subdisicpline, including the \supervisor, and an External Examiner
-        drawn from the Oceanography faculty outside the sub-discipline(s) and
-        preferably in a sub-discipline closely related to the candidate’s
-        research interests. \emph{In exceptional circumstances an External from
-        outside the department may be nominated by the \supervisor. The
-        nomination must be approved by the majority of the other
-        examiners, and the
-        nominee must have no conflict of interest with the Candidate's research
-        programme.}\fixme{I think the highlighted text should be
-        deleted.}\fixme{BB asks what 'conflict of interest' refers to.}
+    \item The \qe must be held within \mutable{6 and 8 weeks} of the reading
+        list being distributed.
 
     \item The form of the Examining Committee must be approved by at least
-        three members of the subdisciplinary faculty no later than 6 weeks\vote{This was 3 weeks, but BB suggested 6 weeks. I made that change. OK? DK=yes, BB=yes}
-        prior to the date of the exam. Once approved, the \supervisor forwards
+        three members of the subdisciplinary faculty no later than 6 weeks
+        prior to the date of the \qe. Once approved, the \supervisor forwards
         the research summary, the reading list, and these guidelines to the
-        External Examiner and to the Chair. The External is not required to
-        read the listed papers.\discuss{Is anyone ``required''? My impression,
-        having been at a lot of these, is that examiners often have not read
-        the other papers, especially if they are specialized (which I think
-        is a mistaken choice of paper, but that's just my own view).}
-        \vote{Does the external provide a paper? DK=yes, BB=yes}
-        At the same time, the Candidate is
-        advised of the committee membership. 
+        External Examiner and to the Chair.  The External is not required to
+        read the listed papers. At the same time, the Candidate is advised of
+        the committee membership. 
 
     \item The Chair moderates the exam (see guidelines below) and does not
         participate in questioning. Ideally, the exam will last no longer than
         1.5~hours. The exam begins with a 20-minute presentation by the
         Candidate who will attempt to demonstrate an understanding of the
         concepts and contents of the papers, perhaps highlighting common
-        threads or links to the rest of the literature,
-        as appropriate.\vote{I removed a phrase about being relevant to the
-        student's plans, at BB's suggestion. OK? DK=yes, BB=yes}
+        threads or links to the rest of the literature, as appropriate.\vote{I
+        removed a phrase about being relevant to the student's plans, at BB's
+        suggestion. OK? DK=yes, BB=yes}
 
     \item The committee then questions the Candidate about Oceanography and
         topics related to the Candidate's research interests where the entry
