@@ -77,9 +77,15 @@
 
 \newcommand{\fixme}[1]{\color{fixmeColor}$\{$#1$\}$\color{black}\index{$>>>>$FIXME$<<<<$}}
 
-\newcommand{\vote}[1]{\color{voteColor}$\ll$#1$\gg$\color{black}\marginpar[$\gg$ vote]{$\ll$ vote}\index{$>>>>$VOTE$<<<<$}}
+\newcommand{\vote}[1]{\color{voteColor}\{#1\}\color{black}\marginpar[$\gg$OK?]{$\ll$OK?}}
 
-\newcommand{\mutable}[1]{\textbf{$\ll$#1$\gg$}\marginpar[$\gg$]{$\ll$}}
+\newcommand{\mutablenum}{\arabic{mutablecount}}
+\newcommand{\mutable}[1]{%
+    \textbf{$\ll$#1$\gg$}%
+    \marginpar[$\gg$]{%
+    $\Leftarrow$\textbf{\mutablenum}\stepcounter{mutablecount}%
+    }%
+    }
 
 \newcommand{\discuss}[1]{\footnote{\color{fixmeColor}#1\color{black}}\index{$>>>>$DISCUSS$<<<<$}}
 
@@ -97,6 +103,8 @@
 %\newcommand\p{\stepcounter{parcount}\leavevmode[\parnum]\hspace{0.2em}\marginpar[\hfill\parnum]{\parnum}}
 \newcommand\p{\stepcounter{parcount}\leavevmode{\raisebox{0.2ex}{\scriptsize[\parnum]}}\hspace{0.2em}}
 \newcommand\cp{\setcounter{parcount}{0}}
+\newcounter{mutablecount}
+\setcounter{mutablecount}{1}
 
 % cav = chapter and verse. arg1=section number (roman); arg2=section name; arg3=url
 \newcommand{\cav}[3]{(FGS \S#1 \textsl{#2}\footnote{\footnotesize{\url{#3}}})}
@@ -1280,12 +1288,12 @@ months of their transfer.\fixme{I'm lost in my notes on the suggested new rules
 on timing. We may have decided ``between 8 and 20 months of finishing core
 classes'' LORI -- is this in your notes?}
 
-\p The \qe Examining Committee includes a Chair (normally the \GC or a
-designate who is not associated with the student), at least three members of
-the subdiscipline, including the \supervisor, and an External Examiner drawn
-from the Oceanography faculty outside the sub-discipline(s).  It is the
-\supervisor's responsibility to set up this committee and to arrange the timing
-of the \qe.
+\p The Examining Committee includes a Chair (normally the \GC or a designate
+who is not associated with the student), at least 3 members of the
+subdiscipline, including the \supervisor, and an External Examiner drawn from
+the Oceanography faculty outside the sub-discipline(s).
+%It is the \supervisor's responsibility to set up the committee and schedule
+%the \qe.
 
 \p The procedure is as follows.
 
@@ -1306,7 +1314,7 @@ of the \qe.
         providing one or two papers (book chapters are also acceptable) to make
         up a reading list for the \qe.  \mutable{The list should not contain
         anything written by any member of the Examining Committee.} At least
-        three faculty members, including the supervisor, must contribute to the
+        3 faculty members, including the supervisor, must contribute to the
         reading list, and the list must contain between \mutable{5 and 8}
         papers.  The papers must be forwarded to the Supervisor within
         \mutable{2 weeks} of the request.
@@ -1317,35 +1325,30 @@ of the \qe.
     \item The \qe must be held within \mutable{6 and 8 weeks} of the reading
         list being distributed.
 
-    \item The form of the Examining Committee must be approved by at least
-        three members of the subdisciplinary faculty no later than 6 weeks
-        prior to the date of the \qe. Once approved, the \supervisor forwards
-        the research summary, the reading list, and these guidelines to the
-        External Examiner and to the Chair.  The External is not required to
-        read the listed papers. At the same time, the Candidate is advised of
-        the committee membership. 
+    %\item The form of the Examining Committee must be approved by at least
+    %    three members of the subdisciplinary faculty no later than 6 weeks
+    %    prior to the date of the \qe. Once approved, the \supervisor forwards
+    %    the research summary, the reading list, and these guidelines to the
+    %    External Examiner and to the Chair.  The External is not required to
+    %    read the listed papers. At the same time, the Candidate is advised of
+    %    the committee membership. 
 
     \item The Chair moderates the exam (see guidelines below) and does not
         participate in questioning. Ideally, the exam will last no longer than
         1.5~hours. The exam begins with a 20-minute presentation by the
         Candidate who will attempt to demonstrate an understanding of the
         concepts and contents of the papers, perhaps highlighting common
-        threads or links to the rest of the literature, as appropriate.\vote{I
-        removed a phrase about being relevant to the student's plans, at BB's
-        suggestion. OK? DK=yes, BB=yes}
+        threads or links to the rest of the literature, as appropriate.
 
     \item The committee then questions the Candidate about Oceanography and
         topics related to the Candidate's research interests where the entry
         points into questions and discussions are to be based on the reading
         material that was provided to the Candidate and Candidate's
-        presentation. \sout{The exam is not about the proposed
-        research.}\fixme{BB struck the preceding sentence out, and wrote a note
-        saying "Entered as a main point above" but I don't understand whether
-        he means that it has been entered or should be. FIXME: DK to check.}
+        presentation.
 
     \item Upon the completion of questioning, the committee meets \emph{in
         camera} to agree on the exam outcome and recommendations to the
-        Candidate and their \supcom, as appropriate.
+        Candidate and the \supcom, as appropriate.
 
     \item The possible outcomes of the Qualifying Examination are:
 
@@ -1356,18 +1359,14 @@ of the \qe.
                 should be addressed during the PhD work, in the form of
                 courses, audits, or directed studies.
 
-            \item The candidate is required to take a written examination where
-                in the format and time line for the exam will determined by the
-                examining committee while meeting \emph{in camera}. This
-                examination will be based on the topics that arose during the
-                oral examination and will not exceed three hours. 
-                
+            \item The candidate is required to take a written examination, the
+                format and timeline of which will determined by the examining
+                committee during the \emph{in camera} session. This examination
+                is to be based on the topics that arose during the oral
+                examination and will not exceed three hours. 
 
             \item The candidate is transferred to, or continued in, the MSc
-                programme.  \vote{DK to GOC: I added this, based on discussions
-                with BB and others about the fact that this is a formal
-                examination, and we had no ``failure'' mode.  OK? DK=yes,
-                BB=yes}
+                programme.
 
         \end{enumerate}
 
@@ -1421,9 +1420,9 @@ of the \qe.
 
             \item Keep notes on the time used by questioners.
 
-            \item Do not let questioners go astray--keep everyone on
-                track.\discuss{I don't know what this means, or how to
-                accomplish it}
+            \item Do not let questioners go astray--keep everyone on track.
+                (For example, sometimes it can help to remind Examiners that a
+                \qe is not a proposal defence.),
 
             \item Discourage \sout{too much} discussion back and forth between members
                 of the Examining Committee; questions should be directed at the
@@ -1433,14 +1432,7 @@ of the \qe.
 
             \item Keep the process just, calm and professional.
 
-            \item The entire exam should last no longer than \sout{1.5} $????$ hours.\vote{DK
-                to GOC: we should use history to guide this.  And a nominal
-                calculation is: 20 min +
-                10min/examiner*5examiner + 10min/discussion yields over 2 hours
-                even with just for one round.  I proposed a 2.5 hour limit for
-                the non-in-camera part. BB suggested 2h in the text, but then
-                said he agreed with the 2.5h limit stated in this comment. Let's
-                come up with a number in a meeting.}
+            \item The entire exam should last no longer than \mutable{1.5 hours}.
 
             \item Keep notes on significant issues during questioning.
 
@@ -1459,13 +1451,8 @@ of the \qe.
                 their recommendation and comments.
 
             \item Encourage either a unanimous decision, or at least a
-                consensus one. In the case of a split decision, the Chair casts
-                the deciding vote.\discuss{DK to GOC: note that I say the chair
-                can cast a deciding vote. The point is we cannot have a
-                non-outcome. This is an examination; after all, and students
-                cannot be told that the professors cannot decide whether they
-                pass or fail. BB agreed, and stated that a non-outcome would
-                not be acceptable to Senate.}
+                consensus one. In the case of a vote with a split decision, the
+                Chair casts the deciding vote.
 
             \item Keep notes on significant issues that should be included in
                 the report sent to the Chair and the departmental \GC.
@@ -1476,12 +1463,14 @@ of the \qe.
 
         \begin{itemize}
 
+            \item The examination Chair shall submit a written (and signed)
+                report to the \GC, and provides it to the \GS.  This report
+                must describe the procedure, as well as stating the examination
+                outcome, along with any recommendations.
 
-            \item The examination Chair shall submit a written report to the
-                Chair of the Department and the departmental \GC.  The report
-                shall include a written description of the procedure and
-                outcome of the exam and associated recommendations. The report
-                shall be included in the Candidate's departmental file.
+            \item The \GS scans the report and send electronic copies to the
+                student and the members of the Examining committee. The
+                original document is to be stored in the student's file.
 
         \end{itemize}
 
